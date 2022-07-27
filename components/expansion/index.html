@@ -1,0 +1,83 @@
+
+
+
+<h2 id="introduction">Introduction</h2>
+<p>The Material Design Lite (MDL) <strong>expansion</strong> component provides a clean interface
+to show collapsable content areas to users.</p>
+<h2 id="basic-usage">Basic Usage</h2>
+<p>To use the expansion panel component browsers must support the <a href="https://www.w3.org/TR/2011/WD-html5-author-20110809/the-details-element.html">details element</a>. Currently only <a href="http://caniuse.com/#feat=details">IE and Edge</a> do not provide support for this. For support there you&#39;ll need to include a polyfill for the <code>&lt;details&gt;</code> element. There are a few available which each have different pitfalls to test them to find the one that best suites your needs.</p>
+<p>Once you have support for detail elements all you need to do is make them with a summary and content containers. Remember that the content element comes directly after the summary element and contains all the rest of the content for the block. If your content has a form or some kind of actions for the user to carry out, include an actions container with actions in the content container.</p>
+<p>Keep in mind, the order is automatically reversed for actions.
+Material Design requires that the primary (confirmation) action be displayed last.
+So, the first action you create will appear last on the action bar.
+This allows for more natural coding and tab ordering while following the specification.</p>
+<p>Remember to add the event handlers for your action items.</p>
+<h2 id="css-classes">CSS Classes</h2>
+<h3 id="blocks">Blocks</h3>
+<table>
+<thead>
+<tr>
+<th>MDL Class</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mdl-expansion</code></td>
+<td>Defines the container of the expansion component.</td>
+<td>Required on expansion container.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="elements">Elements</h3>
+<table>
+<thead>
+<tr>
+<th>MDL Class</th>
+<th>Effect</th>
+<th>Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mdl-expansion__summary</code></td>
+<td>Defines the summary container for the expansion panel.</td>
+<td>Required on summary container.</td>
+</tr>
+<tr>
+<td><code>mdl-expansion__header</code></td>
+<td>Defines the primary header for the summary.</td>
+<td>Required on the header container within the summary.</td>
+</tr>
+<tr>
+<td><code>mdl-expansion__subheader</code></td>
+<td>Defines the subheading for the summary.</td>
+<td>Optional on a node within the header container.</td>
+</tr>
+<tr>
+<td><code>mdl-expansion__secondary-header</code></td>
+<td>Defines auxiliary content for the summary.</td>
+<td>Optional on a node within the summary container.</td>
+</tr>
+<tr>
+<td><code>mdl-expansion__content</code></td>
+<td>Defines the container node for the content that is toggled.</td>
+<td>Required on container node after the summary.</td>
+</tr>
+<tr>
+<td><code>mdl-expansion__actions</code></td>
+<td>Defines the container node for the actions for any forms within the content.</td>
+<td>Optional on container within the content</td>
+</tr>
+<tr>
+<td><code>mdl-expansion__action</code></td>
+<td>Defines an action trigger to provide the appropriate margin.</td>
+<td>Optional on trigger within the actions.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="modifiers">Modifiers</h3>
+<p>There are no modifiers for the expansion panel.</p>
+
+
