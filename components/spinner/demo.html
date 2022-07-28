@@ -1,47 +1,67 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>spinner test</title>
 
-        <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>spinner test</title>
 
-    <!-- Page styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
-    <link rel="stylesheet" href="../../material.min.css">
-    <link rel="stylesheet" href="../../components/demos.css">
-    <script src="../../material.min.js"></script>
+  <!-- Fonts -->
+  <link
+    href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'
+    rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <!-- Page styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
+  <link rel="stylesheet" href="../../material.min.css">
+  <link rel="stylesheet" href="../../components/demos.css">
+  <script src="../../material.min.js"></script>
+
+  
+  <style>
+    body {
+      background-color: var(--md-sys-color-background);
+      color: var(--md-sys-color-on-background);
+    }
+
+    {
+      % include demo_css ignore missing %
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header class="demo-header">
+    <h1 class="demo-title">spinner</h1>
+    <div class="spacer"></div>
+    <material-theme-control></material-theme-control>
+  </header>
+
+  <div style="padding-top: 24px;">
     
-    <style>
-      
-    </style>
-
-  </head>
-  <body>
-
-    <div style="padding-top: 24px;">
-      
-        
+    
 <!-- MDL Spinner Component -->
 <div class="mdl-spinner mdl-js-spinner is-active"></div>
 
 <!-- MDL Spinner Component with Single Color -->
 <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
 
-      
-    </div>
-    <!-- Built with love using Material Design Lite -->
-
     
-    <script>
-      
-    </script>
-  </body>
+  </div>
+  <!-- Built with love using Material Design Lite -->
+
+  
+  <script>
+    
+  </script>
+
+
+  <script type="module" src="https://rodydavis.github.io/material-theme-control/material-theme-control.es.js"></script>
+</body>
+
 </html>
