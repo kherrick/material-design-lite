@@ -1,306 +1,438 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>Material Design Lite</title>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us" class="initial astro-WZWSAYSE">
 
-    <!-- Add to homescreen -->
-    <link rel="manifest" href="manifest.json">
+<head>
+	<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
 
-    <!-- Fallback to homescreen for Chrome <39 on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Material Design Lite">
-    <link rel="icon" sizes="192x192" href="../assets/android-desktop.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon" href="../assets/ios-desktop.png">
+<link rel="sitemap" href="/sitemap.xml">
 
-    <!-- TODO: Tile icon for Win8 (144x144 + tile color) -->
-    <!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png"> -->
-    <!-- <meta name="msapplication-TileColor" content="#3372DF"> -->
+<!-- Preload Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap" rel="stylesheet">
 
-    <meta name="theme-color" content="#263238">
+<!-- Scrollable a11y code helper -->
+<script src="/make-scrollable-code-focusable.js">
 
-    <link rel="shortcut icon" href="../assets/favicon.png">
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+</script>
 
-    <!-- Page styles -->
-    <link rel="stylesheet" href="../assets/prism-default.css">
-    <link rel="stylesheet" href="../material.min.css">
-    <link rel="stylesheet" href="../assets/main.css">
+<!-- This is intentionally inlined to avoid FOUC -->
+<script>
+	const root = document.documentElement;
+	const theme = localStorage.getItem("theme");
+	if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+		root.classList.add("theme-dark");
+	} else {
+		root.classList.remove("theme-dark");
+	}
+</script>
 
-    <!-- Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  </head>
-  <body class="faq">
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-  <script>
-    // if (document.location.hostname !== 'localhost' &&
-    //     document.location.hostname !== '127.0.0.1' &&
-    //     document.location.hostname.search('.corp.') === -1) {
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-25993200-9', 'auto');
-      // If a specific component page is loaded directly we'll attribute the
-      // page view to the specific component's page
-      if (window.location.pathname.indexOf('/components/') !== -1 &&
-          window.location.hash.indexOf('-section') !== -1) {
-        ga('send', 'pageview', '/components/' +
-            window.location.hash.split('#')[1].split('/')[0]);
-      } else {
-        ga('send', 'pageview');
-      }
-    // }
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEL60V1WM9" is:inline></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TEL60V1WM9');
+</script> -->
 
-    // Setup error tracking before anything else runs.
-  window.onerror = function(message, file, lineNumber, columnNumber, error) {
-    try {
-      if (error !== undefined) {
-        message = error.stack;
-      }
-       ga('send', 'event', 'error', file + ':' + lineNumber, String(message));
-    } catch (e) {
-      // no-op
-    }
-  };
-  </script>
-  <div class="image-preloader"></div>
-  <div class="docs-layout mdl-layout mdl-js-layout">
-    <header class="docs-layout-header mdl-layout__header">
-      <div class="mdl-layout__header-row">
-        <span class="docs-layout-title mdl-layout-title"><a href="../">Material<br>Design<br>Lite</a></span>
-      </div>
-      <div class="docs-navigation__container">
-        <nav class="docs-navigation mdl-navigation">
-          <a href="../index.html" class="mdl-navigation__link about">About</a>
-          <a href="../started/index.html" class="mdl-navigation__link started">Getting Started</a>
-          <a href="../templates/index.html" class="mdl-navigation__link templates">Templates</a>
-          <a href="../components/index.html" class="mdl-navigation__link components">Components</a>
-          <a href="../styles/index.html" class="mdl-navigation__link styles">Styles</a>
-          <a href="../customize/index.html" class="mdl-navigation__link customize">Customize</a>
-          <a href="../showcase/index.html" class="mdl-navigation__link showcase">Showcase</a>
-          <a href="../faq/index.html" class="mdl-navigation__link faq">FAQ</a>
-          <div class="spacer"></div>
-          <a href="https://github.com/google/material-design-lite" class="mdl-navigation__link mdl-navigation__link--icon github"><i class="material-icons">link</i><span>GitHub</span></a>
-          <a href="../started/index.html#download" class="mdl-navigation__link mdl-navigation__link--icon download">
-            <i class="material-icons">&#xE2C4;</i><span>Download</span>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--fab mdl-button--mini-fab mdl-color--lime-A200">
-              <i class="material-icons">&#xE2C4;</i>
-            </button>
-          </a>
-        </nav>
-      </div>
-      <i class="material-icons scrollindicator scrollindicator--right">&#xE315;</i>
-      <i class="material-icons scrollindicator scrollindicator--left">&#xE314;</i>
-    </header>
-    <main class="docs-layout-content mdl-layout__content mdl-color-text--grey-600">
-      <div class="content mdl-grid mdl-grid--no-spacing" id="content">
-        <div class="subpageheader mdl-cell--12-col">FAQ</div>
-        
+	<!-- Page Metadata --><link rel="canonical" href="https://getmdl.io/faq">
 
-<div class="docs-text-styling">
-  <section id="include">
-  <p><div class="docs-text-styling">
-  <section class="docs-toc">
-    <h3>Contents</h3>
-    <nav class="section-content">
-      <ul>
-        <li><a href="#where-should-i-use">Where should I use Material Design Lite (MDL)?</a></li>
-        <li><a href="#css-naming-conventions">What CSS naming conventions does MDL use?</a></li>
-        <li><a href="#progressive-enhancement">Does MDL support progressive enhancement?</a></li>
-        <li><a href="#browser-support">Which browsers does MDL support?</a></li>
-        <li><a href="#polymer">Does MDL play nicely with Polymer?</a></li>
-        <li><a href="#bootstrap">Is MDL comparable to Bootstrap?</a></li>
-        <li><a href="#existing-implementations">How does it compare to existing Material CSS implementations?</a></li>
-        <li><a href="#options-available">Should I use the minified, CDN or Sass versions of MDL?</a></li>
-        <li><a href="#official-cdn">What service does the official CDN use?</a></li>
-        <li><a href="#web-starter-kit">How does MDL relate to Web Starter Kit?</a></li>
-        <li><a href="#mdl-in-production">Do any Google properties use MDL in production?</a></li>
-        <li><a href="#mdl-showcase">Is there a showcase available of sites using MDL?</a></li>
-        <li><a href="#individual-components">Can I build or use individual MDL components (e.g a button)?</a></li>
-        <li><a href="#report-an-issue">How do I report a problem with MDL?</a></li>
-        <li><a href="#getting-help">Where can I get help with questions about using MDL?</a>
-        <li><a href="#slide-decks">Are there any presentations or slide-decks available on MDL?</a></li>
-        <li><a href="#new-components">Can I request or contribute components to MDL?</a></li>
-        <li><a href="#alternate-preprocessor">Will MDL support non-Sass preprocessors?</a></li>
-        <li><a href="#issue-updates">How do I keep updated with issues I&#39;m interested in?</a></li>
-      </ul>
-    </nav>
-  </section></p>
-<h2 id="where-should-i-use">Where should I use Material Design Lite (MDL)?</h2>
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="FAQ 🚀 Material Design Lite">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://getmdl.io/faq">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lh3.googleusercontent.com/duWOVI3UUvSetaNEnlx7ggDF5acg7ADmRCSVbWd4MOW8Bo0uPRBhClXhdadmfzqaJ-jeCh-MfS5hnXu7hu2NbrlMuqDabNlVdnoQVBfCU1JSs0miCHEn=w1200-rj">
+<meta property="og:image:alt" content="green and red color gradient">
+<meta name="description" property="og:description" content="Questions and answers about Material Design Lite.">
+<meta property="og:site_name" content="Material Design Lite">
 
-<p>If you’re interested in a <a href="https://www.google.com/design/spec/material-design/introduction.html">Material Design</a> experience using vanilla Web technologies like CSS, JavaScript and HTML, MDL might be a useful option to consider. We optimise for websites heavy on content, such as marketing pages, articles, blogs and general web content that isn’t particularly app-y.  If you just want to pick some colors, customise a template and ship a Material experience, we try to help make that process simpler.</p>
-<p>Whilst there exist several community-driven options for Material Design, our experience has shown that there are several gaps in the Material specification when it comes to the web. Rather than guessing how these gaps should be filled (something we know the community has struggled with), we’ve opted for a close collaboration with the Material Design team to provide a Material library that is both spec compatible for today and provides guidance on aspects of the spec still being evolved.</p>
-<h2 id="css-naming-conventions">What CSS naming conventions does MDL use?</h2>
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="materialdesign">
+<meta name="twitter:title" content="FAQ 🚀 Material Design Lite">
+<meta name="twitter:description" content="Questions and answers about Material Design Lite.">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/duWOVI3UUvSetaNEnlx7ggDF5acg7ADmRCSVbWd4MOW8Bo0uPRBhClXhdadmfzqaJ-jeCh-MfS5hnXu7hu2NbrlMuqDabNlVdnoQVBfCU1JSs0miCHEn=w1200-rj">
+<meta name="twitter:image:alt" content="green and red color gradient">
 
-<p>MDL was written using <a href="https://en.bem.info/method/">BEM</a>. BEM stands for Block, Element, Modifier. It is a method used to construct CSS class-names so they are consistent, isolated, and expressive. A few good resources for learning more about BEM methods are:</p>
-<ul>
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there's a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+	<title>FAQ 🎨 Material Design Lite</title>
+	
+<link rel="stylesheet" href="/assets/756e0ff1.3d38816d.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+/** Bundled JS generated from "@astrojs/lit/client-shim.js" */
+var N = Object.defineProperty;
+var i = (t, n) => () => (t && (n = t((t = 0))), n);
+var b = (t, n) => {
+	for (var a in n) N(t, a, { get: n[a], enumerable: !0 });
+};
+function s() {
+	if (d === void 0) {
+		let t = document.createElement('div');
+		(t.innerHTML = '<div><template shadowroot="open"></template></div>'),
+			(d = !!t.firstElementChild.shadowRoot);
+	}
+	return d;
+}
+var d,
+	m = i(() => {});
+var p,
+	c,
+	f,
+	u = i(() => {
+		(p = (t) => t.parentElement === null),
+			(c = (t) => t.tagName === 'TEMPLATE'),
+			(f = (t) => t.nodeType === Node.ELEMENT_NODE);
+	});
+var h,
+	E = i(() => {
+		m();
+		u();
+		h = (t) => {
+			var n;
+			if (s()) return;
+			let a = [],
+				e = t.firstElementChild;
+			for (; e !== t && e !== null; )
+				if (c(e)) a.push(e), (e = e.content);
+				else if (e.firstElementChild !== null) e = e.firstElementChild;
+				else if (f(e) && e.nextElementSibling !== null) e = e.nextElementSibling;
+				else {
+					let o;
+					for (; e !== t && e !== null; )
+						if (p(e)) {
+							o = a.pop();
+							let r = o.parentElement,
+								l = o.getAttribute('shadowroot');
+							if (((e = o), l === 'open' || l === 'closed')) {
+								let y = o.hasAttribute('shadowrootdelegatesfocus');
+								try {
+									r.attachShadow({ mode: l, delegatesFocus: y }).append(o.content);
+								} catch {}
+							} else o = void 0;
+						} else {
+							let r = e.nextElementSibling;
+							if (r != null) {
+								(e = r), o !== void 0 && o.parentElement.removeChild(o);
+								break;
+							}
+							let l =
+								(n = e.parentElement) === null || n === void 0 ? void 0 : n.nextElementSibling;
+							if (l != null) {
+								(e = l), o !== void 0 && o.parentElement.removeChild(o);
+								break;
+							}
+							(e = e.parentElement), o !== void 0 && (o.parentElement.removeChild(o), (o = void 0));
+						}
+				}
+		};
+	});
+var w = i(() => {
+	E();
+});
+var v = {};
+b(v, { hasNativeDeclarativeShadowRoots: () => s, hydrateShadowRoots: () => h });
+var S = i(() => {
+	m();
+	w();
+});
+async function g() {
+	let { hydrateShadowRoots: t } = await Promise.resolve().then(() => (S(), v));
+	window.addEventListener('DOMContentLoaded', () => t(document.body), { once: true });
+}
+var x = new DOMParser()
+	.parseFromString('<p><template shadowroot="open"></template></p>', 'text/html', {
+		includeShadowRoots: !0,
+	})
+	.querySelector('p');
+(!x || !x.shadowRoot) && g();
+</script></head>
+
+<body class="astro-WZWSAYSE">
+	<header class="astro-FN7PTC7H">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-DGYJY3T3"><span class="astro-DGYJY3T3">Skip to Content</span></a>
+
+
+	<nav class="nav-wrapper astro-FN7PTC7H" title="Top Navigation">
+		<div class="menu-toggle astro-FN7PTC7H">
+			<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="1UXIpB" component-url="/SidebarToggle.5770bf66.js" component-export="default" renderer-url="/client.0d4c82be.js" props="{&quot;class&quot;:[0,&quot;astro-FN7PTC7H&quot;]}" ssr="" client="idle" before-hydration-url="/chunks/astro_scripts/before-hydration.js.88d38c1c.js" opts="{&quot;name&quot;:&quot;SidebarToggle&quot;,&quot;value&quot;:true}" await-children=""><button type="button" aria-pressed="false" id="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="sr-only">Toggle sidebar</span></button></astro-island>
+		</div>
+		<div class="logo flex astro-FN7PTC7H">
+			<a href="/" class="astro-FN7PTC7H">
+				<svg class="logo" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<title>Material Design Lite</title>
+	<path d="M23 12C23 5.93 18.07 1 12 1C5.93 1 1 5.93 1 12C1 18.07 5.93 23 12 23C18.07 23 23 18.07 23 12ZM5 17.64C3.75 16.1 3 14.14 3 12C3 9.87 3.76 7.92 5 6.37V17.64ZM17.64 5H6.36C7.9 3.75 9.86 3 12 3C14.14 3 16.1 3.75 17.64 5ZM12 14.53L8.24 7H15.77L12 14.53ZM17 9V17H13L17 9ZM11 17H7V9L11 17ZM17.64 19C16.09 20.25 14.13 21 12 21C9.87 21 7.9 20.25 6.36 19H17.64ZM21 12C21 14.14 20.25 16.1 19 17.64V6.37C20.24 7.92 21 9.87 21 12Z" fill="var(--md-sys-color-on-background)"></path>
+</svg>
+				<h1 class="astro-FN7PTC7H">Material Design Lite</h1>
+			</a>
+		</div>
+		<div style="flex-grow: 1;" class="astro-FN7PTC7H"></div>
+		<material-theme-control class="astro-FN7PTC7H"></material-theme-control>
+	</nav>
+</header>
+
+<script type="module" src="https://rodydavis.github.io/material-theme-control/material-theme-control.es.js"></script>
+	<main class="layout astro-WZWSAYSE">
+		<aside id="grid-left" class="grid-sidebar astro-WZWSAYSE" title="Site Navigation">
+			<nav aria-labelledby="grid-left" class="astro-EWG4B7OK">
+	<ul class="nav-groups astro-EWG4B7OK">
+		<li class="astro-EWG4B7OK">
+			<div class="nav-group astro-EWG4B7OK">
+				<h2 class="nav-group-title astro-EWG4B7OK"></h2>
+				<ul class="astro-EWG4B7OK">
+					
+				</ul>
+			</div>
+		</li><li class="astro-EWG4B7OK">
+			<div class="nav-group astro-EWG4B7OK">
+				<h2 class="nav-group-title astro-EWG4B7OK">Overview</h2>
+				<ul class="astro-EWG4B7OK">
+					<li class="nav-link astro-EWG4B7OK">
+						<a href="/introduction" aria-current="false" class="astro-EWG4B7OK">
+							Introduction
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/typography" aria-current="false" class="astro-EWG4B7OK">
+							Typography
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/color" aria-current="false" class="astro-EWG4B7OK">
+							Color
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/icons" aria-current="false" class="astro-EWG4B7OK">
+							Icons
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/shape" aria-current="false" class="astro-EWG4B7OK">
+							Shape
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/faq" aria-current="page" class="astro-EWG4B7OK">
+							FAQ
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li><li class="astro-EWG4B7OK">
+			<div class="nav-group astro-EWG4B7OK">
+				<h2 class="nav-group-title astro-EWG4B7OK">Components</h2>
+				<ul class="astro-EWG4B7OK">
+					<li class="nav-link astro-EWG4B7OK">
+						<a href="/components/autocomplete" aria-current="false" class="astro-EWG4B7OK">
+							Autocomplete
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/badge" aria-current="false" class="astro-EWG4B7OK">
+							Badge
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/banner" aria-current="false" class="astro-EWG4B7OK">
+							Banner
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/button" aria-current="false" class="astro-EWG4B7OK">
+							Button
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/bottom-app-bar" aria-current="false" class="astro-EWG4B7OK">
+							Bottom app bar
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/bottom-sheet" aria-current="false" class="astro-EWG4B7OK">
+							Bottom sheet
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/card" aria-current="false" class="astro-EWG4B7OK">
+							Card
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/chip" aria-current="false" class="astro-EWG4B7OK">
+							Chip
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/checkbox" aria-current="false" class="astro-EWG4B7OK">
+							Checkbox
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/data-table" aria-current="false" class="astro-EWG4B7OK">
+							Data Table
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/data-table" aria-current="false" class="astro-EWG4B7OK">
+							Divider
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/divider" aria-current="false" class="astro-EWG4B7OK">
+							Date picker
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/dialog" aria-current="false" class="astro-EWG4B7OK">
+							Dialog
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/expansion-panel" aria-current="false" class="astro-EWG4B7OK">
+							Expansion Panel
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/image-list" aria-current="false" class="astro-EWG4B7OK">
+							Image list
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/icon" aria-current="false" class="astro-EWG4B7OK">
+							Icon
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/fab" aria-current="false" class="astro-EWG4B7OK">
+							Floating action button
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/grid-list" aria-current="false" class="astro-EWG4B7OK">
+							Grid list
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/list" aria-current="false" class="astro-EWG4B7OK">
+							List
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/menu" aria-current="false" class="astro-EWG4B7OK">
+							Menu
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/progress-indicator" aria-current="false" class="astro-EWG4B7OK">
+							Progress indicator
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/navigation-bar" aria-current="false" class="astro-EWG4B7OK">
+							Navigation bar
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/navigation-drawer" aria-current="false" class="astro-EWG4B7OK">
+							Navigation drawer
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/navigation-rail" aria-current="false" class="astro-EWG4B7OK">
+							Navigation rail
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/radio-button" aria-current="false" class="astro-EWG4B7OK">
+							Radio button
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/ripple" aria-current="false" class="astro-EWG4B7OK">
+							Ripple
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/slide" aria-current="false" class="astro-EWG4B7OK">
+							Slider
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/select" aria-current="false" class="astro-EWG4B7OK">
+							Select
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/segmented" aria-current="false" class="astro-EWG4B7OK">
+							Segmented
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/stepper" aria-current="false" class="astro-EWG4B7OK">
+							Stepper
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/sort-header" aria-current="false" class="astro-EWG4B7OK">
+							Sort header
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/snackbar" aria-current="false" class="astro-EWG4B7OK">
+							Snackbar
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/switch" aria-current="false" class="astro-EWG4B7OK">
+							Switch
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/text-field" aria-current="false" class="astro-EWG4B7OK">
+							Text field
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/tree" aria-current="false" class="astro-EWG4B7OK">
+							Tree
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/tooltip" aria-current="false" class="astro-EWG4B7OK">
+							Tooltip
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/tab" aria-current="false" class="astro-EWG4B7OK">
+							Tab
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/top-app-bar" aria-current="false" class="astro-EWG4B7OK">
+							Top app bar
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</nav>
+
+<script>
+	window.addEventListener("DOMContentLoaded", (event) => {
+		var target = document.querySelector('[aria-current="page"]');
+		if (target && target.offsetTop > window.innerHeight - 100) {
+			document.querySelector(".nav-groups").scrollTop = target.offsetTop;
+		}
+	});
+</script>
+		</aside>
+		<div id="grid-main" class="astro-WZWSAYSE">
+			<article id="article" class="content astro-LVQNHYOT">
+	<section class="main-section astro-LVQNHYOT">
+		<h1 class="content-title astro-LVQNHYOT" id="overview">FAQ</h1>
+		<nav class="block sm:hidden astro-LVQNHYOT">
+			<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="ZL7wy6" component-url="/TableOfContents.9c3048f8.js" component-export="default" renderer-url="/client.0d4c82be.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;where-should-i-use-material-design-lite-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Where should I use Material Design Lite (MDL)?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;what-css-naming-conventions-does-mdl-use\&quot;],\&quot;text\&quot;:[0,\&quot;What CSS naming conventions does MDL use?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;does-mdl-support-progressive-enhancement\&quot;],\&quot;text\&quot;:[0,\&quot;Does MDL support progressive enhancement?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;which-browsers-does-mdl-support\&quot;],\&quot;text\&quot;:[0,\&quot;Which browsers does MDL support?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;does-mdl-play-nicely-with-polymer-is-it-a-replacement-for-the-paper-elements\&quot;],\&quot;text\&quot;:[0,\&quot;Does MDL play nicely with Polymer? Is it a replacement for the Paper elements?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;is-mdl-comparable-to-bootstrap\&quot;],\&quot;text\&quot;:[0,\&quot;Is MDL comparable to Bootstrap?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;how-does-it-compare-to-existing-material-css-implementations\&quot;],\&quot;text\&quot;:[0,\&quot;How does it compare to existing Material CSS implementations?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;should-i-use-the-minified-cdn-or-sass-versions-of-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Should I use the minified, CDN or Sass versions of MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;what-service-does-the-official-cdn-use\&quot;],\&quot;text\&quot;:[0,\&quot;What service does the official CDN use?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;how-does-mdl-relate-to-web-starter-kit\&quot;],\&quot;text\&quot;:[0,\&quot;How does MDL relate to Web Starter Kit?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;do-any-google-properties-use-mdl-in-production\&quot;],\&quot;text\&quot;:[0,\&quot;Do any Google properties use MDL in production?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;is-there-a-showcase-available-of-sites-using-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Is there a showcase available of sites using MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;can-i-build-or-use-individual-mdl-components-eg-a-button\&quot;],\&quot;text\&quot;:[0,\&quot;Can I build or use individual MDL components (e.g a button)?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;how-do-i-report-an-issue-with-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;How do I report an issue with MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;where-can-i-get-help-with-questions-about-using-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Where can I get help with questions about using MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;are-there-any-presentations-or-slide-decks-available-on-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Are there any presentations or slide-decks available on MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;can-i-request-or-contribute-components-to-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Can I request or contribute components to MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;will-mdl-support-non-sass-preprocessors\&quot;],\&quot;text\&quot;:[0,\&quot;Will MDL support non-Sass preprocessors?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;how-do-i-keep-updated-with-issues-im-interested-in\&quot;],\&quot;text\&quot;:[0,\&quot;How do I keep updated with issues I’m interested in?\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-LVQNHYOT&quot;]}" ssr="" client="media" before-hydration-url="/chunks/astro_scripts/before-hydration.js.88d38c1c.js" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 50em)&quot;}" await-children=""><h2 class="heading">On this page</h2><ul><li class="heading-link depth-2"><a href="#overview">Overview</a></li><li class="heading-link depth-2"><a href="#where-should-i-use-material-design-lite-mdl">Where should I use Material Design Lite (MDL)?</a></li><li class="heading-link depth-2"><a href="#what-css-naming-conventions-does-mdl-use">What CSS naming conventions does MDL use?</a></li><li class="heading-link depth-2"><a href="#does-mdl-support-progressive-enhancement">Does MDL support progressive enhancement?</a></li><li class="heading-link depth-2"><a href="#which-browsers-does-mdl-support">Which browsers does MDL support?</a></li><li class="heading-link depth-2"><a href="#does-mdl-play-nicely-with-polymer-is-it-a-replacement-for-the-paper-elements">Does MDL play nicely with Polymer? Is it a replacement for the Paper elements?</a></li><li class="heading-link depth-2"><a href="#is-mdl-comparable-to-bootstrap">Is MDL comparable to Bootstrap?</a></li><li class="heading-link depth-2"><a href="#how-does-it-compare-to-existing-material-css-implementations">How does it compare to existing Material CSS implementations?</a></li><li class="heading-link depth-2"><a href="#should-i-use-the-minified-cdn-or-sass-versions-of-mdl">Should I use the minified, CDN or Sass versions of MDL?</a></li><li class="heading-link depth-2"><a href="#what-service-does-the-official-cdn-use">What service does the official CDN use?</a></li><li class="heading-link depth-2"><a href="#how-does-mdl-relate-to-web-starter-kit">How does MDL relate to Web Starter Kit?</a></li><li class="heading-link depth-2"><a href="#do-any-google-properties-use-mdl-in-production">Do any Google properties use MDL in production?</a></li><li class="heading-link depth-2"><a href="#is-there-a-showcase-available-of-sites-using-mdl">Is there a showcase available of sites using MDL?</a></li><li class="heading-link depth-2"><a href="#can-i-build-or-use-individual-mdl-components-eg-a-button">Can I build or use individual MDL components (e.g a button)?</a></li><li class="heading-link depth-2"><a href="#how-do-i-report-an-issue-with-mdl">How do I report an issue with MDL?</a></li><li class="heading-link depth-2"><a href="#where-can-i-get-help-with-questions-about-using-mdl">Where can I get help with questions about using MDL?</a></li><li class="heading-link depth-2"><a href="#are-there-any-presentations-or-slide-decks-available-on-mdl">Are there any presentations or slide-decks available on MDL?</a></li><li class="heading-link depth-2"><a href="#can-i-request-or-contribute-components-to-mdl">Can I request or contribute components to MDL?</a></li><li class="heading-link depth-2"><a href="#will-mdl-support-non-sass-preprocessors">Will MDL support non-Sass preprocessors?</a></li><li class="heading-link depth-2"><a href="#how-do-i-keep-updated-with-issues-im-interested-in">How do I keep updated with issues I’m interested in?</a></li></ul></astro-island>
+		</nav>
+		<h2 id="where-should-i-use-material-design-lite-mdl">Where should I use Material Design Lite (MDL)?</h2><p>If you’re interested in a <a href="https://www.google.com/design/spec/material-design/introduction.html">Material Design</a> experience using vanilla Web technologies like CSS, JavaScript and HTML, MDL might be a useful option to consider. We optimise for websites heavy on content, such as marketing pages, articles, blogs and general web content that isn’t particularly app-y. If you just want to pick some colors, customise a template and ship a Material experience, we try to help make that process simpler.</p><p>Whilst there exist several community-driven options for Material Design, our experience has shown that there are several gaps in the Material specification when it comes to the web. Rather than guessing how these gaps should be filled (something we know the community has struggled with), we’ve opted for a close collaboration with the Material Design team to provide a Material library that is both spec compatible for today and provides guidance on aspects of the spec still being evolved.</p><h2 id="what-css-naming-conventions-does-mdl-use">What CSS naming conventions does MDL use?</h2><p>MDL was written using <a href="https://en.bem.info/method/">BEM</a>. BEM stands for Block, Element, Modifier. It is a method used to construct CSS class-names so they are consistent, isolated, and expressive. A few good resources for learning more about BEM methods are:</p><ul>
 <li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">CSSWizardry</a></li>
 <li><a href="https://css-tricks.com/bem-101/">CSS-Tricks</a></li>
 <li><a href="http://www.smashingmagazine.com/2012/04/16/a-new-front-end-methodology-bem/">Smashing Magazine</a></li>
+</ul><p>These are great resources that simplify the data needed to understand BEM. If you want to read the methodology from the inventors, <a href="https://en.bem.info/">Yandex provides the resource</a>. This reference goes way beyond just the CSS and into the full JavaScript setup they use as well.</p><p>Our <a href="https://github.com/google/material-design-lite/wiki/Understanding-BEM">wiki</a> includes a section on the namespacing used for MDL specifically.</p><h2 id="does-mdl-support-progressive-enhancement">Does MDL support progressive enhancement?</h2><p>MDL’s components were designed from the ground up with progressive enhancement in mind. We attempt to build on native HTML elements as much as possible, relying on JavaScript where absolutely necessary for ‘enhancements’.</p><p>One example of this is our ‘Text only’ Material Design template. Switching JavaScript off in Chrome DevTools, the page still renders CSS fine:</p><p><img src="/assets/template-preview.png" alt="A preview of a template rendering in an older version of IE"></p><p>This allows us to render important content first and then ‘enhance’ the page with things like Material Design button ripples and pop-out menu components.</p><p>MDL will degrade to a no-JavaScript experience on IE9, though you can pull in polyfills for an enhanced experience. If components require JavaScript to function, such as Layout, these will otherwise need to be planned for in development. IE10+ and evergreen browsers are fully supported. For more details on our browser support, see ‘Which browsers does MDL support?’.</p><p>Note: the MDL site itself attempts to use progressive enhancement where possible. We do however have aspects of the site (e.g our component page) that rely more heavily on JS. The MDL Templates and Components otherwise try to render as well as they can with JS off.</p><h2 id="which-browsers-does-mdl-support">Which browsers does MDL support?</h2><p>The complete MDL experience should work in the last two versions of all evergreen browsers, whilst we gracefully degrade to CSS-only in browsers like IE9 that don’t pass our <a href="https://github.com/google/material-design-lite/blob/9e6c6ec9237715bfa04b307f786e9073f943e6be/src/mdlComponentHandler.js#L333">Cutting-the-mustard</a> test.</p><p>Our <a href="https://github.com/google/material-design-lite/#browser-support">browser compatibility matrix</a> has the most up to date information on the browsers we officially support. For components, at minimum we require support for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">classList</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a>, which can be <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">polyfilled</a> as needed. Our Templates will work in IE10+, primarily due to our use of Flexbox.</p><p>The polyfills that we’re currently using for the MDL site to improve support in oldIE are the following:</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #8B949E">&lt;!--[if IE]&gt;</span></span>
+<span class="line"><span style="color: #8B949E">  &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.2.0/es5-shim.min.js&quot;&gt;&lt;/script&gt;</span></span>
+<span class="line"><span style="color: #8B949E">  &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js&quot;&gt;&lt;/script&gt;</span></span>
+<span class="line"><span style="color: #8B949E">  &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js&quot;&gt;&lt;/script&gt;</span></span>
+<span class="line"><span style="color: #8B949E">&lt;![endif]--&gt;</span></span></code></pre><p>IE10 standards mode <a href="http://bit.ly/1dypChT">removes</a> support for conditional comments, so the above will only get interpreted by older versions of IE, such as IE9.</p><p>We do not officially support IE8. That said, some components will degrade using the CSS-only (or native HTML element) experience there better than others. For example:</p><p><strong>Buttons</strong></p><img alt="Buttons rendering in IE8" src="/assets/button_degradation.png"><p><strong>Tables</strong></p><img alt="Tables gracefully degrading in IE8" src="/assets/table_degradation.png"><p><strong>Sliders (degrade to input fields)</strong></p><img alt="Sliders degrading in IE8 to input fields" src="/assets/sliders_degradation.png"><h2 id="does-mdl-play-nicely-with-polymer-is-it-a-replacement-for-the-paper-elements">Does MDL play nicely with Polymer? Is it a replacement for the Paper elements?</h2><p>MDL focuses on delivering an experience that is optimized for static content sites, like blogs, marketing pages and more traditional text-based web pages.</p><p>The <a href="https://elements.polymer-project.org/browse?package=paper-elements">Paper</a> elements built with <a href="http://polymer-project.org">Polymer</a> are fully encapsulated components that can be used individually or composed together to create a material design-style site, and support more advanced user interaction.</p><p>That said, MDL can be used alongside the Polymer element counterparts. Polymer uses the power of Web Components to encapsulate the designs used for those components. MDL does not affect the styling within custom components.</p><h2 id="is-mdl-comparable-to-bootstrap">Is MDL comparable to Bootstrap?</h2><p><em>If we’re using it instead of Bootstrap, can we expect the same level of component styling?</em></p><p>Material Design can replace many parts of Bootstrap. However, it does not intend to feature-match everything Bootstrap offers. Instead MDL intends to implement the components specified by the Material Design specification. This allows it to provide the most comprehensive and accurate solution available.</p><h2 id="how-does-it-compare-to-existing-material-css-implementations">How does it compare to existing Material CSS implementations?</h2><p><em>Materialize, Material Bootstrap, etc</em></p><p>We think the community does a great job offering their own take on how Material Design should be implemented for CSS libraries.</p><p>That said, the large, diverse number of implementations available are often quite liberal with their interpretation of the spec (not their fault!) and their opinions don’t always reflect what the Material Design team would consider ‘correct’. MDL was developed in close collaboration with the Material Design and Chrome UX teams and undergoes regular reviews for spec compliance. When we run into an area of the spec that isn’t yet fully fleshed out, MDL is able to offer reviewed opinions on how these should be solved in a way that tries to stay true to Material Design.</p><h2 id="should-i-use-the-minified-cdn-or-sass-versions-of-mdl">Should I use the minified, CDN or Sass versions of MDL?</h2><p><em>Should I build my own version or download the minified version or simply refer to CDN objects?</em></p><p>**Minified: **If it’s your first time using MDL, we recommend downloading one of the default packages from the ‘Getting Started’ page that include a minified version of our CSS/JS and optionally our pre-made Templates.</p><p>**CDN: **If you’re just prototyping or want to avoid hosting your own copy of the MDL CSS and JS files, you can use our CDN to pull down a heavily edge-cached version.</p><p>**Customiser: **If you’re creating a new site with MDL and are using a custom color scheme, we recommend downloading the default package then generating a custom build using the Customiser tool. You can use this to override the material.min.css file for your own needs.</p><p>**Sass: **If you would prefer to go all in, you can get the Sass version of MDL, which includes our original sources, docs and templates. This version allows maximum customisation using CSS variables and the rest of the Sass goodness you’re used to.</p><h2 id="what-service-does-the-official-cdn-use">What service does the official CDN use?</h2><p>The official CDN is hosted using <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p><h2 id="how-does-mdl-relate-to-web-starter-kit">How does MDL relate to Web Starter Kit?</h2><p>MDL is an evolutionary step from the styleguide provided in Web Starter Kit. The more <a href="https://developers.google.com/web/tools/starter-kit/">Web Starter Kit</a> was used, the more it became clear that many developers simply wanted Material Design in their sites.</p><p>The WSK Styleguide also did not align to Material Design fully, it was simply based on the idea. From the WSK project, MDL was born to try and fill this need for developers. In the process making the implementation as faithful as possible to the specification.</p><h2 id="do-any-google-properties-use-mdl-in-production">Do any Google properties use MDL in production?</h2><p>MDL is used in production by a few different Google properties. These use an older, incomplete version but demonstrate what deployed experiences can look like. Examples include:</p><p>The <a href="https://developers.google.com/mobile/add">Google Services</a> site:</p><p><img src="/assets/google-services.png" alt="Google Services site screenshot"></p><p><a href="http://www.richmediagallery.com/">RichMediaGallery</a> by DoubleClick:</p><p><img src="/assets/rich-media-gallery.png" alt="RichMediaGallery screenshot"></p><p>and is being used by many other teams on upcoming projects, including Google Shopping.</p><h2 id="is-there-a-showcase-available-of-sites-using-mdl">Is there a showcase available of sites using MDL?</h2><p>See the <a href="/showcase/">Showcase</a> for an early list of Google sites using MDL in production.</p><p>To request your site be added, please file a <a href="https://github.com/Google/material-design-lite/issues/new?title=Site%20Showcase%20Request&body=Please%20include:%0A*%20Description%0A*%20Primary%20Link%0A*%20Screenshot">new issue</a> on our GitHub issue tracker. The issue should include a link, a description of the site and a suggested screenshot.</p><p>We hope to add a properly polished showcase to the site in the near future.</p><h2 id="can-i-build-or-use-individual-mdl-components-eg-a-button">Can I build or use individual MDL components (e.g a button)?</h2><p>For V1 of MDL we are focused on the use-case of folks who are likely to need a few different components on their page and will want to include most of the MDL library. This means that support and docs around just plucking single components on their own is minimal.</p><p>That said, if you need to generate a build using just a single (or smaller number of) components, you will need to use Gulp with our Sass build. You can <a href="https://github.com/google/material-design-lite/blob/master/src/material-design-lite.scss">comment out</a> those components you don’t need in material-design-lite.scss, <a href="https://github.com/google/material-design-lite/blob/master/gulpfile.js#L191">comment out</a> the scripts you don’t need in the Gulpfile and then run <code>gulp</code> to create your build.</p><p>We have talked about offering up components in a more modular fashion but will be exploring this in the post V1 timeline.</p><h2 id="how-do-i-report-an-issue-with-mdl">How do I report an issue with MDL?</h2><p>Please let us know about any problems by opening an issue on our <a href="https://github.com/google/material-design-lite/issues">GitHub repo</a>.</p><h2 id="where-can-i-get-help-with-questions-about-using-mdl">Where can I get help with questions about using MDL?</h2><p>We encourage the MDL user and developer community to ask questions, and help answer questions, on <a href="http://stackoverflow.com">Stack Overflow</a>, using the <code>Material-Design-Lite</code> tag.</p><h2 id="are-there-any-presentations-or-slide-decks-available-on-mdl">Are there any presentations or slide-decks available on MDL?</h2><p>We did a preview talk at Google I/O 2015 on MDL and the slides for that talk can be found on <a href="https://speakerdeck.com/gauntface/material-design-lite-preview">SpeakerDeck</a>.</p><h2 id="can-i-request-or-contribute-components-to-mdl">Can I request or contribute components to MDL?</h2><p>Sure! There may be components or templates you would like to see implemented in MDL that we don’t yet provide. Please feel free to propose them on the <a href="https://github.com/Google/material-design-lite/issues/new?title=%5BComponent%20Request%5D%20%7BComponent%7D&body=Please%20include:%0A*%20Description%0A*%20Material%20Design%20Spec%20link%0A*%20Use%20Case%28s%29">Issue Tracker</a>. While we can’t guarantee we’ll be able to implement them all, we will consider requests and review them at regular intervals.</p><h2 id="will-mdl-support-non-sass-preprocessors">Will MDL support non-Sass preprocessors?</h2><p><em>Stylus, Less, PostCSS, etc.</em></p><p>MDL is implemented using Sass and there are no current plans to change this. If you wish to maintain a port to another preprocessor, you are more than welcome to.</p><h2 id="how-do-i-keep-updated-with-issues-im-interested-in">How do I keep updated with issues I’m interested in?</h2><p>Watching the whole repository can introduce a lot of extra noise in your stream. To keep updated with just issues you are interested in you only need to subscribe to that issue. This is done on the issue page by clicking the “Subscribe” button in the right hand sidebar.</p><img alt="Subscribing to a single issue" src="/assets/faq/subscribe-single-issue.png">
+	</section>
+	<nav class="block sm:hidden astro-LVQNHYOT">
+		
+<ul class="astro-QE5KYOPB">
+	
+	
 </ul>
-<p>These are great resources that simplify the data needed to understand BEM. If you want to read the methodology from the inventors, <a href="https://en.bem.info/">Yandex provides the resource</a>. This reference goes way beyond just the CSS and into the full JavaScript setup they use as well.</p>
-<p>Our <a href="https://github.com/google/material-design-lite/wiki/Understanding-BEM">wiki</a> includes a section on the namespacing used for MDL specifically.</p>
-<h2 id="progressive-enhancement">Does MDL support progressive enhancement?</h2>
-
-<p>MDL’s components were designed from the ground up with progressive enhancement in mind. We attempt to build on native HTML elements as much as possible, relying on JavaScript where absolutely necessary for ‘enhancements’.</p>
-<p>One example of this is our ‘Text only’ Material Design template. Switching JavaScript off in Chrome DevTools, the page still renders CSS fine:</p>
-<p><img src="../assets/template-preview.png" alt="A preview of a template rendering in an older version of IE"></p>
-<p>This allows us to render important content first and then ‘enhance’ the page with things like Material Design button ripples and pop-out menu components.</p>
-<p>MDL will degrade to a no-JavaScript experience on IE9, though you can pull in polyfills for an enhanced experience. If components require JavaScript to function, such as Layout, these will otherwise need to be planned for in development. IE10+ and evergreen browsers are fully supported. For more details on our browser support, see ‘Which browsers does MDL support?’.</p>
-<p>Note: the MDL site itself attempts to use progressive enhancement where possible. We do however have aspects of the site (e.g our component page) that rely more heavily on JS. The MDL Templates and Components otherwise try to render as well as they can with JS off.</p>
-<h2 id="browser-support">Which browsers does MDL support?</h2>
-
-<p>The complete MDL experience should work in the last two versions of all evergreen browsers, whilst we gracefully degrade to CSS-only in browsers like IE9 that don’t pass our <a href="https://github.com/google/material-design-lite/blob/9e6c6ec9237715bfa04b307f786e9073f943e6be/src/mdlComponentHandler.js#L333">Cutting-the-mustard</a> test.</p>
-<p>Our <a href="https://github.com/google/material-design-lite/#browser-support">browser compatibility matrix</a> has the most up to date information on the browsers we officially support. For components, at minimum we require support for <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">querySelector</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">classList</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a>, which can be <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">polyfilled</a> as needed. Our Templates will work in IE10+, primarily due to our use of Flexbox.</p>
-<p>The polyfills that we’re currently using for the MDL site to improve support in oldIE are the following:</p>
-<pre><code class="language-markup">&lt;!--[if IE]&gt;
-&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.2.0/es5-shim.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js&quot;&gt;&lt;/script&gt;
-&lt;![endif]--&gt;
-</code></pre>
-<p>IE10 standards mode <a href="http://bit.ly/1dypChT">removes</a> support for conditional comments, so the above will only get interpreted by older versions of IE, such as IE9.</p>
-<p>We do not officially support IE8. That said, some components will degrade using the CSS-only (or native HTML element) experience there better than others. For example:</p>
-<p><strong>Buttons</strong></p>
-<p><img alt="Buttons rendering in IE8" src="../assets/button_degradation.png"></p>
-<p><strong>Tables</strong></p>
-<p><img alt="Tables gracefully degrading in IE8" src="../assets/table_degradation.png"></p>
-<p><strong>Sliders (degrade to input fields)</strong></p>
-<p><img alt="Sliders degrading in IE8 to input fields" src="../assets/sliders_degradation.png"></p>
-<h2 id="polymer">Does MDL play nicely with Polymer? Is it a replacement for the Paper elements?</h2>
-
-<p>MDL focuses on delivering an experience that is optimised for static content sites, like blogs, marketing pages and more traditional text-based web pages.</p>
-<p>The <a href="https://elements.polymer-project.org/browse?package=paper-elements">Paper</a> elements built with <a href="http://polymer-project.org">Polymer</a> are fully encapsulated components that can be used individually or composed together to create a material design-style site, and support more advanced user interaction.</p>
-<p>That said, MDL can be used alongside the Polymer element counterparts. Polymer uses the power of Web Components to encapsulate the designs used for those components. MDL does not affect the styling within custom components.</p>
-<h2 id="bootstrap">Is MDL comparable to Bootstrap?</h2>
-
-<p><em>If we&#39;re using it instead of Bootstrap, can we expect the same level of component styling?</em></p>
-<p>Material Design can replace many parts of Bootstrap. However, it does not intend to feature-match everything Bootstrap offers. Instead MDL intends to implement the components specified by the Material Design specification. This allows it to provide the most comprehensive and accurate solution available.</p>
-<h2 id="existing-implementations">How does it compare to existing Material CSS implementations?</h2>
-
-<p><em>Materialize, Material Bootstrap, etc</em></p>
-<p>We think the community does a great job offering their own take on how Material Design should be implemented for CSS libraries.</p>
-<p>That said, the large, diverse number of implementations available are often quite liberal with their interpretation of the spec (not their fault!) and their opinions don’t always reflect what the Material Design team would consider ‘correct’. MDL was developed in close collaboration with the Material Design and Chrome UX teams and undergoes regular reviews for spec compliance. When we run into an area of the spec that isn’t yet fully fleshed out, MDL is able to offer reviewed opinions on how these should be solved in a way that tries to stay true to Material Design.</p>
-<h2 id="options-available">Should I use the minified, CDN or Sass versions of MDL?</h2>
-
-<p><em>Should I build my own version or download the minified version or simply refer to CDN objects?</em></p>
-<p><strong>Minified: </strong>If it’s your first time using MDL, we recommend downloading one of the default packages from the ‘Getting Started’ page that include a minified version of our CSS/JS and optionally our pre-made Templates.</p>
-<p><strong>CDN: </strong>If you’re just prototyping or want to avoid hosting your own copy of the MDL CSS and JS files, you can use our CDN to pull down a heavily edge-cached version.</p>
-<p><strong>Customiser: </strong>If you’re creating a new site with MDL and are using a custom color scheme, we recommend downloading the default package then generating a custom build using the Customiser tool. You can use this to override the material.min.css file for your own needs.</p>
-<p><strong>Sass: </strong>If you would prefer to go all in, you can get the Sass version of MDL, which includes our original sources, docs and templates. This version allows maximum customisation using CSS variables and the rest of the Sass goodness you’re used to.</p>
-<h2 id="official-cdn">What service does the official CDN use?</h2>
-
-<p>The official CDN is hosted using <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>.</p>
-<h2 id="web-starter-kit">How does MDL relate to Web Starter Kit?</h2>
-
-<p>MDL is an evolutionary step from the styleguide provided in Web Starter Kit. The more <a href="https://developers.google.com/web/tools/starter-kit/">Web Starter Kit</a> was used, the more it became clear that many developers simply wanted Material Design in their sites.</p>
-<p>The WSK Styleguide also did not align to Material Design fully, it was simply based on the idea. From the WSK project, MDL was born to try and fill this need for developers. In the process making the implementation as faithful as possible to the specification.</p>
-<h2 id="mdl-in-production">Do any Google properties use MDL in production?</h2>
-
-<p>MDL is used in production by a few different Google properties. These use an older, incomplete version but demonstrate what deployed experiences can look like. Examples include:</p>
-<p>The <a href="https://developers.google.com/mobile/add">Google Services</a> site:</p>
-<p><img src="../assets/google-services.png" alt="Google Services site screenshot"></p>
-<p><a href="http://www.richmediagallery.com/">RichMediaGallery</a> by DoubleClick:</p>
-<p><img src="../assets/rich-media-gallery.png" alt="RichMediaGallery screenshot"></p>
-<p>and is being used by many other teams on upcoming projects, including Google Shopping.</p>
-<h2 id="mdl-showcase">Is there a showcase available of sites using MDL?</h2>
-
-<p>See the <a href="/showcase/">Showcase</a> for an early list of Google sites using MDL in production. </p>
-<p>To request your site be added, please file a <a href="https://github.com/Google/material-design-lite/issues/new?title=Site%20Showcase%20Request&amp;body=Please%20include:%0A*%20Description%0A*%20Primary%20Link%0A*%20Screenshot">new issue</a> on our GitHub issue tracker. The issue should include a link, a description of the site and a suggested screenshot.</p>
-<p>We hope to add a properly polished showcase to the site in the near future.</p>
-<h2 id="individual-components">Can I build or use individual MDL components (e.g a button)?</h2>
-
-<p>For V1 of MDL we are focused on the use-case of folks who are likely to need a few different components on their page and will want to include most of the MDL library. This means that support and docs around just plucking single components on their own is minimal.</p>
-<p>That said, if you need to generate a build using just a single (or smaller number of) components, you will need to use Gulp with our Sass build. You can <a href="https://github.com/google/material-design-lite/blob/master/src/material-design-lite.scss">comment out</a> those components you don’t need in material-design-lite.scss, <a href="https://github.com/google/material-design-lite/blob/master/gulpfile.js#L191">comment out</a> the scripts you don’t need in the Gulpfile and then run <code>gulp</code> to create your build.</p>
-<p>We have talked about offering up components in a more modular fashion but will be exploring this in the post V1 timeline.</p>
-<h2 id="report-an-issue">How do I report an issue with MDL?</h2>
-
-<p>Please let us know about any problems by opening an issue on our <a href="https://github.com/google/material-design-lite/issues">GitHub repo</a>.</p>
-<h2 id="getting-help">Where can I get help with questions about using MDL?</h2>
-
-<p>We encourage the MDL user and developer community to ask questions, and help answer questions, on <a href="http://stackoverflow.com">Stack Overflow</a>, using the <code>Material-Design-Lite</code> tag.</p>
-<h2 id="slide-decks">Are there any presentations or slide-decks available on MDL?</h2>
-
-<p>We did a preview talk at Google I/O 2015 on MDL and the slides for that talk can be found on <a href="https://speakerdeck.com/gauntface/material-design-lite-preview">SpeakerDeck</a>.</p>
-<h2 id="new-components">Can I request or contribute components to MDL?</h2>
-
-<p>Sure! There may be components or templates you would like to see implemented in MDL that we don&#39;t yet provide. Please feel free to propose them on the <a href="https://github.com/Google/material-design-lite/issues/new?title=%5BComponent%20Request%5D%20%7BComponent%7D&body=Please%20include:%0A*%20Description%0A*%20Material%20Design%20Spec%20link%0A*%20Use%20Case%28s%29">Issue Tracker</a>. While we can&#39;t guarantee we&#39;ll be able to implement them all, we will consider requests and review them at regular intervals.</p>
-<h2 id="alternate-preprocessor">Will MDL support non-Sass preprocessors?</h2>
-
-<p><em>Stylus, Less, PostCSS, etc.</em></p>
-<p>MDL is implemented using Sass and there are no current plans to change this. If you wish to maintain a port to another preprocessor, you are more than welcome to.</p>
-<h2 id="issue-updates">How do I keep updated with issues I&#39;m interested in?</h2>
-
-<p>Watching the whole repository can introduce a lot of extra noise in your stream. To keep updated with just issues you are interested in you only need to subscribe to that issue. This is done on the issue page by clicking the &quot;Subscribe&quot; button in the right hand sidebar.</p>
-<p><img alt="Subscribing to a single issue" src="../assets/faq/subscribe-single-issue.png"></p>
-
-  </section>
-</div>
-
-
-      </div>
-      <section class="docs-text-styling download mdl-color--grey-800">
-        <a href="../started/index.html#download" class="mdl-color-text--grey-50">Download Kit</a>
-      </section>
-      <footer class="docs-text-styling docs-footer mdl-mini-footer mdl-color--grey-900">
-        <ul>
-          <li class="mdl-mini-footer--social-btn">
-            <a href="https://twitter.com/googledesign" class="social-btn social-btn__twitter" role="button" title="Twitter"></a>
-          </li>
-          <li class="mdl-mini-footer--social-btn">
-            <a href="https://github.com/google/material-design-lite" class="social-btn social-btn__github" role="button" title="GitHub"></a>
-          </li>
-          <li class="mdl-mini-footer--social-btn">
-            <a href="https://plus.google.com/+googledesign" class="social-btn social-btn__gplus" role="button" title="Google+"></a>
-          </li>
-        </ul>
-        <ul class="docs-link-list">
-          <li><a class="mdl-color-text--grey-600" href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
-          <li><a class="mdl-color-text--grey-600" href="https://github.com/google/material-design-lite/issues">Help</a></li>
-        </ul>
-      </footer>
-    </main>
-  </div>
-
-    <!-- IE Compatibility shims -->
-      <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js""></script>
-      <![endif]-->
-
-      <!--[if IE]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.7/es5-shim.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/flexie/1.0.3/flexie.min.js"></script>
-        <link href="../assets/ie.css" rel="stylesheet">
-      <![endif]-->
-    <!-- end shims -->
-
-
-    <!-- Material Design Lite -->
-    <script src="../material.min.js"></script>
-    <!-- Add Copy-to-CodePen buttons to code blocks -->
-    <script src="../assets/codepen.js"></script>
-    <!-- Enable Prism syntax highlighting -->
-    <script src="../assets/prism.js"></script>
-    <script src="../assets/prism-markup.min.js"></script>
-    <script src="../assets/prism-javascript.min.js"></script>
-    <script src="../assets/prism-css.min.js"></script>
-    <script src="../assets/prism-bash.min.js"></script>
-    <script src="../assets/main.js"></script>
-    <!-- Built with love using Material Design Lite -->
-  </body>
-</html>
+	</nav>
+</article>
+		</div>
+		<aside id="grid-right" class="grid-sidebar astro-WZWSAYSE" title="Table of Contents">
+			<nav class="sidebar-nav astro-XZUHYCPR" aria-labelledby="grid-right">
+	<div class="sidebar-nav-inner astro-XZUHYCPR">
+		<astro-island uid="ZxeAlG" component-url="/TableOfContents.9c3048f8.js" component-export="default" renderer-url="/client.0d4c82be.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;where-should-i-use-material-design-lite-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Where should I use Material Design Lite (MDL)?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;what-css-naming-conventions-does-mdl-use\&quot;],\&quot;text\&quot;:[0,\&quot;What CSS naming conventions does MDL use?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;does-mdl-support-progressive-enhancement\&quot;],\&quot;text\&quot;:[0,\&quot;Does MDL support progressive enhancement?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;which-browsers-does-mdl-support\&quot;],\&quot;text\&quot;:[0,\&quot;Which browsers does MDL support?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;does-mdl-play-nicely-with-polymer-is-it-a-replacement-for-the-paper-elements\&quot;],\&quot;text\&quot;:[0,\&quot;Does MDL play nicely with Polymer? Is it a replacement for the Paper elements?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;is-mdl-comparable-to-bootstrap\&quot;],\&quot;text\&quot;:[0,\&quot;Is MDL comparable to Bootstrap?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;how-does-it-compare-to-existing-material-css-implementations\&quot;],\&quot;text\&quot;:[0,\&quot;How does it compare to existing Material CSS implementations?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;should-i-use-the-minified-cdn-or-sass-versions-of-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Should I use the minified, CDN or Sass versions of MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;what-service-does-the-official-cdn-use\&quot;],\&quot;text\&quot;:[0,\&quot;What service does the official CDN use?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;how-does-mdl-relate-to-web-starter-kit\&quot;],\&quot;text\&quot;:[0,\&quot;How does MDL relate to Web Starter Kit?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;do-any-google-properties-use-mdl-in-production\&quot;],\&quot;text\&quot;:[0,\&quot;Do any Google properties use MDL in production?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;is-there-a-showcase-available-of-sites-using-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Is there a showcase available of sites using MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;can-i-build-or-use-individual-mdl-components-eg-a-button\&quot;],\&quot;text\&quot;:[0,\&quot;Can I build or use individual MDL components (e.g a button)?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;how-do-i-report-an-issue-with-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;How do I report an issue with MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;where-can-i-get-help-with-questions-about-using-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Where can I get help with questions about using MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;are-there-any-presentations-or-slide-decks-available-on-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Are there any presentations or slide-decks available on MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;can-i-request-or-contribute-components-to-mdl\&quot;],\&quot;text\&quot;:[0,\&quot;Can I request or contribute components to MDL?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;will-mdl-support-non-sass-preprocessors\&quot;],\&quot;text\&quot;:[0,\&quot;Will MDL support non-Sass preprocessors?\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;how-do-i-keep-updated-with-issues-im-interested-in\&quot;],\&quot;text\&quot;:[0,\&quot;How do I keep updated with issues I’m interested in?\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-XZUHYCPR&quot;]}" ssr="" client="media" before-hydration-url="/chunks/astro_scripts/before-hydration.js.88d38c1c.js" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading">On this page</h2><ul><li class="heading-link depth-2"><a href="#overview">Overview</a></li><li class="heading-link depth-2"><a href="#where-should-i-use-material-design-lite-mdl">Where should I use Material Design Lite (MDL)?</a></li><li class="heading-link depth-2"><a href="#what-css-naming-conventions-does-mdl-use">What CSS naming conventions does MDL use?</a></li><li class="heading-link depth-2"><a href="#does-mdl-support-progressive-enhancement">Does MDL support progressive enhancement?</a></li><li class="heading-link depth-2"><a href="#which-browsers-does-mdl-support">Which browsers does MDL support?</a></li><li class="heading-link depth-2"><a href="#does-mdl-play-nicely-with-polymer-is-it-a-replacement-for-the-paper-elements">Does MDL play nicely with Polymer? Is it a replacement for the Paper elements?</a></li><li class="heading-link depth-2"><a href="#is-mdl-comparable-to-bootstrap">Is MDL comparable to Bootstrap?</a></li><li class="heading-link depth-2"><a href="#how-does-it-compare-to-existing-material-css-implementations">How does it compare to existing Material CSS implementations?</a></li><li class="heading-link depth-2"><a href="#should-i-use-the-minified-cdn-or-sass-versions-of-mdl">Should I use the minified, CDN or Sass versions of MDL?</a></li><li class="heading-link depth-2"><a href="#what-service-does-the-official-cdn-use">What service does the official CDN use?</a></li><li class="heading-link depth-2"><a href="#how-does-mdl-relate-to-web-starter-kit">How does MDL relate to Web Starter Kit?</a></li><li class="heading-link depth-2"><a href="#do-any-google-properties-use-mdl-in-production">Do any Google properties use MDL in production?</a></li><li class="heading-link depth-2"><a href="#is-there-a-showcase-available-of-sites-using-mdl">Is there a showcase available of sites using MDL?</a></li><li class="heading-link depth-2"><a href="#can-i-build-or-use-individual-mdl-components-eg-a-button">Can I build or use individual MDL components (e.g a button)?</a></li><li class="heading-link depth-2"><a href="#how-do-i-report-an-issue-with-mdl">How do I report an issue with MDL?</a></li><li class="heading-link depth-2"><a href="#where-can-i-get-help-with-questions-about-using-mdl">Where can I get help with questions about using MDL?</a></li><li class="heading-link depth-2"><a href="#are-there-any-presentations-or-slide-decks-available-on-mdl">Are there any presentations or slide-decks available on MDL?</a></li><li class="heading-link depth-2"><a href="#can-i-request-or-contribute-components-to-mdl">Can I request or contribute components to MDL?</a></li><li class="heading-link depth-2"><a href="#will-mdl-support-non-sass-preprocessors">Will MDL support non-Sass preprocessors?</a></li><li class="heading-link depth-2"><a href="#how-do-i-keep-updated-with-issues-im-interested-in">How do I keep updated with issues I’m interested in?</a></li></ul></astro-island>
+		
+<ul class="astro-QE5KYOPB">
+	
+	
+</ul>
+	</div>
+</nav>
+		</aside>
+	</main>
+</body></html>

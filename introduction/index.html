@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us" class="initial astro-WZWSAYSE">
+
+<head>
+	<!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+
+<link rel="sitemap" href="/sitemap.xml">
+
+<!-- Preload Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Scrollable a11y code helper -->
+<script src="/make-scrollable-code-focusable.js">
+
+</script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+<script>
+	const root = document.documentElement;
+	const theme = localStorage.getItem("theme");
+	if (theme === "dark" || (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+		root.classList.add("theme-dark");
+	} else {
+		root.classList.remove("theme-dark");
+	}
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEL60V1WM9" is:inline></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TEL60V1WM9');
+</script> -->
+
+	<!-- Page Metadata --><link rel="canonical" href="https://getmdl.io/introduction">
+
+<!-- OpenGraph Tags -->
+<meta property="og:title" content="Introduction 🚀 Material Design Lite">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://getmdl.io/introduction">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lh3.googleusercontent.com/duWOVI3UUvSetaNEnlx7ggDF5acg7ADmRCSVbWd4MOW8Bo0uPRBhClXhdadmfzqaJ-jeCh-MfS5hnXu7hu2NbrlMuqDabNlVdnoQVBfCU1JSs0miCHEn=w1200-rj">
+<meta property="og:image:alt" content="green and red color gradient">
+<meta name="description" property="og:description" content="Docs intro">
+<meta property="og:site_name" content="Material Design Lite">
+
+<!-- Twitter Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="materialdesign">
+<meta name="twitter:title" content="Introduction 🚀 Material Design Lite">
+<meta name="twitter:description" content="Docs intro">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/duWOVI3UUvSetaNEnlx7ggDF5acg7ADmRCSVbWd4MOW8Bo0uPRBhClXhdadmfzqaJ-jeCh-MfS5hnXu7hu2NbrlMuqDabNlVdnoQVBfCU1JSs0miCHEn=w1200-rj">
+<meta name="twitter:image:alt" content="green and red color gradient">
+
+<!--
+  TODO: Add json+ld data, maybe https://schema.org/APIReference makes sense?
+  Docs: https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data
+  https://www.npmjs.com/package/schema-dts seems like a great resource for implementing this.
+  Even better, there's a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
+-->
+
+	<title>Introduction 🎨 Material Design Lite</title>
+	
+<link rel="stylesheet" href="/assets/756e0ff1.3d38816d.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+/** Bundled JS generated from "@astrojs/lit/client-shim.js" */
+var N = Object.defineProperty;
+var i = (t, n) => () => (t && (n = t((t = 0))), n);
+var b = (t, n) => {
+	for (var a in n) N(t, a, { get: n[a], enumerable: !0 });
+};
+function s() {
+	if (d === void 0) {
+		let t = document.createElement('div');
+		(t.innerHTML = '<div><template shadowroot="open"></template></div>'),
+			(d = !!t.firstElementChild.shadowRoot);
+	}
+	return d;
+}
+var d,
+	m = i(() => {});
+var p,
+	c,
+	f,
+	u = i(() => {
+		(p = (t) => t.parentElement === null),
+			(c = (t) => t.tagName === 'TEMPLATE'),
+			(f = (t) => t.nodeType === Node.ELEMENT_NODE);
+	});
+var h,
+	E = i(() => {
+		m();
+		u();
+		h = (t) => {
+			var n;
+			if (s()) return;
+			let a = [],
+				e = t.firstElementChild;
+			for (; e !== t && e !== null; )
+				if (c(e)) a.push(e), (e = e.content);
+				else if (e.firstElementChild !== null) e = e.firstElementChild;
+				else if (f(e) && e.nextElementSibling !== null) e = e.nextElementSibling;
+				else {
+					let o;
+					for (; e !== t && e !== null; )
+						if (p(e)) {
+							o = a.pop();
+							let r = o.parentElement,
+								l = o.getAttribute('shadowroot');
+							if (((e = o), l === 'open' || l === 'closed')) {
+								let y = o.hasAttribute('shadowrootdelegatesfocus');
+								try {
+									r.attachShadow({ mode: l, delegatesFocus: y }).append(o.content);
+								} catch {}
+							} else o = void 0;
+						} else {
+							let r = e.nextElementSibling;
+							if (r != null) {
+								(e = r), o !== void 0 && o.parentElement.removeChild(o);
+								break;
+							}
+							let l =
+								(n = e.parentElement) === null || n === void 0 ? void 0 : n.nextElementSibling;
+							if (l != null) {
+								(e = l), o !== void 0 && o.parentElement.removeChild(o);
+								break;
+							}
+							(e = e.parentElement), o !== void 0 && (o.parentElement.removeChild(o), (o = void 0));
+						}
+				}
+		};
+	});
+var w = i(() => {
+	E();
+});
+var v = {};
+b(v, { hasNativeDeclarativeShadowRoots: () => s, hydrateShadowRoots: () => h });
+var S = i(() => {
+	m();
+	w();
+});
+async function g() {
+	let { hydrateShadowRoots: t } = await Promise.resolve().then(() => (S(), v));
+	window.addEventListener('DOMContentLoaded', () => t(document.body), { once: true });
+}
+var x = new DOMParser()
+	.parseFromString('<p><template shadowroot="open"></template></p>', 'text/html', {
+		includeShadowRoots: !0,
+	})
+	.querySelector('p');
+(!x || !x.shadowRoot) && g();
+</script></head>
+
+<body class="astro-WZWSAYSE">
+	<header class="astro-FN7PTC7H">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-DGYJY3T3"><span class="astro-DGYJY3T3">Skip to Content</span></a>
+
+
+	<nav class="nav-wrapper astro-FN7PTC7H" title="Top Navigation">
+		<div class="menu-toggle astro-FN7PTC7H">
+			<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="1UXIpB" component-url="/SidebarToggle.5770bf66.js" component-export="default" renderer-url="/client.0d4c82be.js" props="{&quot;class&quot;:[0,&quot;astro-FN7PTC7H&quot;]}" ssr="" client="idle" before-hydration-url="/chunks/astro_scripts/before-hydration.js.88d38c1c.js" opts="{&quot;name&quot;:&quot;SidebarToggle&quot;,&quot;value&quot;:true}" await-children=""><button type="button" aria-pressed="false" id="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="sr-only">Toggle sidebar</span></button></astro-island>
+		</div>
+		<div class="logo flex astro-FN7PTC7H">
+			<a href="/" class="astro-FN7PTC7H">
+				<svg class="logo" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<title>Material Design Lite</title>
+	<path d="M23 12C23 5.93 18.07 1 12 1C5.93 1 1 5.93 1 12C1 18.07 5.93 23 12 23C18.07 23 23 18.07 23 12ZM5 17.64C3.75 16.1 3 14.14 3 12C3 9.87 3.76 7.92 5 6.37V17.64ZM17.64 5H6.36C7.9 3.75 9.86 3 12 3C14.14 3 16.1 3.75 17.64 5ZM12 14.53L8.24 7H15.77L12 14.53ZM17 9V17H13L17 9ZM11 17H7V9L11 17ZM17.64 19C16.09 20.25 14.13 21 12 21C9.87 21 7.9 20.25 6.36 19H17.64ZM21 12C21 14.14 20.25 16.1 19 17.64V6.37C20.24 7.92 21 9.87 21 12Z" fill="var(--md-sys-color-on-background)"></path>
+</svg>
+				<h1 class="astro-FN7PTC7H">Material Design Lite</h1>
+			</a>
+		</div>
+		<div style="flex-grow: 1;" class="astro-FN7PTC7H"></div>
+		<material-theme-control class="astro-FN7PTC7H"></material-theme-control>
+	</nav>
+</header>
+
+<script type="module" src="https://rodydavis.github.io/material-theme-control/material-theme-control.es.js"></script>
+	<main class="layout astro-WZWSAYSE">
+		<aside id="grid-left" class="grid-sidebar astro-WZWSAYSE" title="Site Navigation">
+			<nav aria-labelledby="grid-left" class="astro-EWG4B7OK">
+	<ul class="nav-groups astro-EWG4B7OK">
+		<li class="astro-EWG4B7OK">
+			<div class="nav-group astro-EWG4B7OK">
+				<h2 class="nav-group-title astro-EWG4B7OK"></h2>
+				<ul class="astro-EWG4B7OK">
+					
+				</ul>
+			</div>
+		</li><li class="astro-EWG4B7OK">
+			<div class="nav-group astro-EWG4B7OK">
+				<h2 class="nav-group-title astro-EWG4B7OK">Overview</h2>
+				<ul class="astro-EWG4B7OK">
+					<li class="nav-link astro-EWG4B7OK">
+						<a href="/introduction" aria-current="page" class="astro-EWG4B7OK">
+							Introduction
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/typography" aria-current="false" class="astro-EWG4B7OK">
+							Typography
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/color" aria-current="false" class="astro-EWG4B7OK">
+							Color
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/icons" aria-current="false" class="astro-EWG4B7OK">
+							Icons
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/shape" aria-current="false" class="astro-EWG4B7OK">
+							Shape
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/faq" aria-current="false" class="astro-EWG4B7OK">
+							FAQ
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li><li class="astro-EWG4B7OK">
+			<div class="nav-group astro-EWG4B7OK">
+				<h2 class="nav-group-title astro-EWG4B7OK">Components</h2>
+				<ul class="astro-EWG4B7OK">
+					<li class="nav-link astro-EWG4B7OK">
+						<a href="/components/autocomplete" aria-current="false" class="astro-EWG4B7OK">
+							Autocomplete
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/badge" aria-current="false" class="astro-EWG4B7OK">
+							Badge
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/banner" aria-current="false" class="astro-EWG4B7OK">
+							Banner
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/button" aria-current="false" class="astro-EWG4B7OK">
+							Button
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/bottom-app-bar" aria-current="false" class="astro-EWG4B7OK">
+							Bottom app bar
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/bottom-sheet" aria-current="false" class="astro-EWG4B7OK">
+							Bottom sheet
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/card" aria-current="false" class="astro-EWG4B7OK">
+							Card
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/chip" aria-current="false" class="astro-EWG4B7OK">
+							Chip
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/checkbox" aria-current="false" class="astro-EWG4B7OK">
+							Checkbox
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/data-table" aria-current="false" class="astro-EWG4B7OK">
+							Data Table
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/data-table" aria-current="false" class="astro-EWG4B7OK">
+							Divider
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/divider" aria-current="false" class="astro-EWG4B7OK">
+							Date picker
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/dialog" aria-current="false" class="astro-EWG4B7OK">
+							Dialog
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/expansion-panel" aria-current="false" class="astro-EWG4B7OK">
+							Expansion Panel
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/image-list" aria-current="false" class="astro-EWG4B7OK">
+							Image list
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/icon" aria-current="false" class="astro-EWG4B7OK">
+							Icon
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/fab" aria-current="false" class="astro-EWG4B7OK">
+							Floating action button
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/grid-list" aria-current="false" class="astro-EWG4B7OK">
+							Grid list
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/list" aria-current="false" class="astro-EWG4B7OK">
+							List
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/menu" aria-current="false" class="astro-EWG4B7OK">
+							Menu
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/progress-indicator" aria-current="false" class="astro-EWG4B7OK">
+							Progress indicator
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/navigation-bar" aria-current="false" class="astro-EWG4B7OK">
+							Navigation bar
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/navigation-drawer" aria-current="false" class="astro-EWG4B7OK">
+							Navigation drawer
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/navigation-rail" aria-current="false" class="astro-EWG4B7OK">
+							Navigation rail
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/radio-button" aria-current="false" class="astro-EWG4B7OK">
+							Radio button
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/ripple" aria-current="false" class="astro-EWG4B7OK">
+							Ripple
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/slide" aria-current="false" class="astro-EWG4B7OK">
+							Slider
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/select" aria-current="false" class="astro-EWG4B7OK">
+							Select
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/segmented" aria-current="false" class="astro-EWG4B7OK">
+							Segmented
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/stepper" aria-current="false" class="astro-EWG4B7OK">
+							Stepper
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/sort-header" aria-current="false" class="astro-EWG4B7OK">
+							Sort header
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/snackbar" aria-current="false" class="astro-EWG4B7OK">
+							Snackbar
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/switch" aria-current="false" class="astro-EWG4B7OK">
+							Switch
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/text-field" aria-current="false" class="astro-EWG4B7OK">
+							Text field
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/tree" aria-current="false" class="astro-EWG4B7OK">
+							Tree
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/tooltip" aria-current="false" class="astro-EWG4B7OK">
+							Tooltip
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/tab" aria-current="false" class="astro-EWG4B7OK">
+							Tab
+						</a>
+					</li><li class="nav-link astro-EWG4B7OK">
+						<a href="/components/top-app-bar" aria-current="false" class="astro-EWG4B7OK">
+							Top app bar
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+</nav>
+
+<script>
+	window.addEventListener("DOMContentLoaded", (event) => {
+		var target = document.querySelector('[aria-current="page"]');
+		if (target && target.offsetTop > window.innerHeight - 100) {
+			document.querySelector(".nav-groups").scrollTop = target.offsetTop;
+		}
+	});
+</script>
+		</aside>
+		<div id="grid-main" class="astro-WZWSAYSE">
+			<article id="article" class="content astro-LVQNHYOT">
+	<section class="main-section astro-LVQNHYOT">
+		<h1 class="content-title astro-LVQNHYOT" id="overview">Introduction</h1>
+		<nav class="block sm:hidden astro-LVQNHYOT">
+			<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="Z1GFmzv" component-url="/TableOfContents.9c3048f8.js" component-export="default" renderer-url="/client.0d4c82be.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;getting-started\&quot;],\&quot;text\&quot;:[0,\&quot;Getting Started\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-LVQNHYOT&quot;]}" ssr="" client="media" before-hydration-url="/chunks/astro_scripts/before-hydration.js.88d38c1c.js" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 50em)&quot;}" await-children=""><h2 class="heading">On this page</h2><ul><li class="heading-link depth-2"><a href="#overview">Overview</a></li><li class="heading-link depth-2"><a href="#getting-started">Getting Started</a></li></ul></astro-island>
+		</nav>
+		<p><strong>Welcome to Astro!</strong></p><p>This is the <code>docs</code> starter template. It contains all of the features that you need to build a Markdown-powered documentation site, including:</p><ul>
+<li>✅ <strong>Full Markdown support</strong></li>
+<li>✅ <strong>Responsive mobile-friendly design</strong></li>
+<li>✅ <strong>Sidebar navigation</strong></li>
+<li>✅ <strong>Search (powered by Algolia)</strong></li>
+<li>✅ <strong>Multi-language i18n</strong></li>
+<li>✅ <strong>Automatic table of contents</strong></li>
+<li>✅ <strong>Automatic list of contributors</strong></li>
+<li>✅ (and, best of all) <strong>dark mode</strong></li>
+</ul><h2 id="getting-started">Getting Started</h2><p>To get started with this theme, check out the <code>README.md</code> in your new project directory. It provides documentation on how to use and customize this template for your own project. Keep the README around so that you can always refer back to it as you build.</p><p>Found a missing feature that you can’t live without? Please suggest it on Discord <a href="https://astro.build/chat">(#ideas-and-suggestions channel)</a> and even consider adding it yourself on GitHub! Astro is an open source project and contributions from developers like you are how we grow!</p><p>Good luck out there, Astronaut. 🧑‍🚀</p>
+	</section>
+	<nav class="block sm:hidden astro-LVQNHYOT">
+		
+<ul class="astro-QE5KYOPB">
+	
+	
+</ul>
+	</nav>
+</article>
+		</div>
+		<aside id="grid-right" class="grid-sidebar astro-WZWSAYSE" title="Table of Contents">
+			<nav class="sidebar-nav astro-XZUHYCPR" aria-labelledby="grid-right">
+	<div class="sidebar-nav-inner astro-XZUHYCPR">
+		<astro-island uid="Z1sMqn6" component-url="/TableOfContents.9c3048f8.js" component-export="default" renderer-url="/client.0d4c82be.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;getting-started\&quot;],\&quot;text\&quot;:[0,\&quot;Getting Started\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-XZUHYCPR&quot;]}" ssr="" client="media" before-hydration-url="/chunks/astro_scripts/before-hydration.js.88d38c1c.js" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading">On this page</h2><ul><li class="heading-link depth-2"><a href="#overview">Overview</a></li><li class="heading-link depth-2"><a href="#getting-started">Getting Started</a></li></ul></astro-island>
+		
+<ul class="astro-QE5KYOPB">
+	
+	
+</ul>
+	</div>
+</nav>
+		</aside>
+	</main>
+</body></html>
