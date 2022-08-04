@@ -1419,10 +1419,32 @@
   height: 56px;
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
+  box-shadow: var(--md-sys-elevation-1);
 }
 
 .fab > i {
   font-size: 24px;
+}
+
+.fab:hover {
+  box-shadow: var(--md-sys-elevation-4);
+  background-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
+}
+
+.fab:focus {
+  box-shadow: var(--md-sys-elevation-2);
+  background-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
+}
+
+.fab:active {
+  box-shadow: var(--md-sys-elevation-2);
+  background-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+.fab[disabled] {
+  box-shadow: var(--md-sys-elevation-0);
+  background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+  color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
 }
 
 .fab.small {
@@ -1461,8 +1483,64 @@
   margin-right: 8px;
 }
 
-button {
-  margin-right: 4px;
+.fab.surface {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+}
+
+.fab.surface:hover {
+  box-shadow: var(--md-sys-elevation-4);
+  background-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-hover-state-layer-opacity));
+}
+
+.fab.surface:focus {
+  box-shadow: var(--md-sys-elevation-2);
+  background-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-focus-state-layer-opacity));
+}
+
+.fab.surface:active {
+  box-shadow: var(--md-sys-elevation-2);
+  background-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+.fab.secondary {
+  background-color: var(--md-sys-color-secondary);
+  color: var(--md-sys-color-on-secondary);
+}
+
+.fab.secondary:hover {
+  box-shadow: var(--md-sys-elevation-4);
+  background-color: rgba(var(--md-sys-color-on-secondary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+}
+
+.fab.secondary:focus {
+  box-shadow: var(--md-sys-elevation-2);
+  background-color: rgba(var(--md-sys-color-on-secondary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+}
+
+.fab.secondary:active {
+  box-shadow: var(--md-sys-elevation-2);
+  background-color: rgba(var(--md-sys-color-on-secondary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+}
+
+.fab.tertiary {
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+}
+
+.fab.tertiary:hover {
+  box-shadow: var(--md-sys-elevation-4);
+  background-color: rgba(var(--md-sys-color-on-tertiary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+}
+
+.fab.tertiary:focus {
+  box-shadow: var(--md-sys-elevation-2);
+  background-color: rgba(var(--md-sys-color-on-tertiary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+}
+
+.fab.tertiary:active {
+  box-shadow: var(--md-sys-elevation-2);
+  background-color: rgba(var(--md-sys-color-on-tertiary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
 }
 
 .card {
