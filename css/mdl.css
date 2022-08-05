@@ -2111,6 +2111,10 @@
   }
 }
 
+datalist {
+  display: none;
+}
+
 .ripple {
   position: relative;
   cursor: pointer;
