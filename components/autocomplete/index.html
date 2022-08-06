@@ -389,19 +389,6 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script><h2 id="default">Default</h2>
 
-<playground-project id="editor-undefined" class="astro-3QSLCT7L" style="--height: auto;"></playground-project>
-
-<div class="demo astro-3QSLCT7L" style="--height: auto;">
-    <playground-preview project="editor-undefined" class="astro-3QSLCT7L"></playground-preview>
-    <playground-file-editor project="editor-undefined" filename="index.html" class="astro-3QSLCT7L"></playground-file-editor>
-</div>
-
-<script async>const ide = document.querySelector('#editor-undefined');
-ide.config = {"files":{"index.html":{"content":"<!-- playground-fold -->\n<!doctype html>\n<head>\n    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">\n    <link rel=\"stylesheet\" href=\"https://rodydavis.github.io/material-design-lite/css/mdl.css\">\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n<!-- playground-fold-end -->\n\n<label class=\"text-field filled\">\r\n\t<input placeholder=\" \" list=\"browsers\">\r\n\t\t<span>Textfield</span>\r\n\t</label>\r\n\t<datalist id=\"browsers\">\r\n\t\t<option value=\"Edge\">\r\n\t\t</option>\r\n\t\t<option value=\"Firefox\">\r\n\t\t</option>\r\n\t\t<option value=\"Chrome\">\r\n\t\t</option>\r\n\t\t<option value=\"Opera\">\r\n\t\t</option>\r\n\t\t<option value=\"Safari\">\r\n\t\t</option>\r\n\t</datalist>\n<!-- playground-fold -->\n</body>"},"main.ts":{"content":""},"style.css":{"content":":root {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100vh;\n  width: 100vw;\n  background: transparent\n}\nbody {\n  background: transparent\n}"}}};
-const previews = document.querySelectorAll("playground-preview");
-previews.forEach(preview => {
-  preview.iframe?.setAttribute('allowtransparency', '');
-});</script>
 <pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">label</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;text-field filled&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">input</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">placeholder</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot; &quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">list</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;browsers&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;Textfield&lt;/</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;</span></span>
