@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en-us" class="initial astro-RW6AUUEK">
-
-<head>
-	<!-- Global Metadata --><meta charset="utf-8">
+<!DOCTYPE html><html dir="ltr" lang="en-us" class="initial">
+	<head>
+		<!-- Global Metadata --><meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <meta name="color-scheme" content="dark light">
 
@@ -18,9 +16,9 @@
 <!-- Material icons -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <!-- Scrollable a11y code helper -->
-<script src="/make-scrollable-code-focusable.js">
-
-</script>
+<script src="make-scrollable-code-focusable.js"></script>
+<script src="codepen.js"></script>
+<script src="warn.js"></script>
 
 <!-- This is intentionally inlined to avoid FOUC -->
 <script>
@@ -41,12 +39,12 @@
   gtag('js', new Date());
   gtag('config', 'G-TEL60V1WM9');
 </script> -->
-	<!-- Page Metadata --><link rel="canonical" href="https://getmdl.io/material-design-lite/components/top-app-bar/">
+		<!-- Page Metadata --><link rel="canonical" href="https://getmdl.io/material-design-lite/components/top-app-bar">
 
 <!-- OpenGraph Tags -->
-<meta property="og:title" content="Top app bar 🚀 Material Design Lite">
+<meta property="og:title" content="Topp app bar 🚀 Material Design Lite">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://getmdl.io/material-design-lite/components/top-app-bar/">
+<meta property="og:url" content="https://getmdl.io/material-design-lite/components/top-app-bar">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://lh3.googleusercontent.com/duWOVI3UUvSetaNEnlx7ggDF5acg7ADmRCSVbWd4MOW8Bo0uPRBhClXhdadmfzqaJ-jeCh-MfS5hnXu7hu2NbrlMuqDabNlVdnoQVBfCU1JSs0miCHEn=w1200-rj">
 <meta property="og:image:alt" content="green and red color gradient">
@@ -56,7 +54,7 @@
 <!-- Twitter Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="materialdesign">
-<meta name="twitter:title" content="Top app bar 🚀 Material Design Lite">
+<meta name="twitter:title" content="Topp app bar 🚀 Material Design Lite">
 <meta name="twitter:description" content="Variations on Material Design top app bars.">
 <meta name="twitter:image" content="https://lh3.googleusercontent.com/duWOVI3UUvSetaNEnlx7ggDF5acg7ADmRCSVbWd4MOW8Bo0uPRBhClXhdadmfzqaJ-jeCh-MfS5hnXu7hu2NbrlMuqDabNlVdnoQVBfCU1JSs0miCHEn=w1200-rj">
 <meta name="twitter:image:alt" content="green and red color gradient">
@@ -68,10 +66,11 @@
   Even better, there's a React component that integrates with `schema-dts`: https://github.com/google/react-schemaorg
 -->
 
-	<title>Top app bar 🎨 Material Design Lite</title>
-	
-<link rel="stylesheet" href="/material-design-lite/assets/b7803de4.8d9c35a5.css" />
-<link rel="stylesheet" href="/material-design-lite/assets/9ecce7a1.a722f81b.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+		<title>
+			Topp app bar 🎨 Material Design Lite
+		</title>
+	<link rel="stylesheet" href="/material-design-lite/assets/4b473aeb.f96e5760.css" />
+<link rel="stylesheet" href="/material-design-lite/assets/1696ce52.cd2d103b.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
 /** Bundled JS generated from "@astrojs/lit/client-shim.js" */
 var N = Object.defineProperty;
 var i = (t, n) => () => (t && (n = t((t = 0))), n);
@@ -160,116 +159,120 @@ var x = new DOMParser()
 (!x || !x.shadowRoot) && g();
 </script></head>
 
-<body class="astro-RW6AUUEK">
-	<header class="astro-4DB7TPYM">
+	<body>
+		<header class="astro-FGEX7W33">
 	<a href="#article" class="sr-only focus:not-sr-only skiplink astro-DGYJY3T3"><span class="astro-DGYJY3T3">Skip to Content</span></a>
 
 
-	<nav class="nav-wrapper astro-4DB7TPYM" title="Top Navigation">
-		<div class="menu-toggle astro-4DB7TPYM">
-			<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[e,i]=r;return e in l?l[e](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),e={},i=this.querySelectorAll("template[data-astro-template]");for(const s of i)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove());for(const s of r)!s.closest(this.tagName)?.isSameNode(this)||(e[s.getAttribute("name")||"default"]=s.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,e,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,e)=>{e.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const e=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),e?import(e):()=>()=>{}]);return this.Component=i[this.getAttribute("component-export")||"default"],this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="Z1zpj0q" component-url="/material-design-lite/SidebarToggle.5770bf66.js" component-export="default" renderer-url="/material-design-lite/client.0d4c82be.js" props="{&quot;class&quot;:[0,&quot;astro-4DB7TPYM&quot;]}" ssr="" client="idle" before-hydration-url="/material-design-lite/chunks/astro_scripts/before-hydration.js.88d38c1c.js" opts="{&quot;name&quot;:&quot;SidebarToggle&quot;,&quot;value&quot;:true}" await-children=""><button type="button" aria-pressed="false" id="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="sr-only">Toggle sidebar</span></button></astro-island>
+	<nav class="nav-wrapper astro-FGEX7W33" title="Top Navigation">
+		<div class="menu-toggle astro-FGEX7W33">
+			<style>astro-island,astro-slot{display:contents}</style><script>(self.Astro=self.Astro||{}).idle=a=>{const e=async()=>{await(await a())()};"requestIdleCallback"in window?window.requestIdleCallback(e):setTimeout(e,200)};var a;{const l={0:t=>t,1:t=>JSON.parse(t,n),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,n)),5:t=>new Set(JSON.parse(t,n)),6:t=>BigInt(t),7:t=>new URL(t)},n=(t,r)=>{if(t===""||!Array.isArray(r))return r;const[s,i]=r;return s in l?l[s](i):void 0};customElements.get("astro-island")||customElements.define("astro-island",(a=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=()=>{if(!this.hydrator||this.parentElement?.closest("astro-island[ssr]"))return;const r=this.querySelectorAll("astro-slot"),s={},i=this.querySelectorAll("template[data-astro-template]");for(const e of i)!e.closest(this.tagName)?.isSameNode(this)||(s[e.getAttribute("data-astro-template")||"default"]=e.innerHTML,e.remove());for(const e of r)!e.closest(this.tagName)?.isSameNode(this)||(s[e.getAttribute("name")||"default"]=e.innerHTML);const o=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),n):{};this.hydrator(this)(this.Component,o,s,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),window.removeEventListener("astro:hydrate",this.hydrate),window.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((r,s)=>{s.disconnect(),this.childrenConnectedCallback()}).observe(this,{childList:!0})}async childrenConnectedCallback(){window.addEventListener("astro:hydrate",this.hydrate),await import(this.getAttribute("before-hydration-url"));const r=JSON.parse(this.getAttribute("opts"));Astro[this.getAttribute("client")](async()=>{const s=this.getAttribute("renderer-url"),[i,{default:o}]=await Promise.all([import(this.getAttribute("component-url")),s?import(s):()=>()=>{}]),e=this.getAttribute("component-export")||"default";if(!e.includes("."))this.Component=i[e];else{this.Component=i;for(const c of e.split("."))this.Component=this.Component[c]}return this.hydrator=o,this.hydrate},r,this)}attributeChangedCallback(){this.hydrator&&this.hydrate()}},a.observedAttributes=["props"],a))}</script><astro-island uid="1pjEk9" component-url="/material-design-lite/SidebarToggle.5770bf66.js" component-export="default" renderer-url="/material-design-lite/client.0d4c82be.js" props="{&quot;class&quot;:[0,&quot;astro-FGEX7W33&quot;]}" ssr="" client="idle" before-hydration-url="/material-design-lite/chunks/astro_scripts/before-hydration.js.9af2403d.js" opts="{&quot;name&quot;:&quot;SidebarToggle&quot;,&quot;value&quot;:true}" await-children=""><button type="button" aria-pressed="false" id="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="sr-only">Toggle sidebar</span></button></astro-island>
 		</div>
-		<div class="logo flex astro-4DB7TPYM">
-			<a href="/" class="astro-4DB7TPYM">
+		<div class="logo flex astro-FGEX7W33">
+			<a href="/" class="astro-FGEX7W33">
 				<svg class="logo" width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 	<title>Material Design Lite</title>
 	<path d="M23 12C23 5.93 18.07 1 12 1C5.93 1 1 5.93 1 12C1 18.07 5.93 23 12 23C18.07 23 23 18.07 23 12ZM5 17.64C3.75 16.1 3 14.14 3 12C3 9.87 3.76 7.92 5 6.37V17.64ZM17.64 5H6.36C7.9 3.75 9.86 3 12 3C14.14 3 16.1 3.75 17.64 5ZM12 14.53L8.24 7H15.77L12 14.53ZM17 9V17H13L17 9ZM11 17H7V9L11 17ZM17.64 19C16.09 20.25 14.13 21 12 21C9.87 21 7.9 20.25 6.36 19H17.64ZM21 12C21 14.14 20.25 16.1 19 17.64V6.37C20.24 7.92 21 9.87 21 12Z" fill="var(--md-sys-color-on-background)"></path>
 </svg>
-				<h1 class="astro-4DB7TPYM">Material Design Lite</h1>
+				<h1 class="astro-FGEX7W33">Material Design Lite</h1>
 			</a>
 		</div>
-		<div style="flex-grow: 1;" class="astro-4DB7TPYM"></div>
-		<a class="icon astro-4DB7TPYM" href="/material-design-lite/css/mdl.css" download class="surface">
-			<i class="material-icons astro-4DB7TPYM">file_download</i>
+		<div style="flex-grow: 1;" class="astro-FGEX7W33"></div>
+		<a class="icon astro-FGEX7W33" href="/material-design-lite/css/mdl.css" download class="surface">
+			<i class="material-icons astro-FGEX7W33">file_download</i>
 		</a>
-		<material-theme-control rgb="true" class="astro-4DB7TPYM"></material-theme-control>
+		<material-theme-control rgb="true" class="astro-FGEX7W33"></material-theme-control>
 	</nav>
 </header>
 
-<script type="module" src="https://rodydavis.github.io/material-theme-control/material-theme-control.es.js"></script>
-	<main class="layout astro-RW6AUUEK">
-		<aside id="grid-left" class="grid-sidebar astro-RW6AUUEK" title="Site Navigation">
-			<nav aria-labelledby="grid-left" class="astro-VV6OK5JJ">
-	<ul class="nav-groups astro-VV6OK5JJ">
-		<li class="astro-VV6OK5JJ">
-			<div class="nav-group astro-VV6OK5JJ">
-				<h2 class="nav-group-title astro-VV6OK5JJ"></h2>
-				<ul class="astro-VV6OK5JJ">
+
+		<main class="layout">
+			<aside id="grid-left" class="grid-sidebar" title="Site Navigation">
+				<nav aria-labelledby="grid-left" class="astro-BFPPPITA">
+	<ul class="nav-groups astro-BFPPPITA">
+		<li class="astro-BFPPPITA">
+			<div class="nav-group astro-BFPPPITA">
+				<h2 class="nav-group-title astro-BFPPPITA"></h2>
+				<ul class="astro-BFPPPITA">
 					
 				</ul>
 			</div>
-		</li><li class="astro-VV6OK5JJ">
-			<div class="nav-group astro-VV6OK5JJ">
-				<h2 class="nav-group-title astro-VV6OK5JJ">Overview</h2>
-				<ul class="astro-VV6OK5JJ">
-					<li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/introduction" aria-current="false" class="astro-VV6OK5JJ">
+		</li><li class="astro-BFPPPITA">
+			<div class="nav-group astro-BFPPPITA">
+				<h2 class="nav-group-title astro-BFPPPITA">Overview</h2>
+				<ul class="astro-BFPPPITA">
+					<li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/introduction" aria-current="false" class="astro-BFPPPITA">
 							Introduction
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/overview/typography" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/overview/typography" aria-current="false" class="astro-BFPPPITA">
 							Typography
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/overview/color" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/overview/color" aria-current="false" class="astro-BFPPPITA">
 							Color
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/faq" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/faq" aria-current="false" class="astro-BFPPPITA">
 							FAQ
 						</a>
 					</li>
 				</ul>
 			</div>
-		</li><li class="astro-VV6OK5JJ">
-			<div class="nav-group astro-VV6OK5JJ">
-				<h2 class="nav-group-title astro-VV6OK5JJ">Demos</h2>
-				<ul class="astro-VV6OK5JJ">
-					<li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/demos/sticker-sheet" aria-current="false" class="astro-VV6OK5JJ">
+		</li><li class="astro-BFPPPITA">
+			<div class="nav-group astro-BFPPPITA">
+				<h2 class="nav-group-title astro-BFPPPITA">Demos</h2>
+				<ul class="astro-BFPPPITA">
+					<li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/sticker-sheet" aria-current="false" class="astro-BFPPPITA">
 							Sticker sheet
+						</a>
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/playground" aria-current="false" class="astro-BFPPPITA">
+							Playground
 						</a>
 					</li>
 				</ul>
 			</div>
-		</li><li class="astro-VV6OK5JJ">
-			<div class="nav-group astro-VV6OK5JJ">
-				<h2 class="nav-group-title astro-VV6OK5JJ">Components</h2>
-				<ul class="astro-VV6OK5JJ">
-					<li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/components/autocomplete" aria-current="false" class="astro-VV6OK5JJ">
+		</li><li class="astro-BFPPPITA">
+			<div class="nav-group astro-BFPPPITA">
+				<h2 class="nav-group-title astro-BFPPPITA">Components</h2>
+				<ul class="astro-BFPPPITA">
+					<li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/components/autocomplete" aria-current="false" class="astro-BFPPPITA">
 							Autocomplete
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/components/button" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/components/button" aria-current="false" class="astro-BFPPPITA">
 							Button
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/components/card" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/components/card" aria-current="false" class="astro-BFPPPITA">
 							Card
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/components/chip" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/components/chip" aria-current="false" class="astro-BFPPPITA">
 							Chip
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/components/fab" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/components/fab" aria-current="false" class="astro-BFPPPITA">
 							Floating action button
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/components/icon" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/components/icon" aria-current="false" class="astro-BFPPPITA">
 							Icon
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/components/ripple" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/components/ripple" aria-current="false" class="astro-BFPPPITA">
 							Ripple
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/components/text-field" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/components/text-field" aria-current="false" class="astro-BFPPPITA">
 							Text field
 						</a>
-					</li><li class="nav-link astro-VV6OK5JJ">
-						<a href="/material-design-lite/components/top-app-bar" aria-current="false" class="astro-VV6OK5JJ">
+					</li><li class="nav-link astro-BFPPPITA">
+						<a href="/material-design-lite/components/top-app-bar" aria-current="page" class="astro-BFPPPITA">
 							Top app bar
 						</a>
 					</li>
@@ -287,17 +290,17 @@ var x = new DOMParser()
 		}
 	});
 </script>
-		</aside>
-		<div id="grid-main" class="astro-RW6AUUEK">
-			<article id="article" class="content astro-GIDQ2CF4">
-	<section class="main-section astro-GIDQ2CF4">
-		<h1 class="content-title astro-GIDQ2CF4" id="overview">Top app bar</h1>
-		<nav class="block sm:hidden astro-GIDQ2CF4">
-			<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="Zghpv" component-url="/material-design-lite/TableOfContents.9c3048f8.js" component-export="default" renderer-url="/material-design-lite/client.0d4c82be.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;default\&quot;],\&quot;text\&quot;:[0,\&quot;Default\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;small\&quot;],\&quot;text\&quot;:[0,\&quot;Small\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;medium\&quot;],\&quot;text\&quot;:[0,\&quot;Medium\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;large\&quot;],\&quot;text\&quot;:[0,\&quot;Large\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-GIDQ2CF4&quot;]}" ssr="" client="media" before-hydration-url="/material-design-lite/chunks/astro_scripts/before-hydration.js.88d38c1c.js" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 50em)&quot;}" await-children=""><h2 class="heading">On this page</h2><ul><li class="heading-link depth-2"><a href="#overview">Overview</a></li><li class="heading-link depth-2"><a href="#default">Default</a></li><li class="heading-link depth-2"><a href="#small">Small</a></li><li class="heading-link depth-2"><a href="#medium">Medium</a></li><li class="heading-link depth-2"><a href="#large">Large</a></li></ul></astro-island>
+			</aside>
+			<div id="grid-main">
+				<article id="article" class="content astro-DZPYBH7M">
+	<section class="main-section astro-DZPYBH7M">
+		<h1 class="content-title astro-DZPYBH7M" id="overview">Topp app bar</h1>
+		<nav class="block sm:hidden astro-DZPYBH7M">
+			<script>(self.Astro=self.Astro||{}).media=(s,a)=>{const t=async()=>{await(await s())()};if(a.value){const e=matchMedia(a.value);e.matches?t():e.addEventListener("change",t,{once:!0})}};</script><astro-island uid="Z1iLCqF" component-url="/material-design-lite/TableOfContents.9c3048f8.js" component-export="default" renderer-url="/material-design-lite/client.0d4c82be.js" props="{&quot;headings&quot;:[0,null],&quot;class&quot;:[0,&quot;astro-DZPYBH7M&quot;]}" ssr="" client="media" before-hydration-url="/material-design-lite/chunks/astro_scripts/before-hydration.js.9af2403d.js" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(max-width: 50em)&quot;}" await-children=""><h2 class="heading">On this page</h2><ul><li class="heading-link depth-2"><a href="#overview">Overview</a></li></ul></astro-island>
 		</nav>
-		
-<link rel="stylesheet" href="/material-design-lite/assets/b7803de4.8d9c35a5.css" />
-<link rel="stylesheet" href="/material-design-lite/assets/9ecce7a1.a722f81b.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+		<h2>Default</h2>
+<link rel="stylesheet" href="/material-design-lite/assets/4b473aeb.f96e5760.css" />
+<link rel="stylesheet" href="/material-design-lite/assets/1696ce52.cd2d103b.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
 /** Bundled JS generated from "@astrojs/lit/client-shim.js" */
 var N = Object.defineProperty;
 var i = (t, n) => () => (t && (n = t((t = 0))), n);
@@ -384,125 +387,188 @@ var x = new DOMParser()
 	})
 	.querySelector('p');
 (!x || !x.shadowRoot) && g();
-</script><h2 id="default">Default</h2>
-
-
-<div class="container astro-SVRFZA7K">
-    <div class="preview astro-SVRFZA7K">
-        <header class="top-app-bar center-aligned"><button class="icon leading"><i class="material-icons">menu</i></button><span class="title">Title Large</span><div class="actions"><button class="icon"><i class="material-icons">search</i></button></div></header>
+</script><section class="astro-X3FOKZ26">
+    <div class="preview row astro-X3FOKZ26">
+        <div id="default.html" class="snippet astro-X3FOKZ26">
+                    <div class="render astro-X3FOKZ26" data-outline><header class="top-app-bar center-aligned" style="min-width: 400px">
+    <button class="icon leading">
+        <i class="material-icons">menu</i>
+    </button>
+    <span class="title">Title Large</span>
+    <div class="actions">
+        <button class="icon">
+            <i class="material-icons">search</i>
+        </button>
     </div>
-</div>
-<pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;top-app-bar center-aligned&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon leading&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;menu&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;title&quot;</span><span style="color: #C9D1D9">&gt;Title Large&lt;/</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;actions&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;search&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9">&gt;</span></span></code></pre>
-<h2 id="small">Small</h2>
-
-
-<div class="container astro-SVRFZA7K">
-    <div class="preview astro-SVRFZA7K">
-        <header class="top-app-bar small"><button class="icon leading"><i class="material-icons">arrow_back</i></button><span class="title">Title Large</span><div class="actions"><button class="icon"><i class="material-icons">info_outline</i></button><button class="icon"><i class="material-icons">filter_list</i></button><button class="icon"><i class="material-icons">settings</i></button></div></header>
+</header></div>
+                    <div class="label astro-X3FOKZ26">Default</div>
+                </div>
     </div>
-</div>
-<pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;top-app-bar small&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon leading&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;arrow_back&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;title&quot;</span><span style="color: #C9D1D9">&gt;Title Large&lt;/</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;actions&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;info_outline&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+    <div class="code astro-X3FOKZ26">
+        <pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #8B949E">&lt;!-- Default --&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;top-app-bar center-aligned&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">style</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;</span><span style="color: #C9D1D9">min-width: 400px&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon leading&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;menu&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;filter_list&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;settings&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;title&quot;</span><span style="color: #C9D1D9">&gt;Title Large&lt;/</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;actions&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">            &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;search&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9">&gt;</span></span></code></pre>
-<h2 id="medium">Medium</h2>
 
-
-<div class="container astro-SVRFZA7K">
-    <div class="preview astro-SVRFZA7K">
-        <header class="top-app-bar medium"><button class="icon leading"><i class="material-icons">menu</i></button><span class="title">Headline Small</span><div class="actions"><button class="icon"><i class="material-icons">info_outline</i></button><button class="icon"><i class="material-icons">settings</i></button></div></header>
     </div>
-</div>
-<pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;top-app-bar medium&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon leading&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;menu&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;title&quot;</span><span style="color: #C9D1D9">&gt;Headline Small&lt;/</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;actions&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;info_outline&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;settings&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9">&gt;</span></span></code></pre>
-<h2 id="large">Large</h2>
+</section>
 
 
-<div class="container astro-SVRFZA7K">
-    <div class="preview astro-SVRFZA7K">
-        <header class="top-app-bar large"><button class="icon leading"><i class="material-icons">menu</i></button><span class="title">Headline Medium</span><div class="actions"><button class="icon"><i class="material-icons">info_outline</i></button><button class="icon"><i class="material-icons">settings</i></button></div></header>
+<h2>Small</h2>
+<section class="astro-X3FOKZ26">
+    <div class="preview row astro-X3FOKZ26">
+        <div id="small.html" class="snippet astro-X3FOKZ26">
+                    <div class="render astro-X3FOKZ26" data-outline><header class="top-app-bar small" style="min-width: 400px">
+    <button class="icon leading">
+        <i class="material-icons">arrow_back</i>
+    </button>
+    <span class="title">Title Large</span>
+    <div class="actions">
+        <button class="icon">
+            <i class="material-icons">info_outline</i>
+        </button>
+        <button class="icon">
+            <i class="material-icons">filter_list</i>
+        </button>
+        <button class="icon">
+            <i class="material-icons">settings</i>
+        </button>
     </div>
-</div>
-<pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;top-app-bar large&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon leading&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;menu&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;title&quot;</span><span style="color: #C9D1D9">&gt;Headline Medium&lt;/</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;actions&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;info_outline&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+</header></div>
+                    <div class="label astro-X3FOKZ26">Small</div>
+                </div>
+    </div>
+    <div class="code astro-X3FOKZ26">
+        <pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #8B949E">&lt;!-- Small --&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;top-app-bar small&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">style</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;</span><span style="color: #C9D1D9">min-width: 400px&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon leading&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;arrow_back&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;settings&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;title&quot;</span><span style="color: #C9D1D9">&gt;Title Large&lt;/</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;actions&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">            &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;info_outline&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">            &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;filter_list&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">            &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;settings&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9">&gt;</span></span></code></pre>
+
+    </div>
+</section>
+
+
+<h2>Medium</h2>
+<section class="astro-X3FOKZ26">
+    <div class="preview row astro-X3FOKZ26">
+        <div id="medium.html" class="snippet astro-X3FOKZ26">
+                    <div class="render astro-X3FOKZ26" data-outline><header class="top-app-bar medium" style="min-width: 400px">
+    <button class="icon leading">
+        <i class="material-icons">menu</i>
+    </button>
+    <span class="title">Headline Small</span>
+    <div class="actions">
+        <button class="icon">
+            <i class="material-icons">info_outline</i>
+        </button>
+        <button class="icon">
+            <i class="material-icons">settings</i>
+        </button>
+    </div>
+</header></div>
+                    <div class="label astro-X3FOKZ26">Medium</div>
+                </div>
+    </div>
+    <div class="code astro-X3FOKZ26">
+        <pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #8B949E">&lt;!-- Medium --&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;top-app-bar medium&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">style</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;</span><span style="color: #C9D1D9">min-width: 400px&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon leading&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;menu&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;title&quot;</span><span style="color: #C9D1D9">&gt;Headline Small&lt;/</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;actions&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">            &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;info_outline&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">            &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;settings&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9">&gt;</span></span></code></pre>
+
+    </div>
+</section>
+
+
+<h2>Large</h2>
+<section class="astro-X3FOKZ26">
+    <div class="preview row astro-X3FOKZ26">
+        <div id="large.html" class="snippet astro-X3FOKZ26">
+                    <div class="render astro-X3FOKZ26" data-outline><header class="top-app-bar large" style="min-width: 400px">
+    <button class="icon leading">
+        <i class="material-icons">menu</i>
+    </button>
+    <span class="title">Headline Medium</span>
+    <div class="actions">
+        <button class="icon">
+            <i class="material-icons">info_outline</i>
+        </button>
+        <button class="icon">
+            <i class="material-icons">settings</i>
+        </button>
+    </div>
+</header></div>
+                    <div class="label astro-X3FOKZ26">Large</div>
+                </div>
+    </div>
+    <div class="code astro-X3FOKZ26">
+        <pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #8B949E">&lt;!-- Large --&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;top-app-bar large&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">style</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;</span><span style="color: #C9D1D9">min-width: 400px&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon leading&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;menu&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;title&quot;</span><span style="color: #C9D1D9">&gt;Headline Medium&lt;/</span><span style="color: #7EE787">span</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;actions&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">            &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;info_outline&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;icon&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">            &lt;</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;material-icons&quot;</span><span style="color: #C9D1D9">&gt;settings&lt;/</span><span style="color: #7EE787">i</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">        &lt;/</span><span style="color: #7EE787">button</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9">&gt;</span></span></code></pre>
+
+    </div>
+</section>
+
+
 	</section>
-	<nav class="block sm:hidden astro-GIDQ2CF4">
-		
-<ul class="astro-QE5KYOPB">
-	
-	
-</ul>
-	</nav>
 </article>
 
 
-
-<script src="data:video/mp2t;base64,ZXhwb3J0IGRlZmF1bHQge307" type="module"> </script>
-		</div>
-		<aside id="grid-right" class="grid-sidebar astro-RW6AUUEK" title="Table of Contents">
-			<nav class="sidebar-nav astro-XZUHYCPR" aria-labelledby="grid-right">
-	<div class="sidebar-nav-inner astro-XZUHYCPR">
-		<astro-island uid="1PR8bM" component-url="/material-design-lite/TableOfContents.9c3048f8.js" component-export="default" renderer-url="/material-design-lite/client.0d4c82be.js" props="{&quot;headings&quot;:[1,&quot;[[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;default\&quot;],\&quot;text\&quot;:[0,\&quot;Default\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;small\&quot;],\&quot;text\&quot;:[0,\&quot;Small\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;medium\&quot;],\&quot;text\&quot;:[0,\&quot;Medium\&quot;]}],[0,{\&quot;depth\&quot;:[0,2],\&quot;slug\&quot;:[0,\&quot;large\&quot;],\&quot;text\&quot;:[0,\&quot;Large\&quot;]}]]&quot;],&quot;class&quot;:[0,&quot;astro-XZUHYCPR&quot;]}" ssr="" client="media" before-hydration-url="/material-design-lite/chunks/astro_scripts/before-hydration.js.88d38c1c.js" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading">On this page</h2><ul><li class="heading-link depth-2"><a href="#overview">Overview</a></li><li class="heading-link depth-2"><a href="#default">Default</a></li><li class="heading-link depth-2"><a href="#small">Small</a></li><li class="heading-link depth-2"><a href="#medium">Medium</a></li><li class="heading-link depth-2"><a href="#large">Large</a></li></ul></astro-island>
-		
-<ul class="astro-QE5KYOPB">
-	
-	
-</ul>
+			</div>
+			<aside id="grid-right" class="grid-sidebar" title="Table of Contents">
+				<nav class="sidebar-nav astro-SYY6EEPA" aria-labelledby="grid-right">
+	<div class="sidebar-nav-inner astro-SYY6EEPA">
+		<astro-island uid="DLjkX" component-url="/material-design-lite/TableOfContents.9c3048f8.js" component-export="default" renderer-url="/material-design-lite/client.0d4c82be.js" props="{&quot;headings&quot;:[0,null],&quot;class&quot;:[0,&quot;astro-SYY6EEPA&quot;]}" ssr="" client="media" before-hydration-url="/material-design-lite/chunks/astro_scripts/before-hydration.js.9af2403d.js" opts="{&quot;name&quot;:&quot;TableOfContents&quot;,&quot;value&quot;:&quot;(min-width: 50em)&quot;}" await-children=""><h2 class="heading">On this page</h2><ul><li class="heading-link depth-2"><a href="#overview">Overview</a></li></ul></astro-island>
 	</div>
 </nav>
-		</aside>
-	</main>
-	<script src="/codepen.js"></script>
-	<script src="/warn.js"></script>
-	<!-- <script type="module" src={playgroundUrl}></script>
-	<script type="module" src={playgroundProjectUrl}></script>
-	<script type="module" src={playgroundFileEditorUrl}></script>
-	<script type="module" src={playgroundPreviewUrl}></script> -->
-</body></html>
+
+
+			</aside>
+		</main>
+		<script type="module" src="https://rodydavis.github.io/material-theme-control/material-theme-control.es.js"></script>
+	</body>
+</html>
