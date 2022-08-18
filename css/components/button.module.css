@@ -38,6 +38,10 @@
     text-decoration: none;
   }
 
+  .button a:focus {
+    text-decoration: none;
+  }
+
   .button:hover {
     box-shadow: var(--md-sys-elevation-2);
   }
