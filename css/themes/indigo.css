@@ -1,4 +1,4 @@
-:root, .tokens {
+body, .tokens {
 --md-source: #4B0082;
   /* light */
   --md-sys-color-primary-rgb-light: 123, 65, 179;
