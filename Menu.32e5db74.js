@@ -1,0 +1,1 @@
+import{e}from"./chunks/jsxRuntime.module.f6a58cef.js";import{p as l}from"./chunks/preact.module.8af602d9.js";const d=({items:n=[]})=>e(l,{children:e("nav",{class:"menu",children:n.map(r=>r.header?e("h2",{children:r.text}):r.draft?e("div",{class:"link draft",children:r.text}):e("a",{class:"link",href:`/material-design-lite/${r.link}`,children:r.text}))})});export{d as default};

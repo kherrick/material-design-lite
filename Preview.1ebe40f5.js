@@ -1,1 +1,0 @@
-import{setThemeColor as e}from"./Color.90c1c392.js";import{e as o}from"./chunks/jsxRuntime.module.1ac67d77.js";import{p as i}from"./chunks/preact.module.8af602d9.js";const l=({color:r=""})=>o(i,{children:o("div",{style:{background:r,width:"50px",height:"50px",borderRadius:"10px",border:"1px solid black",cursor:"pointer"},onClick:()=>e(r)})});export{l as default};
