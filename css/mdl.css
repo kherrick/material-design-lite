@@ -330,6 +330,7 @@
 }
 
 .light-theme {
+  color-scheme: light;
   --md-sys-color-primary-rgb: var(--md-sys-color-primary-rgb-light);
   --md-sys-color-on-primary-rgb: var(--md-sys-color-on-primary-rgb-light);
   --md-sys-color-primary-container-rgb: var(--md-sys-color-primary-container-rgb-light);
@@ -360,6 +361,7 @@
 }
 
 .dark-theme {
+  color-scheme: dark;
   --md-sys-color-primary-rgb: var(--md-sys-color-primary-rgb-dark);
   --md-sys-color-on-primary-rgb: var(--md-sys-color-on-primary-rgb-dark);
   --md-sys-color-primary-container-rgb: var(--md-sys-color-primary-container-rgb-dark);
