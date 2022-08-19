@@ -33,11 +33,15 @@
   .top-app-bar .title {
     grid-area: title;
     flex: 1;
-    font-family: var(--md-sys-typescale-title-large-font);
-    font-weight: var(--md-sys-typescale-title-large-weight);
-    font-size: var(--md-sys-typescale-title-large-size);
-    line-height: var(--md-sys-typescale-title-large-line-height);
+    -webkit-text-decoration: var(--md-sys-typescale-title-large-text-decoration);
+            text-decoration: var(--md-sys-typescale-title-large-text-decoration);
+    text-transform: var(--md-sys-typescale-title-large-text-transform);
+    line-height: var(--md-sys-typescale-title-large-height);
     letter-spacing: var(--md-sys-typescale-title-large-tracking);
+    font-size: var(--md-sys-typescale-title-large-font-size);
+    font-weight: var(--md-sys-typescale-title-large-font-weight);
+    font-style: var(--md-sys-typescale-title-large-font-family-style);
+    font-family: var(--md-sys-typescale-title-large-font-family-name);
   }
 
   .top-app-bar .leading {
@@ -55,9 +59,9 @@
   }
 
 .top-app-bar.small .title {
-  text-align: start;
-  padding-left: 16px;
-}
+    text-align: start;
+    padding-left: 16px;
+  }
 
 .top-app-bar.medium {
   grid-template-columns: auto 1fr;
@@ -66,13 +70,17 @@
 }
 
 .top-app-bar.medium .title {
-  padding-top: 16px;
-  font-family: var(--md-sys-typescale-headline-small-font);
-  font-weight: var(--md-sys-typescale-headline-small-weight);
-  font-size: var(--md-sys-typescale-headline-small-size);
-  line-height: var(--md-sys-typescale-headline-small-line-height);
-  letter-spacing: var(--md-sys-typescale-headline-small-tracking);
-}
+    padding-top: 16px;
+    -webkit-text-decoration: var(--md-sys-typescale-headline-small-text-decoration);
+            text-decoration: var(--md-sys-typescale-headline-small-text-decoration);
+    text-transform: var(--md-sys-typescale-headline-small-text-transform);
+    line-height: var(--md-sys-typescale-headline-small-height);
+    letter-spacing: var(--md-sys-typescale-headline-small-tracking);
+    font-size: var(--md-sys-typescale-headline-small-font-size);
+    font-weight: var(--md-sys-typescale-headline-small-font-weight);
+    font-style: var(--md-sys-typescale-headline-small-font-family-style);
+    font-family: var(--md-sys-typescale-headline-small-font-family-name);
+  }
 
 .top-app-bar.large {
   grid-template-columns: auto 1fr;
@@ -81,14 +89,18 @@
 }
 
 .top-app-bar.large .title {
-  padding-top: 20px;
-  font-family: var(--md-sys-typescale-headline-medium-font);
-  font-weight: var(--md-sys-typescale-headline-medium-weight);
-  font-size: var(--md-sys-typescale-headline-medium-size);
-  line-height: var(--md-sys-typescale-headline-medium-line-height);
-  letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
-}
+    padding-top: 20px;
+    -webkit-text-decoration: var(--md-sys-typescale-headline-medium-text-decoration);
+            text-decoration: var(--md-sys-typescale-headline-medium-text-decoration);
+    text-transform: var(--md-sys-typescale-headline-medium-text-transform);
+    line-height: var(--md-sys-typescale-headline-medium-height);
+    letter-spacing: var(--md-sys-typescale-headline-medium-tracking);
+    font-size: var(--md-sys-typescale-headline-medium-font-size);
+    font-weight: var(--md-sys-typescale-headline-medium-font-weight);
+    font-style: var(--md-sys-typescale-headline-medium-font-family-style);
+    font-family: var(--md-sys-typescale-headline-medium-font-family-name);
+  }
 
 .top-app-bar.center-aligned .title {
-  text-align: center;
-}
+    text-align: center;
+  }

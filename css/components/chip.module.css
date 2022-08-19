@@ -6,29 +6,33 @@
   outline: none;
   padding: 8px 16px;
   cursor: pointer;
-  font-family: var(--md-sys-typescale-label-large-font);
-  font-weight: var(--md-sys-typescale-label-large-weight);
-  font-size: var(--md-sys-typescale-label-large-size);
-  line-height: var(--md-sys-typescale-label-large-line-height);
+  -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+          text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+  text-transform: var(--md-sys-typescale-label-large-text-transform);
+  line-height: var(--md-sys-typescale-label-large-height);
   letter-spacing: var(--md-sys-typescale-label-large-tracking);
+  font-size: var(--md-sys-typescale-label-large-font-size);
+  font-weight: var(--md-sys-typescale-label-large-font-weight);
+  font-style: var(--md-sys-typescale-label-large-font-family-style);
+  font-family: var(--md-sys-typescale-label-large-font-family-name);
 }
 
-.chip > i {
-  color: var(--md-sys-color-primary);
-}
+  .chip > i {
+    color: var(--md-sys-color-primary);
+  }
 
-.chip > i:first-child {
-  margin-right: 8px;
-}
+  .chip > i:first-child {
+    margin-right: 8px;
+  }
 
-.chip > i:last-child {
-  margin-left: 8px;
-}
+  .chip > i:last-child {
+    margin-left: 8px;
+  }
 
-.chip > i:only-child {
-  margin-right: 0px;
-  margin-left: 0px;
-}
+  .chip > i:only-child {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 
 .chip.assist {
   background-color: var(--md-sys-color-surface);

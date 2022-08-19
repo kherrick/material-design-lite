@@ -12,13 +12,17 @@
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  font-family: var(--md-sys-typescale-label-large-font);
-  font-weight: var(--md-sys-typescale-label-large-weight);
-  font-size: var(--md-sys-typescale-label-large-size);
-  line-height: var(--md-sys-typescale-label-large-line-height);
-  letter-spacing: var(--md-sys-typescale-label-large-tracking);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-primary);
+  -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+          text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+  text-transform: var(--md-sys-typescale-label-large-text-transform);
+  line-height: var(--md-sys-typescale-label-large-height);
+  letter-spacing: var(--md-sys-typescale-label-large-tracking);
+  font-size: var(--md-sys-typescale-label-large-font-size);
+  font-weight: var(--md-sys-typescale-label-large-font-weight);
+  font-style: var(--md-sys-typescale-label-large-font-family-style);
+  font-family: var(--md-sys-typescale-label-large-font-family-name);
   box-shadow: var(--md-sys-elevation-1);
 }
 
@@ -42,15 +46,18 @@
     text-decoration: none;
   }
 
-  .button:hover {
+  .button:hover,
+  .button.hover {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-  .button:focus {
+  .button:focus,
+  .button.focus {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-  .button:active {
+  .button:active,
+  .button.active {
     box-shadow: var(--md-sys-elevation-1);
   }
 
@@ -68,17 +75,20 @@
   outline: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
 }
 
-.button.text:hover {
+.button.text:hover,
+  .button.text .hover {
     box-shadow: var(--md-sys-elevation-`);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.text:focus {
+.button.text:focus,
+  .button.text .focus {
     box-shadow: var(--md-sys-elevation-1);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.text:active {
+.button.text:active,
+  .button.text .active {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
@@ -94,17 +104,20 @@
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.button.filled:hover {
+.button.filled:hover,
+  .button.filled.hover {
     box-shadow: var(--md-sys-elevation-1);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.filled:focus {
+.button.filled:focus,
+  .button.filled.focus {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.filled:active {
+.button.filled:active,
+  .button.filled.active {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
@@ -126,17 +139,20 @@
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.button.filled-tonal:hover {
+.button.filled-tonal:hover,
+  .button.filled-tonal.hover {
     box-shadow: var(--md-sys-elevation-1);
     background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.filled-tonal:focus {
+.button.filled-tonal:focus,
+  .button.filled-tonal.focus {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.filled-tonal:active {
+.button.filled-tonal:active,
+  .button.filled-tonal.active {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
@@ -154,18 +170,21 @@
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.button.outlined:hover {
+.button.outlined:hover,
+  .button.outlined.hover {
     box-shadow: var(--md-sys-elevation-1);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.outlined:focus {
+.button.outlined:focus,
+  .button.outlined.focus {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.outlined:active {
+.button.outlined:active,
+  .button.outlined.active {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
@@ -183,17 +202,20 @@
   color: var(--md-sys-color-primary);
 }
 
-.button.elevated:hover {
+.button.elevated:hover,
+  .button.elevated .hover {
     box-shadow: var(--md-sys-elevation-2);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.elevated:focus {
+.button.elevated:focus,
+  .button.elevated .focus {
     box-shadow: var(--md-sys-elevation-1);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.elevated:active {
+.button.elevated:active,
+  .button.elevated .active {
     box-shadow: var(--md-sys-elevation-1);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }

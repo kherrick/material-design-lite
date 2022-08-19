@@ -6,11 +6,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-family: var(--md-sys-typescale-label-large-font);
-  font-weight: var(--md-sys-typescale-label-large-weight);
-  font-size: var(--md-sys-typescale-label-large-size);
-  line-height: var(--md-sys-typescale-label-large-line-height);
+  -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+          text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+  text-transform: var(--md-sys-typescale-label-large-text-transform);
+  line-height: var(--md-sys-typescale-label-large-height);
   letter-spacing: var(--md-sys-typescale-label-large-tracking);
+  font-size: var(--md-sys-typescale-label-large-font-size);
+  font-weight: var(--md-sys-typescale-label-large-font-weight);
+  font-style: var(--md-sys-typescale-label-large-font-family-style);
+  font-family: var(--md-sys-typescale-label-large-font-family-name);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-primary);
   box-shadow: var(--md-sys-elevation-1);
@@ -24,32 +28,35 @@
   box-shadow: none;
 }
 
-.icon[selected] {
-  color: var(--md-sys-color-primary);
-}
+  .icon[selected] {
+    color: var(--md-sys-color-primary);
+  }
 
-.icon:hover {
-  box-shadow: var(--md-sys-elevation-2);
-}
+  .icon:hover,
+  .icon .hover {
+    box-shadow: var(--md-sys-elevation-2);
+  }
 
-.icon:focus {
-  box-shadow: var(--md-sys-elevation-1);
-}
+  .icon:focus,
+  .icon .focus {
+    box-shadow: var(--md-sys-elevation-1);
+  }
 
-.icon:active {
-  box-shadow: var(--md-sys-elevation-1);
-}
+  .icon:active,
+  .icon .active {
+    box-shadow: var(--md-sys-elevation-1);
+  }
 
-.icon[disabled] {
-  cursor: not-allowed;
-  color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
-  box-shadow: var(--md-sys-elevation-0);
-}
+  .icon[disabled] {
+    cursor: not-allowed;
+    color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+    box-shadow: var(--md-sys-elevation-0);
+  }
 
-.icon i {
-  font-size: 24px;
-  vertical-align: middle;
-}
+  .icon i {
+    font-size: 24px;
+    vertical-align: middle;
+  }
 
 .icon.contained.filled {
   background-color: var(--md-sys-color-primary);
@@ -57,26 +64,29 @@
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.icon.contained.filled:hover {
-  box-shadow: var(--md-sys-elevation-1);
-  background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
-}
+.icon.contained.filled:hover,
+  .icon.contained.filled .hover {
+    box-shadow: var(--md-sys-elevation-1);
+    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+  }
 
-.icon.contained.filled:focus {
-  box-shadow: var(--md-sys-elevation-0);
-  background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
-}
+.icon.contained.filled:focus,
+  .icon.contained.filled .focus {
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+  }
 
-.icon.contained.filled:active {
-  box-shadow: var(--md-sys-elevation-0);
-  background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
-}
+.icon.contained.filled:active,
+  .icon.contained.filled .active {
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+  }
 
 .icon.contained.filled[disabled] {
-  box-shadow: var(--md-sys-elevation-0);
-  background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
-  color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
-}
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+    color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+  }
 
 .icon.contained.filled-tonal {
   background-color: var(--md-sys-color-secondary-container);
@@ -84,26 +94,29 @@
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.icon.contained.filled-tonal:hover {
-  box-shadow: var(--md-sys-elevation-1);
-  background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
-}
+.icon.contained.filled-tonal:hover,
+  .icon.contained.filled-tonal .hover {
+    box-shadow: var(--md-sys-elevation-1);
+    background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
+  }
 
-.icon.contained.filled-tonal:focus {
-  box-shadow: var(--md-sys-elevation-0);
-  background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
-}
+.icon.contained.filled-tonal:focus,
+  .icon.contained.filled-tonal .focus {
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
+  }
 
-.icon.contained.filled-tonal:active {
-  box-shadow: var(--md-sys-elevation-0);
-  background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
-}
+.icon.contained.filled-tonal:active,
+  .icon.contained.filled-tonal .active {
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+  }
 
 .icon.contained.filled-tonal[disabled] {
-  box-shadow: var(--md-sys-elevation-0);
-  background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
-  color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
-}
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+    color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+  }
 
 .icon.contained.outlined {
   background-color: transparent;
@@ -112,28 +125,31 @@
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.icon.contained.outlined:hover {
-  box-shadow: var(--md-sys-elevation-1);
-  background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
-}
+.icon.contained.outlined:hover,
+  .icon.contained.outlined .hover {
+    box-shadow: var(--md-sys-elevation-1);
+    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+  }
 
-.icon.contained.outlined:focus {
-  border: 1px solid var(--md-sys-color-primary);
-  box-shadow: var(--md-sys-elevation-0);
-  background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
-}
+.icon.contained.outlined:focus,
+  .icon.contained.outlined .focus {
+    border: 1px solid var(--md-sys-color-primary);
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+  }
 
-.icon.contained.outlined:active {
-  border: 1px solid var(--md-sys-color-primary);
-  box-shadow: var(--md-sys-elevation-0);
-  background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
-}
+.icon.contained.outlined:active,
+  .icon.contained.outlined .active {
+    border: 1px solid var(--md-sys-color-primary);
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+  }
 
 .icon.contained.outlined[disabled] {
-  box-shadow: var(--md-sys-elevation-0);
-  border: 1px solid rgba(var(--md-sys-color-on-surface-rgb), 0.12);
-  color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
-}
+    box-shadow: var(--md-sys-elevation-0);
+    border: 1px solid rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+    color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+  }
 
 .icon.toggle {
   background-color: var(--md-sys-color-surface-variant);
@@ -141,12 +157,12 @@
 }
 
 .icon.toggle[selected] {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-}
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+  }
 
 .icon.toggle[disabled] {
-  box-shadow: var(--md-sys-elevation-0);
-  background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
-  color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
-}
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+    color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+  }
