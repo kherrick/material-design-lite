@@ -2638,11 +2638,11 @@ datalist {
     color: var(--md-sys-color-on-tertiary);
   }
 
-:where(.focus-ring, .button, .icon, .fab) {
+:where(.focus-ring) {
   position: relative;
 }
 
-:where(.focus-ring, .button, .icon, .fab):focus-within::before {
+:where(.focus-ring):focus-within::before {
   content: "";
   border: 2px solid var(--md-sys-color-on-surface-variant);
   border-radius: inherit;
@@ -3105,9 +3105,33 @@ datalist {
     text-align: start;
   }
 
-.data-table .skipped tbody tr:nth-child(odd) td {
-      background-color: rgba(var(--md-sys-color-outline-rgb), 0.67);
-    }
+.data-table.skipped tbody tr:nth-child(odd) td {
+    background-color: rgba(var(--md-sys-color-outline-rgb), 0.67);
+  }
+
+.bottom-app-bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-shadow: var(--md-sys-elevation-1);
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+}
+
+.bottom-app-bar .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1;
+    margin: 16px;
+  }
+
+.bottom-app-bar .fab {
+    margin: 16px;
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+  }
 
 /* button {
   border-radius: 20px;
