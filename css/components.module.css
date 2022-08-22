@@ -1673,3 +1673,34 @@ datalist {
     box-shadow: 0 0 0 1px var(--md-sys-color-surface) !important;
     transform: scale(4, 4);
   }
+/* Material Design Data Table */
+.data-table {
+  border-collapse: collapse;
+  font-family: inherit;
+  font-size: 14px;
+  min-width: 537px;
+  border-radius: var(--md-sys-shape-medium);
+}
+.data-table :where(th, td) {
+    padding: 7px 17px;
+    border: 1px solid var(--md-sys-color-outline);
+  }
+.data-table caption {
+    margin: 7px;
+  }
+.data-table thead {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface-variant);
+  }
+.data-table thead :where(th, tr, td) {
+    text-align: center;
+  }
+.data-table tbody td {
+    color: var(--md-sys-color-on-surface);
+  }
+.data-table tbody :where(:first-child, :nth-child(4), :last-child) {
+    text-align: start;
+  }
+.data-table .skipped tbody tr:nth-child(odd) td {
+      background-color: rgba(var(--md-sys-color-outline-rgb), 0.67);
+    }
