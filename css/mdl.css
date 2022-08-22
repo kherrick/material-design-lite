@@ -1229,7 +1229,7 @@ body {
   box-shadow: var(--md-sys-elevation-3);
 }
 
-.elevation-2 {
+.elevation-4 {
   box-shadow: var(--md-sys-elevation-4);
 }
 
@@ -1239,7 +1239,7 @@ body {
 
 .button {
   padding: 8px 24px;
-  border-radius: var(--md-comp-button-shape, 20px);
+  border-radius: 20px;
   outline: none;
   border: none;
   height: var(--button-height, 40px);
@@ -1304,6 +1304,10 @@ body {
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
     box-shadow: var(--md-sys-elevation-0);
+  }
+
+.button:focus-within::before {
+    border-radius: 40px;
   }
 
 .button.text {
@@ -1919,7 +1923,6 @@ body {
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto;
   grid-template-areas: "leading title actions";
-  transition: background 0.8s;
 }
 
 :where(.top-app-bar) .actions {
@@ -1956,11 +1959,15 @@ body {
     padding: unset;
   }
 
+:where(.top-app-bar).fixed {
+    transition: background 0.8s;
+    z-index: 1000;
+  }
+
 :where(.top-app-bar).scrolled {
     --tint-opacity: 0.09;
     --tint-color-rgb: var(--md-sys-color-primary-rgb);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--tint-opacity));
-    z-index: 1000;
     box-shadow: var(--md-sys-elevation-2);
     background: linear-gradient(var(--tint-color), var(--tint-color)) no-repeat, linear-gradient(var(--md-sys-color-surface), var(--md-sys-color-surface)) no-repeat;
   }
@@ -2633,11 +2640,11 @@ datalist {
     color: var(--md-sys-color-on-tertiary);
   }
 
-:where(.focus-ring, .button, .icon, .fab, .card) {
+:where(.focus-ring, .button, .icon, .fab) {
   position: relative;
 }
 
-:where(.focus-ring, .button, .icon, .fab, .card):focus-within::before {
+:where(.focus-ring, .button, .icon, .fab):focus-within::before {
   content: "";
   border: 2px solid var(--md-sys-color-on-surface-variant);
   border-radius: inherit;
