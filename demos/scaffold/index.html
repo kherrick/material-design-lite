@@ -43,7 +43,7 @@
     <title>scaffold</title>
     
   <link rel="stylesheet" href="/material-design-lite/assets/demos-_id_.cd7bc1a4.css" />
-<link rel="stylesheet" href="/material-design-lite/assets/4e662a36.63a981a7.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+<link rel="stylesheet" href="/material-design-lite/assets/4e662a36.572ef047.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
 /** Bundled JS generated from "@astrojs/lit/client-shim.js" */
 var N = Object.defineProperty;
 var i = (t, n) => () => (t && (n = t((t = 0))), n);
@@ -148,15 +148,25 @@ var x = new DOMParser()
 
     <div class="cards"></div>
 
-    <button id="cta" class="button fab extended">
-        <i class="material-icons">add</i>
-        <label>Button</label>
-    </button>
+    <footer class="bottom-app-bar" style="min-width: 400px">
+        <div class="actions">
+            <button class="icon">
+                <i class="material-icons">search</i>
+            </button>
+            <button class="icon">
+                <i class="material-icons">delete</i>
+            </button>
+            <button class="icon">
+                <i class="material-icons">archive</i>
+            </button>
+        </div>
+        <button class="button fab">
+            <i class="material-icons">add</i>
+        </button>
+    </footer>
 </main>
 
-<footer>
 
-</footer>
 
 <style>
     body {
@@ -164,25 +174,32 @@ var x = new DOMParser()
         color: var(--md-sys-color-on-background);
     }
 
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+
     header {
         position: sticky;
         top: 0;
         width: 100%;
     }
 
+    footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+    }
+
     .cards {
+        flex: 1;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-gap: 16px;
         padding: 16px;
         justify-items: center;
         align-items: center;
-    }
-
-    #cta {
-        position: fixed;
-        bottom: 16px;
-        right: 16px;
     }
 </style>
 

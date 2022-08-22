@@ -15,9 +15,21 @@
     margin: 16px;
   }
 
-  .bottom-app-bar .fab {
+  .bottom-app-bar :where(.fab) {
     margin: 16px;
     box-shadow: var(--md-sys-elevation-0);
     background-color: var(--md-sys-color-surface-variant);
     color: var(--md-sys-color-on-surface-variant);
   }
+
+  .bottom-app-bar :where(.fab):hover {
+      box-shadow: var(--md-sys-elevation-1);
+    }
+
+  .bottom-app-bar :where(.fab):focus {
+      box-shadow: var(--md-sys-elevation-0);
+    }
+
+  .bottom-app-bar :where(.fab):active {
+      box-shadow: var(--md-sys-elevation-0);
+    }
