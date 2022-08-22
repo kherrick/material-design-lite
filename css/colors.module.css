@@ -1,246 +1,246 @@
-.primary {
+.color-primary {
   background-color: var(--md-sys-color-primary);
 }
 
-.primary-text {
+.color-primary-text {
   color: var(--md-sys-color-primary);
 }
 
-.on-primary {
+.color-on-primary {
   background-color: var(--md-sys-color-on-primary);
 }
 
-.on-primary-text {
+.color-on-primary-text {
   color: var(--md-sys-color-on-primary);
 }
 
-.primary-container {
+.color-primary-container {
   background-color: var(--md-sys-color-primary-container);
 }
 
-.primary-container-text {
+.color-primary-container-text {
   color: var(--md-sys-color-primary-container);
 }
 
-.on-primary-container {
+.color-on-primary-container {
   background-color: var(--md-sys-color-on-primary-container);
 }
 
-.on-primary-container-text {
+.color-on-primary-container-text {
   color: var(--md-sys-color-on-primary-container);
 }
 
-.secondary {
+.color-secondary {
   background-color: var(--md-sys-color-secondary);
 }
 
-.secondary-text {
+.color-secondary-text {
   color: var(--md-sys-color-secondary);
 }
 
-.on-secondary {
+.color-on-secondary {
   background-color: var(--md-sys-color-on-secondary);
 }
 
-.on-secondary-text {
+.color-on-secondary-text {
   color: var(--md-sys-color-on-secondary);
 }
 
-.secondary-container {
+.color-secondary-container {
   background-color: var(--md-sys-color-secondary-container);
 }
 
-.secondary-container-text {
+.color-secondary-container-text {
   color: var(--md-sys-color-secondary-container);
 }
 
-.on-secondary-container {
+.color-on-secondary-container {
   background-color: var(--md-sys-color-on-secondary-container);
 }
 
-.on-secondary-container-text {
+.color-on-secondary-container-text {
   color: var(--md-sys-color-on-secondary-container);
 }
 
-.tertiary {
+.color-tertiary {
   background-color: var(--md-sys-color-tertiary);
 }
 
-.tertiary-text {
+.color-tertiary-text {
   color: var(--md-sys-color-tertiary);
 }
 
-.on-tertiary {
+.color-on-tertiary {
   background-color: var(--md-sys-color-on-tertiary);
 }
 
-.on-tertiary-text {
+.color-on-tertiary-text {
   color: var(--md-sys-color-on-tertiary);
 }
 
-.tertiary-container {
+.color-tertiary-container {
   background-color: var(--md-sys-color-tertiary-container);
 }
 
-.tertiary-container-text {
+.color-tertiary-container-text {
   color: var(--md-sys-color-tertiary-container);
 }
 
-.on-tertiary-container {
+.color-on-tertiary-container {
   background-color: var(--md-sys-color-on-tertiary-container);
 }
 
-.on-tertiary-container-text {
+.color-on-tertiary-container-text {
   color: var(--md-sys-color-on-tertiary-container);
 }
 
-.error {
+.color-error {
   background-color: var(--md-sys-color-error);
 }
 
-.error-text {
+.color-error-text {
   color: var(--md-sys-color-error);
 }
 
-.error-container {
+.color-error-container {
   background-color: var(--md-sys-color-error-container);
 }
 
-.error-container-text {
+.color-error-container-text {
   color: var(--md-sys-color-error-container);
 }
 
-.on-error {
+.color-on-error {
   background-color: var(--md-sys-color-on-error);
 }
 
-.on-error-text {
+.color-on-error-text {
   color: var(--md-sys-color-on-error);
 }
 
-.on-error-container {
+.color-on-error-container {
   background-color: var(--md-sys-color-on-error-container);
 }
 
-.on-error-container-text {
+.color-on-error-container-text {
   color: var(--md-sys-color-on-error-container);
 }
 
-.background {
+.color-background {
   background-color: var(--md-sys-color-background);
 }
 
-.background-text {
+.color-background-text {
   color: var(--md-sys-color-background);
 }
 
-.on-background {
+.color-on-background {
   background-color: var(--md-sys-color-on-background);
 }
 
-.on-background-text {
+.color-on-background-text {
   color: var(--md-sys-color-on-background);
 }
 
-.surface {
+.color-surface {
 }
 
-.surface-text {
+.color-surface-text {
   color: var(--md-sys-color-surface);
 }
 
-.on-surface {
+.color-on-surface {
   background-color: var(--md-sys-color-on-surface);
 }
 
-.on-surface-text {
+.color-on-surface-text {
   color: var(--md-sys-color-on-surface);
 }
 
-.surface-variant {
+.color-surface-variant {
   background-color: var(--md-sys-color-surface-variant);
 }
 
-.surface-variant-text {
+.color-surface-variant-text {
   color: var(--md-sys-color-surface-variant);
 }
 
-.on-surface-variant {
+.color-on-surface-variant {
   background-color: var(--md-sys-color-on-surface-variant);
 }
 
-.on-surface-variant-text {
+.color-on-surface-variant-text {
   color: var(--md-sys-color-on-surface-variant);
 }
 
-.outline {
+.color-outline {
   background-color: var(--md-sys-color-outline);
 }
 
-.outline-text {
+.color-outline-text {
   color: var(--md-sys-color-outline);
 }
 
-.inverse-on-surface {
+.color-inverse-on-surface {
   background-color: var(--md-sys-color-inverse-on-surface);
 }
 
-.inverse-on-surface-text {
+.color-inverse-on-surface-text {
   color: var(--md-sys-color-inverse-on-surface);
 }
 
-.inverse-surface {
+.color-inverse-surface {
   background-color: var(--md-sys-color-inverse-surface);
 }
 
-.inverse-surface-text {
+.color-inverse-surface-text {
   color: var(--md-sys-color-inverse-surface);
 }
 
-.inverse-primary {
+.color-inverse-primary {
   background-color: var(--md-sys-color-inverse-primary);
 }
 
-.inverse-primary-text {
+.color-inverse-primary-text {
   color: var(--md-sys-color-inverse-primary);
 }
 
-.shadow {
+.color-shadow {
   background-color: var(--md-sys-color-shadow);
 }
 
-.shadow-text {
+.color-shadow-text {
   color: var(--md-sys-color-shadow);
 }
 
-.surface-tint {
+.color-surface-tint {
   background-color: var(--md-sys-color-surface-tint);
 }
 
-.surface-tint-text {
+.color-surface-tint-text {
   color: var(--md-sys-color-surface-tint);
 }
 
-.surface-tint-color {
+.color-surface-tint-color {
   background-color: var(--md-sys-color-surface-tint-color);
 }
 
-.surface-tint-color-text {
+.color-surface-tint-color-text {
   color: var(--md-sys-color-surface-tint-color);
 }
 
-.black {
+.color-black {
   background-color: var(--md-ref-palette-black, #000);
 }
 
-.black-text {
+.color-black-text {
   color: var(--md-ref-palette-black, #000);
 }
 
-.white {
+.color-white {
   background-color: var(--md-ref-palette-white, #fff);
 }
 
-.white-text {
+.color-white-text {
   color: var(--md-ref-palette-white, #fff);
 }
