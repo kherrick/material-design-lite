@@ -14,9 +14,8 @@
  limitations under the License.
 */
 
-body,
-.tokens,
-.elevation {
+:where(html),
+.tokens {
   /* +5 */
   --md-sys-elevation-level5-value: 12px;
   --md-sys-elevation-level5-unit: 1px;
@@ -49,9 +48,8 @@ body,
   --md-sys-elevation-5: 0px 8px 10px -6px rgba(var(--md-sys-color-shadow-rgb), 0.2), 0px 16px 24px 2px rgba(var(--md-sys-color-shadow-rgb), 0.14), 0px 6px 30px 5px rgba(var(--md-sys-color-shadow-rgb), 0.12);
 }
 
-body,
-.tokens,
-.motion {
+:where(html),
+.tokens {
   /* Emphasized decelerate easing (out) */
   --md-sys-motion-easing-emphasized-decelerate-x0: 0.05000000074505806;
   --md-sys-motion-easing-emphasized-decelerate-y0: 0.699999988079071;
@@ -123,9 +121,8 @@ body,
   --md-sys-motion-path-standard-path: 1;
 }
 
-body,
-.tokens,
-.palettes {
+:where(html),
+.tokens {
   /* Color */
   --md-source: #6750a4;
   --md-source-hue: 298.98099721070395;
@@ -241,9 +238,8 @@ body,
   --md-ref-palette-error100-rgb: 255, 255, 255;
 }
 
-body,
-.tokens,
-.shape {
+:where(html),
+.tokens {
   /* Fully rounded */
   --md-sys-shape-corner-full-family: 3px;
   /* Extra large top rounding */
@@ -305,9 +301,8 @@ body,
   --md-sys-shape-large: var(--md-sys-shape-corner-large);
 }
 
-body,
-.tokens,
-.state {
+:where(html),
+.tokens {
   /* Dragged state layer opacity */
   --md-sys-state-dragged-state-layer-opacity: 0.16;
   /* Pressed state layer opacity */
@@ -318,9 +313,8 @@ body,
   --md-sys-state-hover-state-layer-opacity: 0.08;
 }
 
-body,
-.tokens,
-.surfaces {
+:where(html),
+.tokens {
   --md-surface-1: rgba(var(--md-sys-color-primary-rgb), 0.05);
   --md-surface-2: rgba(var(--md-sys-color-primary-rgb), 0.08);
   --md-surface-3: rgba(var(--md-sys-color-primary-rgb), 0.11);
@@ -328,9 +322,8 @@ body,
   --md-surface-5: rgba(var(--md-sys-color-primary-rgb), 0.14);
 }
 
-body,
-.tokens,
-.typescale {
+:where(html),
+.tokens {
   /* label - small */
   --md-sys-typescale-label-small-font-family-name: Roboto;
   --md-sys-typescale-label-small-font-family-style: Medium;
@@ -438,8 +431,7 @@ body,
   --md-sys-typescale-title-large-line-height: 28px;
 }
 
-body,
-body.light-theme {
+:where(html, .light-theme) {
   color-scheme: light;
   --md-sys-color-primary-rgb: var(--md-ref-palette-primary40-rgb);
   --md-sys-color-on-primary-rgb: var(--md-ref-palette-primary100-rgb);
@@ -473,7 +465,7 @@ body.light-theme {
   --md-sys-color-scrim-rgb: var(--md-ref-palette-neutral0-rgb);
 }
 
-body.dark-theme {
+:where(.dark-theme) {
   color-scheme: dark;
   --md-sys-color-primary-rgb: var(--md-ref-palette-primary80-rgb);
   --md-sys-color-on-primary-rgb: var(--md-ref-palette-primary20-rgb);
@@ -507,7 +499,7 @@ body.dark-theme {
   --md-sys-color-scrim-rgb: var(--md-ref-palette-neutral0-rgb);
 }
 
-body {
+:where(.light-theme, .dark-theme) {
   --md-sys-color-primary: rgba(var(--md-sys-color-primary-rgb), 1);
   --md-sys-color-primary-container: rgba(var(--md-sys-color-primary-container-rgb), 1);
   --md-sys-color-secondary: rgba(var(--md-sys-color-secondary-rgb), 1);
@@ -3212,17 +3204,3 @@ datalist {
   width: 100%;
   background-color: var(--md-sys-color-outline-variant);
 }
-
-/* button {
-  border-radius: 20px;
-  position: relative;
-}
-
-:where(button, .icon):focus::before {
-  content: "";
-  border: 2px solid black;
-  border-radius: inherit;
-  position: absolute;
-  inset: -6px;
-  box-sizing: border-box;
-} */

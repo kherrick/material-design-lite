@@ -1,4 +1,4 @@
-body, .tokens {
+:where(html, .tokens) {
 --md-source: #F0F8FF;
   /* primary */
   --md-ref-palette-primary0-rgb: 0, 0, 0;
