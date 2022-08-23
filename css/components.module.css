@@ -684,6 +684,7 @@
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto;
   grid-template-areas: "leading title actions";
+  z-index: 1;
 }
 
 :where(.top-app-bar) .actions {
@@ -1674,37 +1675,49 @@ datalist {
     box-shadow: 0 0 0 1px var(--md-sys-color-surface) !important;
     transform: scale(4, 4);
   }
-/* Material Design Data Table */
-.data-table {
-  border-collapse: collapse;
-  font-family: inherit;
-  font-size: 14px;
-  min-width: 537px;
+
+:where(.data-table, table) {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--md-sys-color-outline-variant);
   border-radius: var(--md-sys-shape-medium);
+  margin: 0;
+  padding: 0;
 }
-.data-table :where(th, td) {
-    padding: 7px 17px;
-    border: 1px solid var(--md-sys-color-outline);
-  }
-.data-table caption {
-    margin: 7px;
-  }
-.data-table thead {
-    background-color: var(--md-sys-color-surface-variant);
-    color: var(--md-sys-color-on-surface-variant);
-  }
-.data-table thead :where(th, tr, td) {
-    text-align: center;
-  }
-.data-table tbody td {
-    color: var(--md-sys-color-on-surface);
-  }
-.data-table tbody :where(:first-child, :nth-child(4), :last-child) {
-    text-align: start;
+
+:where(.data-table, table) :where(td:first-child, th:first-child) {
+    border-left: none;
   }
 
-.data-table.skipped tbody tr:nth-child(odd) td {
-    background-color: rgba(var(--md-sys-color-outline-rgb), 0.67);
+:where(.data-table, table) thead:first-child tr:first-child th,
+  :where(.data-table, table) tbody:first-child tr:first-child td {
+    border-top: none;
+  }
+
+:where(.data-table, table) thead tr th:first-of-type {
+    border-top-left-radius: var(--md-sys-shape-medium);
+  }
+
+:where(.data-table, table) thead tr th:last-of-type {
+    border-top-right-radius: var(--md-sys-shape-medium);
+  }
+
+:where(.data-table, table) :where(th) {
+    border-top: none;
+    background-color: var(--md-surface-2);
+    color: var(--md-sys-color-on-surface-variant);
+    font-weight: 500;
+  }
+
+:where(.data-table, table) :where(td, th) {
+    padding: 16px 24px;
+    border-top: 1px solid var(--md-sys-color-surface-variant);
+    border-left: 1px solid var(--md-sys-color-surface-variant);
+    vertical-align: middle;
+  }
+
+.data-table.zebra tr:nth-of-type(even) {
+    background-color: var(--md-surface-1);
   }
 
 .bottom-app-bar {
@@ -1748,3 +1761,99 @@ datalist {
   width: 100%;
   background-color: var(--md-sys-color-outline-variant);
 }
+
+.segmented-button {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-radius: 20px;
+  border: 1px solid var(--md-sys-color-outline);
+  color: var(--md-sys-color-on-surface);
+  background-color: var(--md-sys-color-surface);
+  -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+          text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+  text-transform: var(--md-sys-typescale-label-large-text-transform);
+  line-height: var(--md-sys-typescale-label-large-height);
+  letter-spacing: var(--md-sys-typescale-label-large-tracking);
+  font-size: var(--md-sys-typescale-label-large-font-size);
+  font-weight: var(--md-sys-typescale-label-large-font-weight);
+  font-style: var(--md-sys-typescale-label-large-font-family-style);
+  font-family: var(--md-sys-typescale-label-large-font-family-name);
+}
+
+.segmented-button input {
+    display: none;
+    pointer-events: none;
+  }
+
+.segmented-button input + label {
+      min-width: 40px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      padding: 0 40px;
+      margin: 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+              user-select: none;
+      position: relative;
+      z-index: 1;
+    }
+
+.segmented-button input + label i {
+        margin-right: 8px;
+      }
+
+.segmented-button label:last-of-type {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+.segmented-button label:first-of-type {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+.segmented-button label:not(:last-child) {
+    border-right: 1px solid var(--md-sys-color-outline);
+  }
+
+.segmented-button input:checked + label {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+  }
+
+.segmented-button input:checked + label:before {
+      content: "check";
+
+      /* Material Icons */
+      font-family: "Material Icons";
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      font-feature-settings: "liga";
+      -webkit-font-feature-settings: "liga";
+      -webkit-font-smoothing: antialiased;
+      padding-right: 8px;
+    }
+
+.segmented-button input:checked + label i {
+      display: none;
+    }

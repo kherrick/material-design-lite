@@ -1,39 +1,43 @@
-/* Material Design Data Table */
-
-.data-table {
-  border-collapse: collapse;
-  font-family: inherit;
-  font-size: 14px;
-  min-width: 537px;
+:where(.data-table, table) {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--md-sys-color-outline-variant);
   border-radius: var(--md-sys-shape-medium);
+  margin: 0;
+  padding: 0;
 }
 
-.data-table :where(th, td) {
-    padding: 7px 17px;
-    border: 1px solid var(--md-sys-color-outline);
+  :where(.data-table, table) :where(td:first-child, th:first-child) {
+    border-left: none;
   }
 
-.data-table caption {
-    margin: 7px;
+  :where(.data-table, table) thead:first-child tr:first-child th,
+  :where(.data-table, table) tbody:first-child tr:first-child td {
+    border-top: none;
   }
 
-.data-table thead {
-    background-color: var(--md-sys-color-surface-variant);
+  :where(.data-table, table) thead tr th:first-of-type {
+    border-top-left-radius: var(--md-sys-shape-medium);
+  }
+
+  :where(.data-table, table) thead tr th:last-of-type {
+    border-top-right-radius: var(--md-sys-shape-medium);
+  }
+
+  :where(.data-table, table) :where(th) {
+    border-top: none;
+    background-color: var(--md-surface-2);
     color: var(--md-sys-color-on-surface-variant);
+    font-weight: 500;
   }
 
-.data-table thead :where(th, tr, td) {
-    text-align: center;
+  :where(.data-table, table) :where(td, th) {
+    padding: 16px 24px;
+    border-top: 1px solid var(--md-sys-color-surface-variant);
+    border-left: 1px solid var(--md-sys-color-surface-variant);
+    vertical-align: middle;
   }
 
-.data-table tbody td {
-    color: var(--md-sys-color-on-surface);
-  }
-
-.data-table tbody :where(:first-child, :nth-child(4), :last-child) {
-    text-align: start;
-  }
-
-.data-table.skipped tbody tr:nth-child(odd) td {
-    background-color: rgba(var(--md-sys-color-outline-rgb), 0.67);
+.data-table.zebra tr:nth-of-type(even) {
+    background-color: var(--md-surface-1);
   }
