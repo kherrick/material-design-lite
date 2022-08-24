@@ -1762,7 +1762,7 @@ datalist {
   background-color: var(--md-sys-color-outline-variant);
 }
 
-.segmented-button {
+:where(.segmented-button) {
   width: 100%;
   height: 40px;
   display: flex;
@@ -1787,12 +1787,12 @@ datalist {
   font-family: var(--md-sys-typescale-label-large-font-family-name);
 }
 
-.segmented-button input {
+:where(.segmented-button) input {
     display: none;
     pointer-events: none;
   }
 
-.segmented-button input + label {
+:where(.segmented-button) input + label {
       min-width: 40px;
       flex: 1;
       display: flex;
@@ -1810,30 +1810,30 @@ datalist {
       z-index: 1;
     }
 
-.segmented-button input + label i {
+:where(.segmented-button) input + label i {
         margin-right: 8px;
       }
 
-.segmented-button label:last-of-type {
+:where(.segmented-button) label:last-of-type {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
 
-.segmented-button label:first-of-type {
+:where(.segmented-button) label:first-of-type {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
 
-.segmented-button label:not(:last-child) {
+:where(.segmented-button) label:not(:last-child) {
     border-right: 1px solid var(--md-sys-color-outline);
   }
 
-.segmented-button input:checked + label {
+:where(.segmented-button) input:checked + label {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
   }
 
-.segmented-button input:checked + label:before {
+:where(.segmented-button) input:checked + label:before {
       content: "check";
 
       /* Material Icons */
@@ -1844,7 +1844,6 @@ datalist {
       line-height: 1;
       letter-spacing: normal;
       text-transform: none;
-      display: inline-block;
       white-space: nowrap;
       word-wrap: normal;
       direction: ltr;
@@ -1854,6 +1853,41 @@ datalist {
       padding-right: 8px;
     }
 
-.segmented-button input:checked + label i {
+:where(.segmented-button) input:checked + label i {
       display: none;
     }
+
+:where(input[type="radio"], .radio-button) {
+  accent-color: var(--md-sys-color-primary);
+  display: grid;
+  place-content: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  margin: 0;
+  background-color: var(--md-sys-color-surface);
+}
+
+:where(input[type="radio"], .radio-button)::before {
+    /* Material Icons */
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    content: "radio_button_unchecked";
+    color: var(--md-sys-color-on-surface-variant);
+  }
+
+:where(input[type="radio"], .radio-button):checked::before {
+    content: "radio_button_checked";
+    color: var(--md-sys-color-primary);
+  }
