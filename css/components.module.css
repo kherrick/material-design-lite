@@ -1857,7 +1857,7 @@ datalist {
       display: none;
     }
 
-:where(input[type="radio"], .radio-button) {
+:where(.radio-button) {
   accent-color: var(--md-sys-color-primary);
   display: grid;
   place-content: center;
@@ -1868,7 +1868,7 @@ datalist {
   background-color: var(--md-sys-color-surface);
 }
 
-:where(input[type="radio"], .radio-button)::before {
+:where(.radio-button)::before {
     /* Material Icons */
     font-family: "Material Icons";
     font-weight: normal;
@@ -1887,7 +1887,7 @@ datalist {
     color: var(--md-sys-color-on-surface-variant);
   }
 
-:where(input[type="radio"], .radio-button):checked::before {
+:where(.radio-button):checked::before {
     content: "radio_button_checked";
     color: var(--md-sys-color-primary);
   }
