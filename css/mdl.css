@@ -1372,7 +1372,7 @@
 
 .button.text:hover,
   .button.text .hover {
-    box-shadow: var(--md-sys-elevation-`);
+    box-shadow: var(--md-sys-elevation-1);
     background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
@@ -3439,9 +3439,9 @@ datalist {
             animation: circular 6s infinite cubic-bezier(0.3, 0.6, 1, 1);
   }
 
-:where(progress, .progress).circular:-ms-lang(x),
-  :where(progress, .progress).circular:indeterminate {
-    animation: none;
+:where(progress, .progress).circular:indeterminate {
+    -webkit-animation: none;
+            animation: none;
   }
 
 :where(progress, .progress).circular:indeterminate::before,
