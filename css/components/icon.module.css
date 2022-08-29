@@ -25,7 +25,19 @@
   background-color: transparent;
   color: var(--md-sys-color-on-surface-variant);
   box-shadow: none;
+  --tint-color: transparent;
 }
+
+  :where(.button).icon::after {
+    content: " ";
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--tint-color);
+  }
 
   :where(.button).icon[selected] {
     color: var(--md-sys-color-primary);
@@ -66,19 +78,19 @@
 :where(.button).icon.contained.filled:hover,
   :where(.button).icon.contained.filled .hover {
     box-shadow: var(--md-sys-elevation-1);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled:focus,
   :where(.button).icon.contained.filled .focus {
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled:active,
   :where(.button).icon.contained.filled .active {
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled[disabled] {
@@ -96,19 +108,19 @@
 :where(.button).icon.contained.filled-tonal:hover,
   :where(.button).icon.contained.filled-tonal .hover {
     box-shadow: var(--md-sys-elevation-1);
-    background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled-tonal:focus,
   :where(.button).icon.contained.filled-tonal .focus {
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled-tonal:active,
   :where(.button).icon.contained.filled-tonal .active {
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled-tonal[disabled] {
@@ -127,21 +139,21 @@
 :where(.button).icon.contained.outlined:hover,
   :where(.button).icon.contained.outlined .hover {
     box-shadow: var(--md-sys-elevation-1);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
 :where(.button).icon.contained.outlined:focus,
   :where(.button).icon.contained.outlined .focus {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
 :where(.button).icon.contained.outlined:active,
   :where(.button).icon.contained.outlined .active {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
 :where(.button).icon.contained.outlined[disabled] {
@@ -155,9 +167,9 @@
   color: var(--md-sys-color-primary);
 }
 
-:where(.button).icon.toggle[selected] {
-    background-color: var(--md-sys-color-primary);
+:where(.button).icon.toggle[checked] {
     color: var(--md-sys-color-on-primary);
+    background-color: var(--md-sys-color-primary);
   }
 
 :where(.button).icon.toggle[disabled] {

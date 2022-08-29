@@ -1,4 +1,4 @@
-.button {
+:where(.button) {
   padding: 8px 24px;
   border-radius: 20px;
   border: none;
@@ -25,7 +25,7 @@
   --tint-color: transparent;
 }
 
-  .button::after {
+  :where(.button)::after {
     content: " ";
     border-radius: inherit;
     position: absolute;
@@ -36,7 +36,7 @@
     background-color: var(--tint-color);
   }
 
-  .button[label] {
+  :where(.button)[label] {
     content: attr(label);
     -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
             text-decoration: var(--md-sys-typescale-label-large-text-decoration);
@@ -49,204 +49,204 @@
     font-family: var(--md-sys-typescale-label-large-font-family-name);
   }
 
-  .button i {
+  :where(.button) i {
     margin-right: 8px;
   }
 
-  .button i:only-child {
+  :where(.button) i:only-child {
     margin-right: 0px;
   }
 
-  .button a {
+  :where(.button) a {
     text-decoration: none;
   }
 
-  .button a:hover {
+  :where(.button) a:hover {
     text-decoration: none;
   }
 
-  .button a:focus {
+  :where(.button) a:focus {
     text-decoration: none;
   }
 
-  .button:hover,
-  .button.hover {
+  :where(.button):hover,
+  :where(.button).hover {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-  .button:focus,
-  .button.focus {
+  :where(.button):focus,
+  :where(.button).focus {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-  .button:active,
-  .button.active {
+  :where(.button):active,
+  :where(.button).active {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-  .button[disabled] {
+  :where(.button)[disabled] {
     cursor: default;
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
     box-shadow: var(--md-sys-elevation-0);
   }
 
-  .button:focus-within::before {
+  :where(.button):focus-within::before {
     border-radius: 40px;
   }
 
-.button.text {
+:where(.button).text {
   background-color: transparent;
   color: var(--md-sys-color-primary);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.button.text:hover,
-  .button.text .hover {
+:where(.button).text:hover,
+  :where(.button).text .hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.text:focus,
-  .button.text .focus {
+:where(.button).text:focus,
+  :where(.button).text .focus {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.text:active,
-  .button.text .active {
+:where(.button).text:active,
+  :where(.button).text .active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-.button.text[disabled] {
+:where(.button).text[disabled] {
     box-shadow: none;
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-.button.filled {
+:where(.button).filled {
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.button.filled:hover,
-  .button.filled.hover {
+:where(.button).filled:hover,
+  :where(.button).filled.hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.filled:focus,
-  .button.filled.focus {
+:where(.button).filled:focus,
+  :where(.button).filled.focus {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.filled:active,
-  .button.filled.active {
+:where(.button).filled:active,
+  :where(.button).filled.active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-.button.filled[disabled] {
+:where(.button).filled[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-.button.filled.ripple {
+:where(.button).filled.ripple {
     --ripple-bg: rgba(var(--md-sys-color-primary-rgb), 0.4);
     --ripple-fg: rgba(var(--md-sys-color-on-primary-rgb), 0.6);
   }
 
-.button.filled-tonal {
+:where(.button).filled-tonal {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.button.filled-tonal:hover,
-  .button.filled-tonal.hover {
+:where(.button).filled-tonal:hover,
+  :where(.button).filled-tonal.hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.filled-tonal:focus,
-  .button.filled-tonal.focus {
+:where(.button).filled-tonal:focus,
+  :where(.button).filled-tonal.focus {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.filled-tonal:active,
-  .button.filled-tonal.active {
+:where(.button).filled-tonal:active,
+  :where(.button).filled-tonal.active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-.button.filled-tonal[disabled] {
+:where(.button).filled-tonal[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-.button.outlined {
+:where(.button).outlined {
   background-color: transparent;
   color: var(--md-sys-color-primary);
   border: 1px solid var(--md-sys-color-outline);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-.button.outlined:hover,
-  .button.outlined.hover {
+:where(.button).outlined:hover,
+  :where(.button).outlined.hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.outlined:focus,
-  .button.outlined.focus {
+:where(.button).outlined:focus,
+  :where(.button).outlined.focus {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.outlined:active,
-  .button.outlined.active {
+:where(.button).outlined:active,
+  :where(.button).outlined.active {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-.button.outlined[disabled] {
+:where(.button).outlined[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     border: 1px solid rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-.button.elevated {
+:where(.button).elevated {
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-primary);
 }
 
-.button.elevated:hover,
-  .button.elevated .hover {
+:where(.button).elevated:hover,
+  :where(.button).elevated .hover {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.button.elevated:focus,
-  .button.elevated .focus {
+:where(.button).elevated:focus,
+  :where(.button).elevated .focus {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.button.elevated:active,
-  .button.elevated .active {
+:where(.button).elevated:active,
+  :where(.button).elevated .active {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-.button.elevated[disabled] {
+:where(.button).elevated[disabled] {
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
@@ -278,7 +278,19 @@
   background-color: transparent;
   color: var(--md-sys-color-on-surface-variant);
   box-shadow: none;
+  --tint-color: transparent;
 }
+
+:where(.button).icon::after {
+    content: " ";
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--tint-color);
+  }
 
 :where(.button).icon[selected] {
     color: var(--md-sys-color-primary);
@@ -319,19 +331,19 @@
 :where(.button).icon.contained.filled:hover,
   :where(.button).icon.contained.filled .hover {
     box-shadow: var(--md-sys-elevation-1);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled:focus,
   :where(.button).icon.contained.filled .focus {
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled:active,
   :where(.button).icon.contained.filled .active {
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled[disabled] {
@@ -349,19 +361,19 @@
 :where(.button).icon.contained.filled-tonal:hover,
   :where(.button).icon.contained.filled-tonal .hover {
     box-shadow: var(--md-sys-elevation-1);
-    background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled-tonal:focus,
   :where(.button).icon.contained.filled-tonal .focus {
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled-tonal:active,
   :where(.button).icon.contained.filled-tonal .active {
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
 :where(.button).icon.contained.filled-tonal[disabled] {
@@ -380,21 +392,21 @@
 :where(.button).icon.contained.outlined:hover,
   :where(.button).icon.contained.outlined .hover {
     box-shadow: var(--md-sys-elevation-1);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
 :where(.button).icon.contained.outlined:focus,
   :where(.button).icon.contained.outlined .focus {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
 :where(.button).icon.contained.outlined:active,
   :where(.button).icon.contained.outlined .active {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
-    background-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
 :where(.button).icon.contained.outlined[disabled] {
@@ -408,9 +420,9 @@
   color: var(--md-sys-color-primary);
 }
 
-:where(.button).icon.toggle[selected] {
-    background-color: var(--md-sys-color-primary);
+:where(.button).icon.toggle[checked] {
     color: var(--md-sys-color-on-primary);
+    background-color: var(--md-sys-color-primary);
   }
 
 :where(.button).icon.toggle[disabled] {
@@ -419,46 +431,58 @@
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-.fab {
+:where(.button).fab {
   padding: 16px;
   font-size: 24px;
-  border-radius: var(--md-sys-shape-medium);
+  border-radius: 16px;
   width: 56px;
   height: 56px;
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
   box-shadow: var(--md-sys-elevation-1);
+  --tint-color: transparent;
 }
 
-.fab > i {
+:where(.button).fab::after {
+    content: " ";
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--tint-color);
+  }
+
+:where(.button).fab > i {
     font-size: 24px;
   }
 
-.fab:hover,
-  .fab .hover {
+:where(.button).fab:hover,
+  :where(.button).fab .hover {
     box-shadow: var(--md-sys-elevation-4);
-    background-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.fab:focus,
-  .fab .focus {
+:where(.button).fab:focus,
+  :where(.button).fab .focus {
     box-shadow: var(--md-sys-elevation-2);
-    background-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.fab:active,
-  .fab .active {
+:where(.button).fab:active,
+  :where(.button).fab .active {
     box-shadow: var(--md-sys-elevation-2);
-    background-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-.fab[disabled] {
+:where(.button).fab[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-.fab.small {
+:where(.button).fab.small {
   padding: 16px;
   font-size: 24px;
   border-radius: 12px;
@@ -466,11 +490,11 @@
   height: 40px;
 }
 
-.fab.small > i {
+:where(.button).fab.small > i {
     font-size: 24px;
   }
 
-.fab.large {
+:where(.button).fab.large {
   padding: 16px;
   font-size: 36px;
   border-radius: var(--md-sys-shape-medium);
@@ -478,89 +502,107 @@
   height: 96px;
 }
 
-.fab.large > i {
+:where(.button).fab.large > i {
     font-size: 36px;
   }
 
-.fab.extended {
+:where(.button).fab.extended {
   border-radius: var(--md-sys-shape-medium);
   height: 56px;
   font-size: 16px;
   width: unset;
 }
 
-.fab.extended > i {
+:where(.button).fab.extended > i {
     font-size: 24px;
     margin-right: 8px;
   }
 
-.fab.surface {
+:where(.button).fab.surface {
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
 }
 
-.fab.surface:hover,
-  .fab.surface .hover {
+:where(.button).fab.surface:hover,
+  :where(.button).fab.surface .hover {
     box-shadow: var(--md-sys-elevation-4);
-    background-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.fab.surface:focus,
-  .fab.surface .focus {
+:where(.button).fab.surface:focus,
+  :where(.button).fab.surface .focus {
     box-shadow: var(--md-sys-elevation-2);
-    background-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.fab.surface:active,
-  .fab.surface .active {
+:where(.button).fab.surface:active,
+  :where(.button).fab.surface .active {
     box-shadow: var(--md-sys-elevation-2);
-    background-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-.fab.secondary {
+:where(.button).fab.surface[disabled] {
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+    color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+  }
+
+:where(.button).fab.secondary {
   background-color: var(--md-sys-color-secondary);
   color: var(--md-sys-color-on-secondary);
 }
 
-.fab.secondary:hover,
-  .fab.secondary .hover {
+:where(.button).fab.secondary:hover,
+  :where(.button).fab.secondary .hover {
     box-shadow: var(--md-sys-elevation-4);
-    background-color: rgba(var(--md-sys-color-secondary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-secondary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.fab.secondary:focus,
-  .fab.secondary .focus {
+:where(.button).fab.secondary:focus,
+  :where(.button).fab.secondary .focus {
     box-shadow: var(--md-sys-elevation-2);
-    background-color: rgba(var(--md-sys-color-secondary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-secondary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.fab.secondary:active,
-  .fab.secondary .active {
+:where(.button).fab.secondary:active,
+  :where(.button).fab.secondary .active {
     box-shadow: var(--md-sys-elevation-2);
-    background-color: rgba(var(--md-sys-color-secondary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-secondary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-.fab.tertiary {
+:where(.button).fab.secondary[disabled] {
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+    color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
+  }
+
+:where(.button).fab.tertiary {
   background-color: var(--md-sys-color-tertiary);
   color: var(--md-sys-color-on-tertiary);
 }
 
-.fab.tertiary:hover,
-  .fab.tertiary .hover {
+:where(.button).fab.tertiary:hover,
+  :where(.button).fab.tertiary .hover {
     box-shadow: var(--md-sys-elevation-4);
-    background-color: rgba(var(--md-sys-color-tertiary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-tertiary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-.fab.tertiary:focus,
-  .fab.tertiary .focus {
+:where(.button).fab.tertiary:focus,
+  :where(.button).fab.tertiary .focus {
     box-shadow: var(--md-sys-elevation-2);
-    background-color: rgba(var(--md-sys-color-tertiary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-tertiary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-.fab.tertiary:active,
-  .fab.tertiary .active {
+:where(.button).fab.tertiary:active,
+  :where(.button).fab.tertiary .active {
     box-shadow: var(--md-sys-elevation-2);
-    background-color: rgba(var(--md-sys-color-tertiary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+    --tint-color: rgba(var(--md-sys-color-tertiary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+  }
+
+:where(.button).fab.tertiary[disabled] {
+    box-shadow: var(--md-sys-elevation-0);
+    background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
+    color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
 .card {
