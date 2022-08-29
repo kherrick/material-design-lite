@@ -76,7 +76,7 @@
 
   .button:focus,
   .button.focus {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-2);
   }
 
   .button:active,
@@ -138,7 +138,7 @@
 
 .button.filled:focus,
   .button.filled.focus {
-    box-shadow: var(--md-sys-elevation-0);
+    box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
@@ -173,7 +173,7 @@
 
 .button.filled-tonal:focus,
   .button.filled-tonal.focus {
-    box-shadow: var(--md-sys-elevation-0);
+    box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
@@ -205,7 +205,7 @@
 .button.outlined:focus,
   .button.outlined.focus {
     border: 1px solid var(--md-sys-color-primary);
-    box-shadow: var(--md-sys-elevation-0);
+    box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
@@ -236,7 +236,7 @@
 
 .button.elevated:focus,
   .button.elevated .focus {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 

@@ -66,7 +66,7 @@
 	<link rel="stylesheet" href="/material-design-lite/assets/dd61a433.f699d1dd.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/6cd422f7.479a5ae1.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/691f1988.1ebcd962.css" />
-<link rel="stylesheet" href="/material-design-lite/assets/0a29f33f.9a35cdf3.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+<link rel="stylesheet" href="/material-design-lite/assets/0a29f33f.1962fe81.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
 /** Bundled JS generated from "@astrojs/lit/client-shim.js" */
 var N = Object.defineProperty;
 var i = (t, n) => () => (t && (n = t((t = 0))), n);
@@ -167,7 +167,7 @@ var x = new DOMParser()
 <link rel="stylesheet" href="/material-design-lite/assets/dd61a433.f699d1dd.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/6cd422f7.479a5ae1.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/691f1988.1ebcd962.css" />
-<link rel="stylesheet" href="/material-design-lite/assets/0a29f33f.9a35cdf3.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+<link rel="stylesheet" href="/material-design-lite/assets/0a29f33f.1962fe81.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
 /** Bundled JS generated from "@astrojs/lit/client-shim.js" */
 var N = Object.defineProperty;
 var i = (t, n) => () => (t && (n = t((t = 0))), n);
@@ -259,11 +259,35 @@ var x = new DOMParser()
         <div id="default.html" class="snippet astro-VRRABG6G">
                     <div class="render astro-VRRABG6G" data-outline><div class="ripple" style="width: 100px; height: 100px"></div></div>
                     <div class="label astro-VRRABG6G">Default</div>
+                </div><div id="default.js.html" class="snippet astro-VRRABG6G">
+                    <div class="render astro-VRRABG6G" data-outline><div id="ripple" class="ripple" style="width: 100px; height: 100px"></div>
+<script>
+    const ripple = document.getElementById('ripple');
+    ripple.addEventListener('mousemove', (e) => {
+        const x = parseInt(ripple.style.width) - e.offsetX;
+        const y = parseInt(ripple.style.height) - e.offsetY;
+        ripple.style.setProperty('--ripple-start-x', 100 - x + '%');
+        ripple.style.setProperty('--ripple-start-y', 100 - y + '%');
+    });
+</script></div>
+                    <div class="label astro-VRRABG6G">Default Js</div>
                 </div>
     </div>
     <div class="code astro-VRRABG6G">
         <pre class="astro-code" style="background-color: #0d1117; overflow-x: auto;"><code><span class="line"><span style="color: #8B949E">&lt;!-- Default --&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;ripple&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">style</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;</span><span style="color: #C9D1D9">width: 100px; height: 100px&quot;</span><span style="color: #C9D1D9">&gt;&lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span></code></pre>
+<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;ripple&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">style</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;</span><span style="color: #C9D1D9">width: 100px; height: 100px&quot;</span><span style="color: #C9D1D9">&gt;&lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #8B949E">&lt;!-- Default Js --&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">id</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;ripple&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;ripple&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">style</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;</span><span style="color: #C9D1D9">width: 100px; height: 100px&quot;</span><span style="color: #C9D1D9">&gt;&lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">script</span><span style="color: #C9D1D9">&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">    </span><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">ripple</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> document.</span><span style="color: #D2A8FF">getElementById</span><span style="color: #C9D1D9">(</span><span style="color: #A5D6FF">&#39;ripple&#39;</span><span style="color: #C9D1D9">);</span></span>
+<span class="line"><span style="color: #C9D1D9">    ripple.</span><span style="color: #D2A8FF">addEventListener</span><span style="color: #C9D1D9">(</span><span style="color: #A5D6FF">&#39;mousemove&#39;</span><span style="color: #C9D1D9">, (</span><span style="color: #FFA657">e</span><span style="color: #C9D1D9">) </span><span style="color: #FF7B72">=&gt;</span><span style="color: #C9D1D9"> {</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">x</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">parseInt</span><span style="color: #C9D1D9">(ripple.style.width) </span><span style="color: #FF7B72">-</span><span style="color: #C9D1D9"> e.offsetX;</span></span>
+<span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">y</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">parseInt</span><span style="color: #C9D1D9">(ripple.style.height) </span><span style="color: #FF7B72">-</span><span style="color: #C9D1D9"> e.offsetY;</span></span>
+<span class="line"><span style="color: #C9D1D9">        ripple.style.</span><span style="color: #D2A8FF">setProperty</span><span style="color: #C9D1D9">(</span><span style="color: #A5D6FF">&#39;--ripple-start-x&#39;</span><span style="color: #C9D1D9">, </span><span style="color: #79C0FF">100</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">-</span><span style="color: #C9D1D9"> x </span><span style="color: #FF7B72">+</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">&#39;%&#39;</span><span style="color: #C9D1D9">);</span></span>
+<span class="line"><span style="color: #C9D1D9">        ripple.style.</span><span style="color: #D2A8FF">setProperty</span><span style="color: #C9D1D9">(</span><span style="color: #A5D6FF">&#39;--ripple-start-y&#39;</span><span style="color: #C9D1D9">, </span><span style="color: #79C0FF">100</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">-</span><span style="color: #C9D1D9"> y </span><span style="color: #FF7B72">+</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">&#39;%&#39;</span><span style="color: #C9D1D9">);</span></span>
+<span class="line"><span style="color: #C9D1D9">    });</span></span>
+<span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">script</span><span style="color: #C9D1D9">&gt;</span></span></code></pre>
 
 
 

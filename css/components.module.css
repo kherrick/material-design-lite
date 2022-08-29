@@ -76,7 +76,7 @@
 
   .button:focus,
   .button.focus {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-2);
   }
 
   .button:active,
@@ -138,7 +138,7 @@
 
 .button.filled:focus,
   .button.filled.focus {
-    box-shadow: var(--md-sys-elevation-0);
+    box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
@@ -173,7 +173,7 @@
 
 .button.filled-tonal:focus,
   .button.filled-tonal.focus {
-    box-shadow: var(--md-sys-elevation-0);
+    box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
@@ -205,7 +205,7 @@
 .button.outlined:focus,
   .button.outlined.focus {
     border: 1px solid var(--md-sys-color-primary);
-    box-shadow: var(--md-sys-elevation-0);
+    box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
@@ -236,7 +236,7 @@
 
 .button.elevated:focus,
   .button.elevated .focus {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
@@ -1127,22 +1127,33 @@ datalist {
 .ripple {
   --ripple-bg: rgba(var(--md-sys-color-surface-rgb), 0.4);
   --ripple-fg: rgba(var(--md-sys-color-on-surface-rgb), 0.6);
+  --ripple-start-x: 50%;
+  --ripple-start-y: 50%;
+  --ripple-start: var(--ripple-start-x) var(--ripple-start-y);
+  --ripple-end-size: 15000%;
+  position: relative;
 }
 
-.ripple:not([disabled]) {
-      background-position: center;
+.ripple:not([disabled])::after {
+      content: " ";
+      border-radius: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-position-x: var(--ripple-start-x);
+      background-position-y: var(--ripple-start-y);
+      background-repeat: no-repeat;
       transition: background 0.8s;
+      background: var(--ripple-bg) radial-gradient(circle at var(--ripple-start), transparent 1%, var(--ripple-bg) 1%) var(--ripple-start) / var(--ripple-end-size);
     }
 
-.ripple:not([disabled]):hover {
-      background: var(--ripple-bg) radial-gradient(circle, transparent 1%, var(--ripple-bg) 1%) center/15000%;
-    }
-
-.ripple:not([disabled]):active {
-      background-color: var(--ripple-fg);
-      background-size: 100%;
-      transition: background 0s;
-    }
+.ripple:not([disabled]):active::after {
+        background-color: var(--ripple-fg);
+        background-size: 100%;
+        transition: background 0s;
+      }
 
 .tooltip {
   text-decoration: none;
