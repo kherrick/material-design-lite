@@ -3,7 +3,7 @@
   flex-direction: row;
   width: 100%;
   box-shadow: var(--md-sys-elevation-1);
-  background-color: var(--md-surface-1);
+  background-color: var(--md-sys-color-surface-1);
   color: var(--md-sys-color-on-surface);
 }
 
