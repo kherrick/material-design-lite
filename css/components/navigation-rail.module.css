@@ -1,0 +1,114 @@
+.navigation-rail {
+  height: 100%;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--md-sys-elevation-1);
+  background-color: var(--md-surface-1);
+  color: var(--md-sys-color-on-surface);
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+  .navigation-rail .button {
+    background-color: transparent;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: 24px;
+    padding: 12px;
+  }
+
+  .navigation-rail .button.fab {
+      background-color: var(--md-sys-color-tertiary-container);
+      color: var(--md-sys-color-on-tertiary-container);
+      box-shadow: var(--md-sys-elevation-0);
+      margin-top: 12px;
+    }
+
+  .navigation-rail nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .navigation-rail nav .option {
+      height: 56px;
+      align-items: center;
+      justify-content: center;
+    }
+
+  .navigation-rail nav .option input {
+        display: none;
+        pointer-events: none;
+      }
+
+  .navigation-rail nav .option input:checked ~ label i {
+          background-color: var(--md-sys-color-secondary-container);
+          color: var(--md-sys-color-on-secondary-container);
+        }
+
+  .navigation-rail nav .option label {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        -webkit-text-decoration: var(--md-sys-typescale-label-medium-text-decoration);
+                text-decoration: var(--md-sys-typescale-label-medium-text-decoration);
+        text-transform: var(--md-sys-typescale-label-medium-text-transform);
+        line-height: var(--md-sys-typescale-label-medium-height);
+        letter-spacing: var(--md-sys-typescale-label-medium-tracking);
+        font-size: var(--md-sys-typescale-label-medium-font-size);
+        font-weight: var(--md-sys-typescale-label-medium-font-weight);
+        font-style: var(--md-sys-typescale-label-medium-font-family-style);
+        font-family: var(--md-sys-typescale-label-medium-font-family-name);
+        --tint-color: transparent;
+      }
+
+  .navigation-rail nav .option label::after {
+          content: " ";
+          border-radius: inherit;
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: -8px;
+          right: -8px;
+          background-color: var(--tint-color);
+        }
+
+  .navigation-rail nav .option label:hover,
+        .navigation-rail nav .option label.hover {
+          --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+        }
+
+  .navigation-rail nav .option label:focus,
+        .navigation-rail nav .option label .focus {
+          --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+        }
+
+  .navigation-rail nav .option label:active,
+        .navigation-rail nav .option label .active {
+          --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+        }
+
+  .navigation-rail nav .option i {
+        font-size: 24px;
+        width: 64px;
+        height: 32px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+.navigation-rail.middle nav {
+    justify-content: center;
+  }
+
+.navigation-rail.bottom nav {
+    justify-content: flex-end;
+  }
