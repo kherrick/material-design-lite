@@ -4034,3 +4034,33 @@ datalist {
 .navigation-rail.bottom nav {
     justify-content: flex-end;
   }
+
+.snackbar {
+  width: 344px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 16px 14px;
+  border-radius: 4px;
+  white-space: wrap;
+  background-color: var(--md-sys-color-inverse-surface);
+  color: var(--md-sys-color-inverse-on-surface);
+  -webkit-text-decoration: var(--md-sys-typescale-body-medium-text-decoration);
+          text-decoration: var(--md-sys-typescale-body-medium-text-decoration);
+  text-transform: var(--md-sys-typescale-body-medium-text-transform);
+  line-height: var(--md-sys-typescale-body-medium-height);
+  letter-spacing: var(--md-sys-typescale-body-medium-tracking);
+  font-size: var(--md-sys-typescale-body-medium-font-size);
+  font-weight: var(--md-sys-typescale-body-medium-font-weight);
+  font-style: var(--md-sys-typescale-body-medium-font-family-style);
+  font-family: var(--md-sys-typescale-body-medium-font-family-name);
+}
+
+.snackbar :first-child {
+    flex: 1;
+  }
+
+.snackbar .button {
+    align-self: end;
+  }
