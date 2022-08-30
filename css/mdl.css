@@ -4063,4 +4063,5 @@ datalist {
 
 .snackbar .button {
     align-self: end;
+    color: var(--md-sys-color-inverse-primary);
   }
