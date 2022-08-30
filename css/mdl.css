@@ -3292,7 +3292,7 @@ datalist {
     vertical-align: middle;
   }
 
-.table.zebra tr:nth-of-type(even) {
+:where(.table, table).zebra tr:nth-of-type(even) {
     background-color: var(--md-surface-1);
   }
 
