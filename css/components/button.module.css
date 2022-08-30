@@ -1,8 +1,8 @@
-:where(.button) {
-  padding: 8px 24px;
+.button {
+  padding: 10px 20px;
   border-radius: 20px;
   border: none;
-  height: var(--button-height, 40px);
+  height: 40px;
   position: relative;
   cursor: pointer;
   display: flex;
@@ -22,10 +22,11 @@
   font-style: var(--md-sys-typescale-label-large-font-family-style);
   font-family: var(--md-sys-typescale-label-large-font-family-name);
   box-shadow: var(--md-sys-elevation-1);
+  transition: box-shadow 0.2s ease-in-out;
   --tint-color: transparent;
 }
 
-  :where(.button)::after {
+  .button::after {
     content: " ";
     border-radius: inherit;
     position: absolute;
@@ -36,7 +37,7 @@
     background-color: var(--tint-color);
   }
 
-  :where(.button)[label] {
+  .button[label] {
     content: attr(label);
     -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
             text-decoration: var(--md-sys-typescale-label-large-text-decoration);
@@ -49,49 +50,50 @@
     font-family: var(--md-sys-typescale-label-large-font-family-name);
   }
 
-  :where(.button) i {
-    margin-right: 8px;
+  .button i {
+    margin-right: 4px;
+    font-size: 18px;
   }
 
-  :where(.button) i:only-child {
+  .button i:only-child {
     margin-right: 0px;
   }
 
-  :where(.button) a {
+  .button a {
     text-decoration: none;
   }
 
-  :where(.button) a:hover {
+  .button a:hover {
     text-decoration: none;
   }
 
-  :where(.button) a:focus {
+  .button a:focus {
     text-decoration: none;
   }
 
-  :where(.button):hover,
-  :where(.button).hover {
+  .button:hover,
+  .button.hover {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-  :where(.button):focus,
-  :where(.button).focus {
+  .button:focus,
+  .button.focus {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-  :where(.button):active,
-  :where(.button).active {
+  .button:active,
+  .button.active {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-  :where(.button)[disabled] {
+  .button[disabled] {
     cursor: default;
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
     box-shadow: var(--md-sys-elevation-0);
   }
 
-  :where(.button):focus-within::before {
+  .button:focus-within::before {
     border-radius: 40px;
   }
 
@@ -204,14 +206,12 @@
 
 :where(.button).outlined:focus,
   :where(.button).outlined.focus {
-    border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
 :where(.button).outlined:active,
   :where(.button).outlined.active {
-    border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }

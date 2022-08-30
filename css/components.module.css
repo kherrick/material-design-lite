@@ -1,8 +1,8 @@
-:where(.button) {
-  padding: 8px 24px;
+.button {
+  padding: 10px 20px;
   border-radius: 20px;
   border: none;
-  height: var(--button-height, 40px);
+  height: 40px;
   position: relative;
   cursor: pointer;
   display: flex;
@@ -22,10 +22,11 @@
   font-style: var(--md-sys-typescale-label-large-font-family-style);
   font-family: var(--md-sys-typescale-label-large-font-family-name);
   box-shadow: var(--md-sys-elevation-1);
+  transition: box-shadow 0.2s ease-in-out;
   --tint-color: transparent;
 }
 
-  :where(.button)::after {
+  .button::after {
     content: " ";
     border-radius: inherit;
     position: absolute;
@@ -36,7 +37,7 @@
     background-color: var(--tint-color);
   }
 
-  :where(.button)[label] {
+  .button[label] {
     content: attr(label);
     -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
             text-decoration: var(--md-sys-typescale-label-large-text-decoration);
@@ -49,49 +50,50 @@
     font-family: var(--md-sys-typescale-label-large-font-family-name);
   }
 
-  :where(.button) i {
-    margin-right: 8px;
+  .button i {
+    margin-right: 4px;
+    font-size: 18px;
   }
 
-  :where(.button) i:only-child {
+  .button i:only-child {
     margin-right: 0px;
   }
 
-  :where(.button) a {
+  .button a {
     text-decoration: none;
   }
 
-  :where(.button) a:hover {
+  .button a:hover {
     text-decoration: none;
   }
 
-  :where(.button) a:focus {
+  .button a:focus {
     text-decoration: none;
   }
 
-  :where(.button):hover,
-  :where(.button).hover {
+  .button:hover,
+  .button.hover {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-  :where(.button):focus,
-  :where(.button).focus {
+  .button:focus,
+  .button.focus {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-  :where(.button):active,
-  :where(.button).active {
+  .button:active,
+  .button.active {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-  :where(.button)[disabled] {
+  .button[disabled] {
     cursor: default;
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
     box-shadow: var(--md-sys-elevation-0);
   }
 
-  :where(.button):focus-within::before {
+  .button:focus-within::before {
     border-radius: 40px;
   }
 
@@ -204,14 +206,12 @@
 
 :where(.button).outlined:focus,
   :where(.button).outlined.focus {
-    border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
 :where(.button).outlined:active,
   :where(.button).outlined.active {
-    border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
@@ -440,20 +440,19 @@
   }
 
 :where(.button).icon.toggle:is(input[type="checkbox"])::after {
-      /* Material Icons */
-      font-family: "Material Icons";
-      font-weight: normal;
-      font-style: normal;
-      font-size: 24px;
-      line-height: 1;
-      letter-spacing: normal;
-      text-transform: none;
-      white-space: nowrap;
-      word-wrap: normal;
-      direction: ltr;
-      font-feature-settings: "liga";
-      -webkit-font-feature-settings: "liga";
       -webkit-font-smoothing: antialiased;
+      font-feature-settings: "liga";
+      direction: ltr;
+      word-wrap: normal;
+      white-space: nowrap;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Material Icons";
+      font-size: 24px;
       content: "check";
       display: flex;
       align-items: center;
@@ -722,9 +721,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: var(--md-sys-shape-large);
+  border-radius: 8px;
   outline: none;
   padding: 8px 16px;
+  height: 32px;
+  gap: 8px;
   cursor: pointer;
   -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
           text-decoration: var(--md-sys-typescale-label-large-text-decoration);
@@ -735,23 +736,46 @@
   font-weight: var(--md-sys-typescale-label-large-font-weight);
   font-style: var(--md-sys-typescale-label-large-font-family-style);
   font-family: var(--md-sys-typescale-label-large-font-family-name);
+  --tint-color: transparent;
 }
+
+.chip::after {
+    content: " ";
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--tint-color);
+  }
+
+.chip:hover,
+  .chip .hover {
+    box-shadow: var(--md-sys-elevation-1);
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+  }
+
+.chip:focus,
+  .chip .focus {
+    box-shadow: var(--md-sys-elevation-1);
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+  }
+
+.chip:active,
+  .chip .active {
+    box-shadow: var(--md-sys-elevation-0);
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+  }
 
 .chip > i {
     color: var(--md-sys-color-primary);
-  }
-
-.chip > i:first-child {
-    margin-right: 8px;
-  }
-
-.chip > i:last-child {
-    margin-left: 8px;
+    font-size: 18px;
   }
 
 .chip > i:only-child {
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: 0;
+    margin-left: 0;
   }
 
 .chip.assist {
@@ -1305,21 +1329,19 @@ datalist {
 
 :where(.switch)::after {
     content: "";
-
-    /* Material Icons */
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    font-feature-settings: "liga";
-    -webkit-font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
+    font-feature-settings: "liga";
+    direction: ltr;
+    word-wrap: normal;
+    white-space: nowrap;
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: 1;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Material Icons";
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1923,31 +1945,25 @@ datalist {
     margin-right: 8px;
   }
 
-:where(.segmented-button) input:checked .option {
-  }
-
 :where(.segmented-button) input:checked + label {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
   }
 
-:where(.segmented-button) input:checked + label:before {
+:where(.segmented-button) input:checked + label::before {
       content: "check";
-
-      /* Material Icons */
-      font-family: "Material Icons";
-      font-weight: normal;
-      font-style: normal;
-      font-size: 24px;
-      line-height: 1;
-      letter-spacing: normal;
-      text-transform: none;
-      white-space: nowrap;
-      word-wrap: normal;
-      direction: ltr;
-      font-feature-settings: "liga";
-      -webkit-font-feature-settings: "liga";
       -webkit-font-smoothing: antialiased;
+      font-feature-settings: "liga";
+      direction: ltr;
+      word-wrap: normal;
+      white-space: nowrap;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: normal;
+      font-family: "Material Icons";
       padding-right: 8px;
     }
 
@@ -1963,7 +1979,7 @@ datalist {
       justify-content: center;
       width: 100%;
       height: 100%;
-      padding: 0 40px;
+      padding: 0 20px;
       margin: 0;
       cursor: pointer;
       -webkit-user-select: none;
@@ -2035,20 +2051,19 @@ datalist {
 }
 
 :where(.radio-button)::before {
-    /* Material Icons */
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    font-feature-settings: "liga";
-    -webkit-font-feature-settings: "liga";
     -webkit-font-smoothing: antialiased;
+    font-feature-settings: "liga";
+    direction: ltr;
+    word-wrap: normal;
+    white-space: nowrap;
+    text-transform: none;
+    letter-spacing: normal;
+    line-height: 1;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: "Material Icons";
+    font-size: 24px;
     content: "radio_button_unchecked";
     color: var(--md-sys-color-on-surface-variant);
   }

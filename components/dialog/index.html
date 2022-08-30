@@ -66,7 +66,7 @@
 	<link rel="stylesheet" href="/material-design-lite/assets/dd61a433.6adb7304.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/6cd422f7.479a5ae1.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/691f1988.1ebcd962.css" />
-<link rel="stylesheet" href="/material-design-lite/assets/0a29f33f.6c415f9e.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+<link rel="stylesheet" href="/material-design-lite/assets/0a29f33f.82f93727.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
 /** Bundled JS generated from "@astrojs/lit/client-shim.js" */
 var N = Object.defineProperty;
 var i = (t, n) => () => (t && (n = t((t = 0))), n);
@@ -167,7 +167,7 @@ var x = new DOMParser()
 <link rel="stylesheet" href="/material-design-lite/assets/dd61a433.6adb7304.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/6cd422f7.479a5ae1.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/691f1988.1ebcd962.css" />
-<link rel="stylesheet" href="/material-design-lite/assets/0a29f33f.6c415f9e.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
+<link rel="stylesheet" href="/material-design-lite/assets/0a29f33f.82f93727.css" /><script>/** @license Copyright 2020 Google LLC (BSD-3-Clause) */
 /** Bundled JS generated from "@astrojs/lit/client-shim.js" */
 var N = Object.defineProperty;
 var i = (t, n) => () => (t && (n = t((t = 0))), n);
@@ -325,9 +325,9 @@ var x = new DOMParser()
         const btn = e.target;
         const dialog = document.getElementById('modal-dialog');
         dialog.showModal();
-        btn.style.display = 'none';
+        btn.disabled = true;
         dialog.addEventListener('close', () => {
-            btn.style.display = 'block';
+            btn.disabled = false;
         });
     });
 </script></div>
@@ -358,9 +358,9 @@ var x = new DOMParser()
 <span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">btn</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> e.target;</span></span>
 <span class="line"><span style="color: #C9D1D9">        </span><span style="color: #FF7B72">const</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">dialog</span><span style="color: #C9D1D9"> </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> document.</span><span style="color: #D2A8FF">getElementById</span><span style="color: #C9D1D9">(</span><span style="color: #A5D6FF">&#39;modal-dialog&#39;</span><span style="color: #C9D1D9">);</span></span>
 <span class="line"><span style="color: #C9D1D9">        dialog.</span><span style="color: #D2A8FF">showModal</span><span style="color: #C9D1D9">();</span></span>
-<span class="line"><span style="color: #C9D1D9">        btn.style.display </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">&#39;none&#39;</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"><span style="color: #C9D1D9">        btn.disabled </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">true</span><span style="color: #C9D1D9">;</span></span>
 <span class="line"><span style="color: #C9D1D9">        dialog.</span><span style="color: #D2A8FF">addEventListener</span><span style="color: #C9D1D9">(</span><span style="color: #A5D6FF">&#39;close&#39;</span><span style="color: #C9D1D9">, () </span><span style="color: #FF7B72">=&gt;</span><span style="color: #C9D1D9"> {</span></span>
-<span class="line"><span style="color: #C9D1D9">            btn.style.display </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">&#39;block&#39;</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"><span style="color: #C9D1D9">            btn.disabled </span><span style="color: #FF7B72">=</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">false</span><span style="color: #C9D1D9">;</span></span>
 <span class="line"><span style="color: #C9D1D9">        });</span></span>
 <span class="line"><span style="color: #C9D1D9">    });</span></span>
 <span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">script</span><span style="color: #C9D1D9">&gt;</span></span></code></pre>
