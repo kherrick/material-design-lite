@@ -1,4 +1,4 @@
-:where(.data-table, table) {
+:where(.table, table) {
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--md-sys-color-outline-variant);
@@ -7,37 +7,37 @@
   padding: 0;
 }
 
-  :where(.data-table, table) :where(td:first-child, th:first-child) {
+  :where(.table, table) :where(td:first-child, th:first-child) {
     border-left: none;
   }
 
-  :where(.data-table, table) thead:first-child tr:first-child th,
-  :where(.data-table, table) tbody:first-child tr:first-child td {
+  :where(.table, table) thead:first-child tr:first-child th,
+  :where(.table, table) tbody:first-child tr:first-child td {
     border-top: none;
   }
 
-  :where(.data-table, table) thead tr th:first-of-type {
+  :where(.table, table) thead tr th:first-of-type {
     border-top-left-radius: var(--md-sys-shape-medium);
   }
 
-  :where(.data-table, table) thead tr th:last-of-type {
+  :where(.table, table) thead tr th:last-of-type {
     border-top-right-radius: var(--md-sys-shape-medium);
   }
 
-  :where(.data-table, table) :where(th) {
+  :where(.table, table) :where(th) {
     border-top: none;
     background-color: var(--md-surface-2);
     color: var(--md-sys-color-on-surface-variant);
     font-weight: 500;
   }
 
-  :where(.data-table, table) :where(td, th) {
+  :where(.table, table) :where(td, th) {
     padding: 16px 24px;
     border-top: 1px solid var(--md-sys-color-surface-variant);
     border-left: 1px solid var(--md-sys-color-surface-variant);
     vertical-align: middle;
   }
 
-.data-table.zebra tr:nth-of-type(even) {
+.table.zebra tr:nth-of-type(even) {
     background-color: var(--md-surface-1);
   }

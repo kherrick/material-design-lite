@@ -1,4 +1,4 @@
-:where(.button).icon {
+:where(.button, button).icon {
   border: none;
   cursor: pointer;
   display: flex;
@@ -28,7 +28,7 @@
   --tint-color: transparent;
 }
 
-  :where(.button).icon::after {
+  :where(.button, button).icon::after {
     content: " ";
     border-radius: inherit;
     position: absolute;
@@ -39,146 +39,146 @@
     background-color: var(--tint-color);
   }
 
-  :where(.button).icon[selected] {
+  :where(.button, button).icon[selected] {
     color: var(--md-sys-color-primary);
   }
 
-  :where(.button).icon:hover,
-  :where(.button).icon .hover {
+  :where(.button, button).icon:hover,
+  :where(.button, button).icon .hover {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-  :where(.button).icon:focus,
-  :where(.button).icon .focus {
+  :where(.button, button).icon:focus,
+  :where(.button, button).icon .focus {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-  :where(.button).icon:active,
-  :where(.button).icon .active {
+  :where(.button, button).icon:active,
+  :where(.button, button).icon .active {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-  :where(.button).icon[disabled] {
+  :where(.button, button).icon[disabled] {
     cursor: default;
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
     box-shadow: var(--md-sys-elevation-0);
   }
 
-  :where(.button).icon i {
+  :where(.button, button).icon i {
     font-size: 24px;
     vertical-align: middle;
   }
 
-:where(.button).icon.contained.filled {
+:where(.button, button).icon.contained.filled {
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).icon.contained.filled:hover,
-  :where(.button).icon.contained.filled .hover {
+:where(.button, button).icon.contained.filled:hover,
+  :where(.button, button).icon.contained.filled .hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled:focus,
-  :where(.button).icon.contained.filled .focus {
+:where(.button, button).icon.contained.filled:focus,
+  :where(.button, button).icon.contained.filled .focus {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled:active,
-  :where(.button).icon.contained.filled .active {
+:where(.button, button).icon.contained.filled:active,
+  :where(.button, button).icon.contained.filled .active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled[disabled] {
+:where(.button, button).icon.contained.filled[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).icon.contained.filled-tonal {
+:where(.button, button).icon.contained.filled-tonal {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).icon.contained.filled-tonal:hover,
-  :where(.button).icon.contained.filled-tonal .hover {
+:where(.button, button).icon.contained.filled-tonal:hover,
+  :where(.button, button).icon.contained.filled-tonal .hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled-tonal:focus,
-  :where(.button).icon.contained.filled-tonal .focus {
+:where(.button, button).icon.contained.filled-tonal:focus,
+  :where(.button, button).icon.contained.filled-tonal .focus {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled-tonal:active,
-  :where(.button).icon.contained.filled-tonal .active {
+:where(.button, button).icon.contained.filled-tonal:active,
+  :where(.button, button).icon.contained.filled-tonal .active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled-tonal[disabled] {
+:where(.button, button).icon.contained.filled-tonal[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).icon.contained.outlined {
+:where(.button, button).icon.contained.outlined {
   background-color: transparent;
   color: var(--md-sys-color-primary);
   border: 1px solid var(--md-sys-color-outline);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).icon.contained.outlined:hover,
-  :where(.button).icon.contained.outlined .hover {
+:where(.button, button).icon.contained.outlined:hover,
+  :where(.button, button).icon.contained.outlined .hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).icon.contained.outlined:focus,
-  :where(.button).icon.contained.outlined .focus {
+:where(.button, button).icon.contained.outlined:focus,
+  :where(.button, button).icon.contained.outlined .focus {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).icon.contained.outlined:active,
-  :where(.button).icon.contained.outlined .active {
+:where(.button, button).icon.contained.outlined:active,
+  :where(.button, button).icon.contained.outlined .active {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).icon.contained.outlined[disabled] {
+:where(.button, button).icon.contained.outlined[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     border: 1px solid rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).icon.toggle {
+:where(.button, button).icon.toggle {
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-primary);
 }
 
-:where(.button).icon.toggle[checked] {
+:where(.button, button).icon.toggle[checked] {
     color: var(--md-sys-color-on-primary);
     background-color: var(--md-sys-color-primary);
   }
 
-:where(.button).icon.toggle[disabled] {
+:where(.button, button).icon.toggle[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).icon.toggle:is(input[type="checkbox"]) {
+:where(.button, button).icon.toggle:is(input[type="checkbox"]) {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -186,7 +186,7 @@
     color: var(--md-sys-color-primary);
   }
 
-:where(.button).icon.toggle:is(input[type="checkbox"])::after {
+:where(.button, button).icon.toggle:is(input[type="checkbox"])::after {
       -webkit-font-smoothing: antialiased;
       font-feature-settings: "liga";
       direction: ltr;
@@ -206,19 +206,19 @@
       justify-content: center;
     }
 
-:where(.button).icon.toggle:is(input[type="checkbox"])[off-icon]::after {
+:where(.button, button).icon.toggle:is(input[type="checkbox"])[off-icon]::after {
         content: attr(off-icon);
       }
 
-:where(.button).icon.toggle:is(input[type="checkbox"]):checked {
+:where(.button, button).icon.toggle:is(input[type="checkbox"]):checked {
       color: var(--md-sys-color-on-primary);
       background-color: var(--md-sys-color-primary);
     }
 
-:where(.button).icon.toggle:is(input[type="checkbox"]):checked::after {
+:where(.button, button).icon.toggle:is(input[type="checkbox"]):checked::after {
         content: "check";
       }
 
-:where(.button).icon.toggle:is(input[type="checkbox"]):checked[on-icon]::after {
+:where(.button, button).icon.toggle:is(input[type="checkbox"]):checked[on-icon]::after {
           content: attr(on-icon);
         }

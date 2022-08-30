@@ -1290,7 +1290,8 @@
   box-shadow: var(--md-sys-elevation-5);
 }
 
-.button {
+.button,
+button {
   padding: 10px 20px;
   border-radius: 20px;
   border: none;
@@ -1318,7 +1319,7 @@
   --tint-color: transparent;
 }
 
-.button::after {
+.button::after, button::after {
     content: " ";
     border-radius: inherit;
     position: absolute;
@@ -1329,7 +1330,7 @@
     background-color: var(--tint-color);
   }
 
-.button[label] {
+.button[label], button[label] {
     content: attr(label);
     -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
             text-decoration: var(--md-sys-typescale-label-large-text-decoration);
@@ -1342,208 +1343,214 @@
     font-family: var(--md-sys-typescale-label-large-font-family-name);
   }
 
-.button i {
+.button i, button i {
     margin-right: 4px;
     font-size: 18px;
   }
 
-.button i:only-child {
+.button i:only-child, button i:only-child {
     margin-right: 0px;
   }
 
-.button a {
+.button a, button a {
     text-decoration: none;
   }
 
-.button a:hover {
+.button a:hover, button a:hover {
     text-decoration: none;
   }
 
-.button a:focus {
+.button a:focus, button a:focus {
     text-decoration: none;
   }
 
 .button:hover,
-  .button.hover {
+  .button.hover,
+  button:hover,
+  button.hover {
     box-shadow: var(--md-sys-elevation-2);
   }
 
 .button:focus,
-  .button.focus {
+  .button.focus,
+  button:focus,
+  button.focus {
     box-shadow: var(--md-sys-elevation-2);
   }
 
 .button:active,
-  .button.active {
+  .button.active,
+  button:active,
+  button.active {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-.button[disabled] {
+.button[disabled], button[disabled] {
     cursor: default;
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
     box-shadow: var(--md-sys-elevation-0);
   }
 
-.button:focus-within::before {
+.button:focus-within::before, button:focus-within::before {
     border-radius: 40px;
   }
 
-:where(.button).text {
+:where(.button, button).text {
   background-color: transparent;
   color: var(--md-sys-color-primary);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).text:hover,
-  :where(.button).text .hover {
+:where(.button, button).text:hover,
+  :where(.button, button).text .hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).text:focus,
-  :where(.button).text .focus {
+:where(.button, button).text:focus,
+  :where(.button, button).text .focus {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).text:active,
-  :where(.button).text .active {
+:where(.button, button).text:active,
+  :where(.button, button).text .active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).text[disabled] {
+:where(.button, button).text[disabled] {
     box-shadow: none;
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).filled {
+:where(.button, button).filled {
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).filled:hover,
-  :where(.button).filled.hover {
+:where(.button, button).filled:hover,
+  :where(.button, button).filled.hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).filled:focus,
-  :where(.button).filled.focus {
+:where(.button, button).filled:focus,
+  :where(.button, button).filled.focus {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).filled:active,
-  :where(.button).filled.active {
+:where(.button, button).filled:active,
+  :where(.button, button).filled.active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).filled[disabled] {
+:where(.button, button).filled[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).filled.ripple {
+:where(.button, button).filled.ripple {
     --ripple-bg: rgba(var(--md-sys-color-primary-rgb), 0.4);
     --ripple-fg: rgba(var(--md-sys-color-on-primary-rgb), 0.6);
   }
 
-:where(.button).filled-tonal {
+:where(.button, button).filled-tonal {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).filled-tonal:hover,
-  :where(.button).filled-tonal.hover {
+:where(.button, button).filled-tonal:hover,
+  :where(.button, button).filled-tonal.hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).filled-tonal:focus,
-  :where(.button).filled-tonal.focus {
+:where(.button, button).filled-tonal:focus,
+  :where(.button, button).filled-tonal.focus {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).filled-tonal:active,
-  :where(.button).filled-tonal.active {
+:where(.button, button).filled-tonal:active,
+  :where(.button, button).filled-tonal.active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).filled-tonal[disabled] {
+:where(.button, button).filled-tonal[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).outlined {
+:where(.button, button).outlined {
   background-color: transparent;
   color: var(--md-sys-color-primary);
   border: 1px solid var(--md-sys-color-outline);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).outlined:hover,
-  :where(.button).outlined.hover {
+:where(.button, button).outlined:hover,
+  :where(.button, button).outlined.hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).outlined:focus,
-  :where(.button).outlined.focus {
+:where(.button, button).outlined:focus,
+  :where(.button, button).outlined.focus {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).outlined:active,
-  :where(.button).outlined.active {
+:where(.button, button).outlined:active,
+  :where(.button, button).outlined.active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).outlined[disabled] {
+:where(.button, button).outlined[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     border: 1px solid rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).elevated {
+:where(.button, button).elevated {
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-primary);
 }
 
-:where(.button).elevated:hover,
-  :where(.button).elevated .hover {
+:where(.button, button).elevated:hover,
+  :where(.button, button).elevated .hover {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).elevated:focus,
-  :where(.button).elevated .focus {
+:where(.button, button).elevated:focus,
+  :where(.button, button).elevated .focus {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).elevated:active,
-  :where(.button).elevated .active {
+:where(.button, button).elevated:active,
+  :where(.button, button).elevated .active {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).elevated[disabled] {
+:where(.button, button).elevated[disabled] {
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).icon {
+:where(.button, button).icon {
   border: none;
   cursor: pointer;
   display: flex;
@@ -1573,7 +1580,7 @@
   --tint-color: transparent;
 }
 
-:where(.button).icon::after {
+:where(.button, button).icon::after {
     content: " ";
     border-radius: inherit;
     position: absolute;
@@ -1584,146 +1591,146 @@
     background-color: var(--tint-color);
   }
 
-:where(.button).icon[selected] {
+:where(.button, button).icon[selected] {
     color: var(--md-sys-color-primary);
   }
 
-:where(.button).icon:hover,
-  :where(.button).icon .hover {
+:where(.button, button).icon:hover,
+  :where(.button, button).icon .hover {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button).icon:focus,
-  :where(.button).icon .focus {
+:where(.button, button).icon:focus,
+  :where(.button, button).icon .focus {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button).icon:active,
-  :where(.button).icon .active {
+:where(.button, button).icon:active,
+  :where(.button, button).icon .active {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button).icon[disabled] {
+:where(.button, button).icon[disabled] {
     cursor: default;
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button).icon i {
+:where(.button, button).icon i {
     font-size: 24px;
     vertical-align: middle;
   }
 
-:where(.button).icon.contained.filled {
+:where(.button, button).icon.contained.filled {
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).icon.contained.filled:hover,
-  :where(.button).icon.contained.filled .hover {
+:where(.button, button).icon.contained.filled:hover,
+  :where(.button, button).icon.contained.filled .hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled:focus,
-  :where(.button).icon.contained.filled .focus {
+:where(.button, button).icon.contained.filled:focus,
+  :where(.button, button).icon.contained.filled .focus {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled:active,
-  :where(.button).icon.contained.filled .active {
+:where(.button, button).icon.contained.filled:active,
+  :where(.button, button).icon.contained.filled .active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled[disabled] {
+:where(.button, button).icon.contained.filled[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).icon.contained.filled-tonal {
+:where(.button, button).icon.contained.filled-tonal {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).icon.contained.filled-tonal:hover,
-  :where(.button).icon.contained.filled-tonal .hover {
+:where(.button, button).icon.contained.filled-tonal:hover,
+  :where(.button, button).icon.contained.filled-tonal .hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled-tonal:focus,
-  :where(.button).icon.contained.filled-tonal .focus {
+:where(.button, button).icon.contained.filled-tonal:focus,
+  :where(.button, button).icon.contained.filled-tonal .focus {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled-tonal:active,
-  :where(.button).icon.contained.filled-tonal .active {
+:where(.button, button).icon.contained.filled-tonal:active,
+  :where(.button, button).icon.contained.filled-tonal .active {
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-on-secondary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).icon.contained.filled-tonal[disabled] {
+:where(.button, button).icon.contained.filled-tonal[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).icon.contained.outlined {
+:where(.button, button).icon.contained.outlined {
   background-color: transparent;
   color: var(--md-sys-color-primary);
   border: 1px solid var(--md-sys-color-outline);
   box-shadow: var(--md-sys-elevation-0);
 }
 
-:where(.button).icon.contained.outlined:hover,
-  :where(.button).icon.contained.outlined .hover {
+:where(.button, button).icon.contained.outlined:hover,
+  :where(.button, button).icon.contained.outlined .hover {
     box-shadow: var(--md-sys-elevation-1);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).icon.contained.outlined:focus,
-  :where(.button).icon.contained.outlined .focus {
+:where(.button, button).icon.contained.outlined:focus,
+  :where(.button, button).icon.contained.outlined .focus {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).icon.contained.outlined:active,
-  :where(.button).icon.contained.outlined .active {
+:where(.button, button).icon.contained.outlined:active,
+  :where(.button, button).icon.contained.outlined .active {
     border: 1px solid var(--md-sys-color-primary);
     box-shadow: var(--md-sys-elevation-0);
     --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).icon.contained.outlined[disabled] {
+:where(.button, button).icon.contained.outlined[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     border: 1px solid rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).icon.toggle {
+:where(.button, button).icon.toggle {
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-primary);
 }
 
-:where(.button).icon.toggle[checked] {
+:where(.button, button).icon.toggle[checked] {
     color: var(--md-sys-color-on-primary);
     background-color: var(--md-sys-color-primary);
   }
 
-:where(.button).icon.toggle[disabled] {
+:where(.button, button).icon.toggle[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).icon.toggle:is(input[type="checkbox"]) {
+:where(.button, button).icon.toggle:is(input[type="checkbox"]) {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -1731,7 +1738,7 @@
     color: var(--md-sys-color-primary);
   }
 
-:where(.button).icon.toggle:is(input[type="checkbox"])::after {
+:where(.button, button).icon.toggle:is(input[type="checkbox"])::after {
       -webkit-font-smoothing: antialiased;
       font-feature-settings: "liga";
       direction: ltr;
@@ -1751,24 +1758,24 @@
       justify-content: center;
     }
 
-:where(.button).icon.toggle:is(input[type="checkbox"])[off-icon]::after {
+:where(.button, button).icon.toggle:is(input[type="checkbox"])[off-icon]::after {
         content: attr(off-icon);
       }
 
-:where(.button).icon.toggle:is(input[type="checkbox"]):checked {
+:where(.button, button).icon.toggle:is(input[type="checkbox"]):checked {
       color: var(--md-sys-color-on-primary);
       background-color: var(--md-sys-color-primary);
     }
 
-:where(.button).icon.toggle:is(input[type="checkbox"]):checked::after {
+:where(.button, button).icon.toggle:is(input[type="checkbox"]):checked::after {
         content: "check";
       }
 
-:where(.button).icon.toggle:is(input[type="checkbox"]):checked[on-icon]::after {
+:where(.button, button).icon.toggle:is(input[type="checkbox"]):checked[on-icon]::after {
           content: attr(on-icon);
         }
 
-:where(.button).fab {
+:where(.button, button).fab {
   padding: 16px;
   font-size: 24px;
   border-radius: 16px;
@@ -1780,7 +1787,7 @@
   --tint-color: transparent;
 }
 
-:where(.button).fab::after {
+:where(.button, button).fab::after {
     content: " ";
     border-radius: inherit;
     position: absolute;
@@ -1791,35 +1798,35 @@
     background-color: var(--tint-color);
   }
 
-:where(.button).fab > i {
+:where(.button, button).fab > i {
     font-size: 24px;
   }
 
-:where(.button).fab:hover,
-  :where(.button).fab .hover {
+:where(.button, button).fab:hover,
+  :where(.button, button).fab .hover {
     box-shadow: var(--md-sys-elevation-4);
     --tint-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).fab:focus,
-  :where(.button).fab .focus {
+:where(.button, button).fab:focus,
+  :where(.button, button).fab .focus {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).fab:active,
-  :where(.button).fab .active {
+:where(.button, button).fab:active,
+  :where(.button, button).fab .active {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-on-primary-container-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).fab[disabled] {
+:where(.button, button).fab[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).fab.small {
+:where(.button, button).fab.small {
   padding: 16px;
   font-size: 24px;
   border-radius: 12px;
@@ -1827,11 +1834,11 @@
   height: 40px;
 }
 
-:where(.button).fab.small > i {
+:where(.button, button).fab.small > i {
     font-size: 24px;
   }
 
-:where(.button).fab.large {
+:where(.button, button).fab.large {
   padding: 16px;
   font-size: 36px;
   border-radius: var(--md-sys-shape-medium);
@@ -1839,104 +1846,104 @@
   height: 96px;
 }
 
-:where(.button).fab.large > i {
+:where(.button, button).fab.large > i {
     font-size: 36px;
   }
 
-:where(.button).fab.extended {
+:where(.button, button).fab.extended {
   border-radius: var(--md-sys-shape-medium);
   height: 56px;
   font-size: 16px;
   width: unset;
 }
 
-:where(.button).fab.extended > i {
+:where(.button, button).fab.extended > i {
     font-size: 24px;
     margin-right: 8px;
   }
 
-:where(.button).fab.surface {
+:where(.button, button).fab.surface {
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
 }
 
-:where(.button).fab.surface:hover,
-  :where(.button).fab.surface .hover {
+:where(.button, button).fab.surface:hover,
+  :where(.button, button).fab.surface .hover {
     box-shadow: var(--md-sys-elevation-4);
     --tint-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).fab.surface:focus,
-  :where(.button).fab.surface .focus {
+:where(.button, button).fab.surface:focus,
+  :where(.button, button).fab.surface .focus {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).fab.surface:active,
-  :where(.button).fab.surface .active {
+:where(.button, button).fab.surface:active,
+  :where(.button, button).fab.surface .active {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-on-surface-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).fab.surface[disabled] {
+:where(.button, button).fab.surface[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).fab.secondary {
+:where(.button, button).fab.secondary {
   background-color: var(--md-sys-color-secondary);
   color: var(--md-sys-color-on-secondary);
 }
 
-:where(.button).fab.secondary:hover,
-  :where(.button).fab.secondary .hover {
+:where(.button, button).fab.secondary:hover,
+  :where(.button, button).fab.secondary .hover {
     box-shadow: var(--md-sys-elevation-4);
     --tint-color: rgba(var(--md-sys-color-secondary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).fab.secondary:focus,
-  :where(.button).fab.secondary .focus {
+:where(.button, button).fab.secondary:focus,
+  :where(.button, button).fab.secondary .focus {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-secondary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).fab.secondary:active,
-  :where(.button).fab.secondary .active {
+:where(.button, button).fab.secondary:active,
+  :where(.button, button).fab.secondary .active {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-secondary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).fab.secondary[disabled] {
+:where(.button, button).fab.secondary[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
   }
 
-:where(.button).fab.tertiary {
+:where(.button, button).fab.tertiary {
   background-color: var(--md-sys-color-tertiary);
   color: var(--md-sys-color-on-tertiary);
 }
 
-:where(.button).fab.tertiary:hover,
-  :where(.button).fab.tertiary .hover {
+:where(.button, button).fab.tertiary:hover,
+  :where(.button, button).fab.tertiary .hover {
     box-shadow: var(--md-sys-elevation-4);
     --tint-color: rgba(var(--md-sys-color-tertiary-rgb), var(--md-sys-state-hover-state-layer-opacity));
   }
 
-:where(.button).fab.tertiary:focus,
-  :where(.button).fab.tertiary .focus {
+:where(.button, button).fab.tertiary:focus,
+  :where(.button, button).fab.tertiary .focus {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-tertiary-rgb), var(--md-sys-state-focus-state-layer-opacity));
   }
 
-:where(.button).fab.tertiary:active,
-  :where(.button).fab.tertiary .active {
+:where(.button, button).fab.tertiary:active,
+  :where(.button, button).fab.tertiary .active {
     box-shadow: var(--md-sys-elevation-2);
     --tint-color: rgba(var(--md-sys-color-tertiary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
   }
 
-:where(.button).fab.tertiary[disabled] {
+:where(.button, button).fab.tertiary[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgba(var(--md-sys-color-on-surface-rgb), 0.12);
     color: rgba(var(--md-sys-color-on-surface-rgb), 0.38);
@@ -3245,7 +3252,7 @@ datalist {
     transform: scale(4, 4);
   }
 
-:where(.data-table, table) {
+:where(.table, table) {
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--md-sys-color-outline-variant);
@@ -3254,38 +3261,38 @@ datalist {
   padding: 0;
 }
 
-:where(.data-table, table) :where(td:first-child, th:first-child) {
+:where(.table, table) :where(td:first-child, th:first-child) {
     border-left: none;
   }
 
-:where(.data-table, table) thead:first-child tr:first-child th,
-  :where(.data-table, table) tbody:first-child tr:first-child td {
+:where(.table, table) thead:first-child tr:first-child th,
+  :where(.table, table) tbody:first-child tr:first-child td {
     border-top: none;
   }
 
-:where(.data-table, table) thead tr th:first-of-type {
+:where(.table, table) thead tr th:first-of-type {
     border-top-left-radius: var(--md-sys-shape-medium);
   }
 
-:where(.data-table, table) thead tr th:last-of-type {
+:where(.table, table) thead tr th:last-of-type {
     border-top-right-radius: var(--md-sys-shape-medium);
   }
 
-:where(.data-table, table) :where(th) {
+:where(.table, table) :where(th) {
     border-top: none;
     background-color: var(--md-surface-2);
     color: var(--md-sys-color-on-surface-variant);
     font-weight: 500;
   }
 
-:where(.data-table, table) :where(td, th) {
+:where(.table, table) :where(td, th) {
     padding: 16px 24px;
     border-top: 1px solid var(--md-sys-color-surface-variant);
     border-left: 1px solid var(--md-sys-color-surface-variant);
     vertical-align: middle;
   }
 
-.data-table.zebra tr:nth-of-type(even) {
+.table.zebra tr:nth-of-type(even) {
     background-color: var(--md-surface-1);
   }
 
