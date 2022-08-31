@@ -29,14 +29,14 @@
     flex: 1;
   }
 
-  :where(.segmented-button) .option :where(.segmented-button) .option:last-of-type label {
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 20px;
-    }
-
-  :where(.segmented-button) .option :where(.segmented-button) .option:first-of-type label {
+  :where(.segmented-button) .option:first-of-type label {
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
+    }
+
+  :where(.segmented-button) .option:last-of-type label {
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
 
   :where(.segmented-button) label {
