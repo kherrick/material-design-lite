@@ -97,6 +97,7 @@
     top: 8px;
     bottom: 8px;
     height: 100%;
+    max-height: calc(100% - 16px);
     border: none;
     overflow-y: auto;
   }
