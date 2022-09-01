@@ -1,28 +1,44 @@
-:where(.progress, progress) {
+/* CSS progress indicator at value 75% */
+:where(progress, .progress).linear {
+  --progress-fg: var(--md-sys-color-primary);
+  --progress-bg: var(--md-sys-color-surface-variant);
+  --progress-value: 20%;
   height: 4px;
-  border-radius: none;
-  color: var(--md-sys-color-primary);
-  accent-color: var(--md-sys-color-primary);
-  transition: all 0.2s ease-in-out;
+  border-radius: 4px;
+}
+:where(progress, .progress).linear::-webkit-progress-value {
+    background: var(--progress-fg);
+  }
+:where(progress, .progress).linear::-moz-progress-bar {
+    background: var(--progress-fg);
+  }
+:where(progress, .progress).linear::-webkit-progress-bar {
+    background: var(--progress-bg);
+  }
+:where(progress, .progress).linear[indeterminate] {
+    -webkit-animation: linear-progress-indeterminate 2s infinite;
+            animation: linear-progress-indeterminate 2s infinite;
+  }
+
+@-webkit-keyframes linear-progress-indeterminate {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
-  :where(.progress, progress):not(:indeterminate) {
-    background-color: var(--md-sys-color-surface-variant);
+@keyframes linear-progress-indeterminate {
+  0% {
+    background-position: -200% 0;
   }
 
-  :where(.progress, progress):indeterminate {
-    color: var(--md-sys-color-primary);
+  100% {
+    background-position: 200% 0;
   }
-
-  :where(.progress, progress)::-webkit-progress-bar {
-    background-color: var(--md-sys-color-surface-variant);
-    width: 100%;
-  }
-
-  :where(.progress, progress)::-webkit-progress-value {
-    background-color: var(--md-sys-color-primary);
-    width: 100%;
-  }
+}
 /* Codepen: https://codepen.io/finnhvman/pen/bmNdNr */
 :where(progress, .progress).circular {
   -webkit-appearance: none;
@@ -34,7 +50,7 @@
   padding: 0.25em;
   width: 3em;
   height: 3em;
-  color: rgb(var(--md-sys-color-primary-rgb));
+  color: var(--md-sys-color-primary);
   background-color: transparent;
   font-size: 16px;
   overflow: hidden;
@@ -43,18 +59,18 @@
     background-color: transparent;
   }
 /* Indeterminate */
-:where(progress, .progress).circular:indeterminate {
+:where(progress, .progress).circular[indeterminate] {
     -webkit-mask-image: linear-gradient(transparent 50%, black 50%), linear-gradient(to right, transparent 50%, black 50%);
     mask-image: linear-gradient(transparent 50%, black 50%), linear-gradient(to right, transparent 50%, black 50%);
     -webkit-animation: circular 6s infinite cubic-bezier(0.3, 0.6, 1, 1);
             animation: circular 6s infinite cubic-bezier(0.3, 0.6, 1, 1);
   }
-:where(progress, .progress).circular:indeterminate {
+:where(progress, .progress).circular[indeterminate] {
     -webkit-animation: none;
             animation: none;
   }
-:where(progress, .progress).circular:indeterminate::before,
-  :where(progress, .progress).circular:indeterminate::-webkit-progress-value {
+:where(progress, .progress).circular[indeterminate]::before,
+  :where(progress, .progress).circular[indeterminate]::-webkit-progress-value {
     content: "";
     display: block;
     box-sizing: border-box;
@@ -68,7 +84,7 @@
     -webkit-animation: circular-pseudo 0.75s infinite linear alternate;
             animation: circular-pseudo 0.75s infinite linear alternate;
   }
-:where(progress, .progress).circular:indeterminate::-moz-progress-bar {
+:where(progress, .progress).circular[indeterminate]::-moz-progress-bar {
     box-sizing: border-box;
     border: solid 0.25em transparent;
     border-top-color: currentColor;
@@ -78,7 +94,7 @@
     background-color: transparent;
     animation: circular-pseudo 0.75s infinite linear alternate;
   }
-:where(progress, .progress).circular:indeterminate::-ms-fill {
+:where(progress, .progress).circular[indeterminate]::-ms-fill {
     animation-name: -ms-ring;
   }
 

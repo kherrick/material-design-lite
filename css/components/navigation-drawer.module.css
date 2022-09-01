@@ -46,40 +46,13 @@
   .navigation-drawer section {
     display: flex;
     flex-direction: column;
-    gap: 4px;
   }
 
   .navigation-drawer section .section-header {
       padding: 16px 18px;
     }
 
-  .navigation-drawer section .drawer-item {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      box-sizing: border-box;
-      padding: 0 24px;
-      gap: 16px;
-    }
-
-  .navigation-drawer section .drawer-item .title {
-        flex: 1;
-        white-space: nowrap;
-        text-align: start;
-        padding: 16px 0;
-      }
-
-  .navigation-drawer section .drawer-item .leading {
-        display: flex;
-        align-items: center;
-      }
-
-  .navigation-drawer section .drawer-item .trailing {
-        display: flex;
-        align-items: center;
-      }
-
-  .navigation-drawer section .drawer-item[selected]::before {
+  .navigation-drawer section .list-tile[selected]::before {
           content: "";
           position: absolute;
           top: 0;

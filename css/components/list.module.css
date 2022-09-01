@@ -6,95 +6,60 @@
   .list {
   min-width: 300px;
 }
-  .list .list-tile:where(li) {
-      margin: 0;
-      padding: 0;
-    }
-  .list .list-tile {
-    padding: 12px;
-    box-sizing: border-box;
-    -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
-            text-decoration: var(--md-sys-typescale-label-large-text-decoration);
-    text-transform: var(--md-sys-typescale-label-large-text-transform);
-    line-height: var(--md-sys-typescale-label-large-height);
-    letter-spacing: var(--md-sys-typescale-label-large-tracking);
-    font-size: var(--md-sys-typescale-label-large-font-size);
-    font-weight: var(--md-sys-typescale-label-large-font-weight);
-    font-style: var(--md-sys-typescale-label-large-font-family-style);
-    font-family: var(--md-sys-typescale-label-large-font-family-name);
-    display: grid;
-    grid-template-areas: "leading title trailing" "leading subtitle trailing";
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto auto;
+
+.list-tile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  gap: 16px;
 }
-  .list .list-tile .leading {
-      grid-area: leading;
-      display: flex;
-      align-items: start;
-      justify-content: center;
-      padding-right: 12px;
-      opacity: 0.67;
-    }
-  .list .list-tile .trailing {
-      grid-area: trailing;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding-left: 12px;
-      opacity: 0.67;
-    }
-  .list .list-tile .title {
-      grid-area: title;
-      -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
-              text-decoration: var(--md-sys-typescale-label-large-text-decoration);
-      text-transform: var(--md-sys-typescale-label-large-text-transform);
-      line-height: var(--md-sys-typescale-label-large-height);
-      letter-spacing: var(--md-sys-typescale-label-large-tracking);
-      font-size: var(--md-sys-typescale-label-large-font-size);
-      font-weight: var(--md-sys-typescale-label-large-font-weight);
-      font-style: var(--md-sys-typescale-label-large-font-family-style);
-      font-family: var(--md-sys-typescale-label-large-font-family-name);
-    }
-  .list .list-tile .subtitle {
-      grid-area: subtitle;
-      -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
-              text-decoration: var(--md-sys-typescale-label-large-text-decoration);
-      text-transform: var(--md-sys-typescale-label-large-text-transform);
-      line-height: var(--md-sys-typescale-label-large-height);
-      letter-spacing: var(--md-sys-typescale-label-large-tracking);
-      font-size: var(--md-sys-typescale-label-large-font-size);
-      font-weight: var(--md-sys-typescale-label-large-font-weight);
-      font-style: var(--md-sys-typescale-label-large-font-family-style);
-      font-family: var(--md-sys-typescale-label-large-font-family-name);
-      font-size: 14px;
-      opacity: 0.67;
-      padding-top: 4px;
-    }
-  .list .list-tile i {
-      font-size: 24px;
-    }
-  .list .list-tile {
-    --tint-color: transparent;
+
+.list-tile .title {
+    flex: 1;
+    white-space: nowrap;
+    text-align: start;
+  }
+
+.list-tile .leading {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+  }
+
+.list-tile .trailing {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+  }
+
+.list-tile {
+  --tint-color: transparent;
 }
-  .list .list-tile::after {
-      content: " ";
-      border-radius: inherit;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: var(--tint-color);
-    }
-  .list .list-tile:hover,
-    .list .list-tile .hover {
-      --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
-    }
-  .list .list-tile:focus,
-    .list .list-tile .focus {
-      --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
-    }
-  .list .list-tile:active,
-    .list .list-tile .active {
-      --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
-    }
+
+.list-tile::after {
+    content: " ";
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--tint-color);
+  }
+
+.list-tile:hover,
+  .list-tile .hover {
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
+  }
+
+.list-tile:focus,
+  .list-tile .focus {
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
+  }
+
+.list-tile:active,
+  .list-tile .active {
+    --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
+  }
