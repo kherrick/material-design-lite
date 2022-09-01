@@ -2474,7 +2474,8 @@ datalist {
         bottom: 0;
         left: 0;
         right: 0;
-        background-color: var(--tint-color);
+
+        /* background-color: var(--tint-color); */
       }
 
 .navigation-rail nav input:hover + label {
