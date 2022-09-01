@@ -35,7 +35,8 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--tint-color);
+
+    /* background-color: var(--tint-color); */
   }
 
   .button[label], button[label] {
@@ -296,7 +297,8 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--tint-color);
+
+    /* background-color: var(--tint-color); */
   }
 
 :where(.button, button).icon[selected] {
@@ -503,7 +505,8 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--tint-color);
+
+    /* background-color: var(--tint-color); */
   }
 
 :where(.button, button).fab > i {
@@ -754,7 +757,8 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--tint-color);
+
+    /* background-color: var(--tint-color); */
   }
 
 .chip:hover,
@@ -1903,7 +1907,8 @@ datalist {
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: var(--tint-color);
+
+      /* background-color: var(--tint-color); */
     }
 
 :where(.segmented-button) input:hover + label {
@@ -2357,7 +2362,8 @@ datalist {
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: var(--tint-color);
+
+      /* background-color: var(--tint-color); */
     }
 
 .navigation-bar input:hover + label {
@@ -2775,7 +2781,8 @@ datalist {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--tint-color);
+
+    /* background-color: var(--tint-color); */
   }
 
 .list-tile:hover,

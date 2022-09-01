@@ -39,7 +39,8 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: var(--tint-color);
+
+      /* background-color: var(--tint-color); */
     }
 
   .navigation-bar input:hover + label {
