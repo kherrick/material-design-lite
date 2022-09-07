@@ -3765,6 +3765,8 @@ datalist {
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
+  box-sizing: border-box;
+  position: relative;
 }
 
 .navigation-bar::before {
@@ -3799,8 +3801,7 @@ datalist {
       bottom: 0;
       left: 0;
       right: 0;
-
-      /* background-color: var(--tint-color); */
+      background-color: var(--tint-color);
     }
 
 .navigation-bar input:hover + label {
@@ -3854,6 +3855,8 @@ datalist {
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
+  box-sizing: border-box;
+  position: relative;
 }
 
 .navigation-rail::before {
@@ -3917,8 +3920,7 @@ datalist {
         bottom: 0;
         left: 0;
         right: 0;
-
-        /* background-color: var(--tint-color); */
+        background-color: var(--tint-color);
       }
 
 .navigation-rail nav input:hover + label {
@@ -3972,16 +3974,13 @@ datalist {
 .navigation-drawer {
   width: 360px;
   height: 100%;
-  box-sizing: border-box;
   padding: 12px;
   border-radius: 16px;
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface-variant);
+  box-sizing: border-box;
+  position: relative;
 }
-
-.navigation-drawer * {
-    box-sizing: border-box;
-  }
 
 .navigation-drawer .drawer-title {
     -webkit-text-decoration: var(--md-sys-typescale-title-medium-text-decoration);

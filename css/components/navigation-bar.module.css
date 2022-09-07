@@ -5,6 +5,8 @@
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
+  box-sizing: border-box;
+  position: relative;
 }
 
   .navigation-bar::before {
@@ -39,8 +41,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-
-      /* background-color: var(--tint-color); */
+      background-color: var(--tint-color);
     }
 
   .navigation-bar input:hover + label {
