@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
@@ -22,7 +23,7 @@
   }
 
   .navigation-rail {
-  padding-top: 56px;
+  padding-top: 16px;
   padding-bottom: 56px;
 }
 
@@ -60,39 +61,15 @@
         color: var(--md-sys-color-on-secondary-container);
       }
 
-  .navigation-rail nav input {
-      --tint-color: transparent;
-}
-
-  .navigation-rail nav input + label::after {
-        content: " ";
-        border-radius: inherit;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: var(--tint-color);
-      }
-
-  .navigation-rail nav input:hover + label {
-        --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
-      }
-
-  .navigation-rail nav input:focus + label {
-        --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
-      }
-
-  .navigation-rail nav input:active + label {
-        --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
-      }
-
   .navigation-rail nav label {
       height: 56px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+      visibility: visible;
+      z-index: 1;
       gap: 4px;
       -webkit-text-decoration: var(--md-sys-typescale-label-medium-text-decoration);
               text-decoration: var(--md-sys-typescale-label-medium-text-decoration);

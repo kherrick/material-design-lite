@@ -64,6 +64,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    visibility: visible;
+    z-index: 1;
     gap: 4px;
     -webkit-text-decoration: var(--md-sys-typescale-label-medium-text-decoration);
             text-decoration: var(--md-sys-typescale-label-medium-text-decoration);
