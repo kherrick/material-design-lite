@@ -296,9 +296,6 @@
   --md-sys-shape-corner-none-family: 1px;
   --md-sys-shape-corner-none-unit: 1px;
   --md-sys-shape-corner-none: 0px;
-  --md-sys-shape-small: var(--md-sys-shape-corner-small);
-  --md-sys-shape-medium: var(--md-sys-shape-corner-medium);
-  --md-sys-shape-large: var(--md-sys-shape-corner-large);
 }
 
 :where(html),
@@ -500,6 +497,9 @@
 }
 
 * {
+  --md-sys-shape-small: var(--md-sys-shape-corner-small);
+  --md-sys-shape-medium: var(--md-sys-shape-corner-medium);
+  --md-sys-shape-large: var(--md-sys-shape-corner-large);
   --md-sys-color-primary: rgba(var(--md-sys-color-primary-rgb), 1);
   --md-sys-color-primary-container: rgba(var(--md-sys-color-primary-container-rgb), 1);
   --md-sys-color-secondary: rgba(var(--md-sys-color-secondary-rgb), 1);
@@ -791,6 +791,7 @@
 }
 
 .color-surface {
+  background-color: var(--md-sys-color-surface);
 }
 
 .color-surface-text {
@@ -859,6 +860,14 @@
 
 .color-shadow-text {
   color: var(--md-sys-color-shadow);
+}
+
+.color-scrim {
+  background-color: var(--md-sys-color-scrim);
+}
+
+.color-scrim-text {
+  color: var(--md-sys-color-scrim);
 }
 
 .color-surface-tint {
@@ -1558,6 +1567,7 @@ button {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
   -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
           text-decoration: var(--md-sys-typescale-label-large-text-decoration);
   text-transform: var(--md-sys-typescale-label-large-text-transform);
@@ -1783,6 +1793,7 @@ button {
   border-radius: 16px;
   width: 56px;
   height: 56px;
+  position: relative;
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
   box-shadow: var(--md-sys-elevation-1);
@@ -1955,7 +1966,7 @@ button {
 .card {
   display: flex;
   flex-direction: column;
-  min-width: 300px;
+  width: 300px;
   border-radius: var(--md-sys-shape-medium);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
@@ -2023,6 +2034,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
   border-radius: 8px;
   outline: none;
   padding: 8px 16px;
@@ -3686,6 +3698,7 @@ datalist {
     box-shadow: var(--md-sys-elevation-3);
     background-color: var(--md-sys-color-surface);
     color: var(--md-sys-color-on-surface-variant);
+    position: relative;
     min-width: 280px;
     max-width: 560px;
     padding: 24px;
@@ -3762,6 +3775,8 @@ datalist {
   display: flex;
   flex-direction: row;
   width: 100%;
+  align-items: center;
+  justify-content: space-between;
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
@@ -3782,38 +3797,13 @@ datalist {
 .navigation-bar input {
     opacity: 0;
     position: absolute;
+    width: 0;
+    height: 0;
   }
 
 .navigation-bar input:checked + label i {
       background-color: var(--md-sys-color-secondary-container);
       color: var(--md-sys-color-on-secondary-container);
-    }
-
-.navigation-bar input {
-    --tint-color: transparent;
-}
-
-.navigation-bar input + label::after {
-      content: " ";
-      border-radius: inherit;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: var(--tint-color);
-    }
-
-.navigation-bar input:hover + label {
-      --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
-    }
-
-.navigation-bar input:focus + label {
-      --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
-    }
-
-.navigation-bar input:active + label {
-      --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
     }
 
 .navigation-bar label {
@@ -3849,7 +3839,7 @@ datalist {
     justify-content: center;
   }
 
-.navigation-rail {
+:is(.navigation-rail) {
   height: 100%;
   width: 80px;
   display: flex;
@@ -3863,7 +3853,7 @@ datalist {
   position: relative;
 }
 
-.navigation-rail::before {
+:is(.navigation-rail)::before {
     content: "";
     position: absolute;
     top: 0;
@@ -3873,26 +3863,34 @@ datalist {
     background-color: var(--md-sys-color-surface-1);
   }
 
-.navigation-rail {
+:is(.navigation-rail) {
   padding-top: 16px;
   padding-bottom: 56px;
 }
 
-.navigation-rail :where(button, .button) {
+:is(.navigation-rail) :where(button, .button) {
     background-color: transparent;
     color: var(--md-sys-color-on-surface-variant);
     font-size: 24px;
     padding: 12px;
   }
 
-.navigation-rail :where(button, .button).fab {
+:is(.navigation-rail) :where(button, .button).fab {
       background-color: var(--md-sys-color-tertiary-container);
       color: var(--md-sys-color-on-tertiary-container);
       box-shadow: var(--md-sys-elevation-0);
       margin-top: 12px;
     }
 
-.navigation-rail nav {
+:is(.navigation-rail) :where(button, .button).fab:hover {
+        box-shadow: var(--md-sys-elevation-2);
+      }
+
+:is(.navigation-rail) :where(button, .button).fab:active {
+        box-shadow: var(--md-sys-elevation-1);
+      }
+
+:is(.navigation-rail) nav {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -3902,17 +3900,17 @@ datalist {
     margin-bottom: 40px;
   }
 
-.navigation-rail nav input {
+:is(.navigation-rail) nav input {
       opacity: 0;
       position: absolute;
     }
 
-.navigation-rail nav input:checked + label i {
+:is(.navigation-rail) nav input:checked + :where(label, .tab-icon) i {
         background-color: var(--md-sys-color-secondary-container);
         color: var(--md-sys-color-on-secondary-container);
       }
 
-.navigation-rail nav label {
+:is(.navigation-rail) nav :where(label, .tab-icon) {
       height: 56px;
       display: flex;
       flex-direction: column;
@@ -3933,15 +3931,15 @@ datalist {
       font-family: var(--md-sys-typescale-label-medium-font-family-name);
     }
 
-.navigation-rail nav i {
-      font-size: 24px;
-      width: 64px;
-      height: 32px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+:is(.navigation-rail) nav :where(label, .tab-icon) i {
+        font-size: 24px;
+        width: 64px;
+        height: 32px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
 .navigation-rail.middle nav {
     justify-content: center;
@@ -3951,7 +3949,7 @@ datalist {
     justify-content: flex-end;
   }
 
-.navigation-drawer {
+:where(.navigation-drawer) {
   width: 360px;
   height: 100%;
   padding: 12px;
@@ -3962,7 +3960,7 @@ datalist {
   position: relative;
 }
 
-.navigation-drawer .drawer-title {
+:where(.navigation-drawer) .drawer-title {
     -webkit-text-decoration: var(--md-sys-typescale-title-medium-text-decoration);
             text-decoration: var(--md-sys-typescale-title-medium-text-decoration);
     text-transform: var(--md-sys-typescale-title-medium-text-transform);
@@ -3975,7 +3973,7 @@ datalist {
     padding: 16px 18px;
   }
 
-.navigation-drawer .section-header {
+:where(.navigation-drawer) .section-header {
     -webkit-text-decoration: var(--md-sys-typescale-title-small-text-decoration);
             text-decoration: var(--md-sys-typescale-title-small-text-decoration);
     text-transform: var(--md-sys-typescale-title-small-text-transform);
@@ -3988,21 +3986,33 @@ datalist {
     padding: 16px 18px;
   }
 
-.navigation-drawer .divider {
+:where(.navigation-drawer) .divider {
     margin-top: 2px;
     margin-bottom: 2px;
   }
 
-.navigation-drawer section {
+:where(.navigation-drawer) section {
     display: flex;
     flex-direction: column;
   }
 
-.navigation-drawer section .section-header {
+:where(.navigation-drawer) section .section-header {
       padding: 16px 18px;
     }
 
-.navigation-drawer section .list-tile[selected]::before {
+:where(.navigation-drawer) section .list-tile {
+      position: relative;
+    }
+
+:where(.navigation-drawer) section .list-tile:where([selected], [data-selected]) {
+        color: var(--md-sys-color-on-secondary-container);
+      }
+
+:where(.navigation-drawer) section .list-tile:where([selected], [data-selected]) * {
+          z-index: 1;
+        }
+
+:where(.navigation-drawer) section .list-tile:where([selected], [data-selected])::before {
           content: "";
           position: absolute;
           top: 0;
@@ -4163,6 +4173,7 @@ datalist {
   flex-direction: row;
   align-items: center;
   box-sizing: border-box;
+  position: relative;
   padding: 16px 24px;
   gap: 16px;
 }
