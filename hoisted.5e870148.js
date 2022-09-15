@@ -1,1 +1,0 @@
-import"./chunks/Options.astro_astro_type_script_index_0_lang.efee2bb8.js";const e=document.querySelectorAll(".nav-link[data-selected]");e&&e[0].scrollIntoView({behavior:"smooth",block:"center",inline:"center"});
