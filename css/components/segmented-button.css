@@ -1,4 +1,4 @@
-:where(.segmented-button) {
+where(.segmented-button) {
   width: 100%;
   height: 40px;
   display: flex;
@@ -19,7 +19,7 @@
   font-family: var(--md-sys-typescale-label-large-font-family-name);
 }
 
-  :where(.segmented-button) label {
+  where(.segmented-button) label {
     border-radius: 0;
     width: 100%;
     height: 100%;
@@ -39,34 +39,34 @@
     z-index: 1;
   }
 
-  :where(.segmented-button) label:first-of-type {
+  where(.segmented-button) label:first-of-type {
       border-top-left-radius: 20px;
       border-bottom-left-radius: 20px;
     }
 
-  :where(.segmented-button) label:last-of-type {
+  where(.segmented-button) label:last-of-type {
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
     }
 
-  :where(.segmented-button) label:not(:last-child) {
+  where(.segmented-button) label:not(:last-child) {
       border-right: 1px solid var(--md-sys-color-outline);
     }
 
-  :where(.segmented-button) input {
+  where(.segmented-button) input {
     opacity: 0;
     position: absolute;
   }
 
-  :where(.segmented-button) input:focus:not(:checked) + label {
+  where(.segmented-button) input:focus:not(:checked) + label {
       background-color: var(--md-sys-color-surface-2);
     }
 
-  :where(.segmented-button) input {
+  where(.segmented-button) input {
     --tint-color: transparent;
 }
 
-  :where(.segmented-button) input + label::after {
+  where(.segmented-button) input + label::after {
       content: " ";
       border-radius: inherit;
       position: absolute;
@@ -78,23 +78,23 @@
       /* background-color: var(--tint-color); */
     }
 
-  :where(.segmented-button) input:hover + label {
+  where(.segmented-button) input:hover + label {
       --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-hover-state-layer-opacity));
     }
 
-  :where(.segmented-button) input:focus + label {
+  where(.segmented-button) input:focus + label {
       --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-focus-state-layer-opacity));
     }
 
-  :where(.segmented-button) input:active + label {
+  where(.segmented-button) input:active + label {
       --tint-color: rgba(var(--md-sys-color-primary-rgb), var(--md-sys-state-pressed-state-layer-opacity));
     }
 
-  :where(.segmented-button) i {
+  where(.segmented-button) i {
     margin-right: 8px;
   }
 
-  :where(.segmented-button) input:checked + label {
+  where(.segmented-button) input:checked + label {
     background-color: var(--md-sys-color-secondary-container);
     color: var(--md-sys-color-on-secondary-container);
     -webkit-text-decoration: var(--md-sys-typescale-title-small-text-decoration);
@@ -108,7 +108,7 @@
     font-family: var(--md-sys-typescale-title-small-font-family-name);
   }
 
-  :where(.segmented-button) input:checked + label::before {
+  where(.segmented-button) input:checked + label::before {
       content: "check";
       -webkit-font-smoothing: antialiased;
       font-feature-settings: "liga";
@@ -125,6 +125,6 @@
       padding-right: 8px;
     }
 
-  :where(.segmented-button) input:checked + label i {
+  where(.segmented-button) input:checked + label i {
       display: none;
     }
