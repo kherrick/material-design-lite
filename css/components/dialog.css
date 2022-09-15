@@ -1,4 +1,8 @@
-:where(.dialog)[open] {
+:where(.dialog) {
+  position: relative;
+}
+
+  :where(.dialog)[open] {
     border-radius: 28px;
     border: none;
     box-shadow: var(--md-sys-elevation-3);
@@ -15,11 +19,11 @@
     align-items: center;
   }
 
-    :where(.dialog)[open] i {
+  :where(.dialog)[open] i {
       pointer-events: none;
     }
 
-    :where(.dialog)[open] .title {
+  :where(.dialog)[open] .title {
       -webkit-text-decoration: var(--md-sys-typescale-headline-small-text-decoration);
               text-decoration: var(--md-sys-typescale-headline-small-text-decoration);
       text-transform: var(--md-sys-typescale-headline-small-text-transform);
@@ -32,7 +36,7 @@
       text-align: center;
     }
 
-    :where(.dialog)[open] .content {
+  :where(.dialog)[open] .content {
       -webkit-text-decoration: var(--md-sys-typescale-body-medium-text-decoration);
               text-decoration: var(--md-sys-typescale-body-medium-text-decoration);
       text-transform: var(--md-sys-typescale-body-medium-text-transform);
@@ -45,7 +49,7 @@
       text-align: start;
     }
 
-    :where(.dialog)[open] .actions {
+  :where(.dialog)[open] .actions {
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -64,15 +68,15 @@
   }
 
 :where(.dialog).modal::-webkit-backdrop {
-    /* Tokens not avaliable in backdrop (above document) */
-    /* background-color: rgba(var(--md-sys-color-scrim), 0.4); */
-    background-color: rgba(0, 0, 0, 0.4);
+    /* Tokens not available in backdrop (above document) */
+    /* background-color: rgba(var(--md-sys-color-scrim), 0.32); */
+    background-color: rgba(0, 0, 0, 0.32);
     pointer-events: none !important;
   }
 
 :where(.dialog).modal::backdrop {
-    /* Tokens not avaliable in backdrop (above document) */
-    /* background-color: rgba(var(--md-sys-color-scrim), 0.4); */
-    background-color: rgba(0, 0, 0, 0.4);
+    /* Tokens not available in backdrop (above document) */
+    /* background-color: rgba(var(--md-sys-color-scrim), 0.32); */
+    background-color: rgba(0, 0, 0, 0.32);
     pointer-events: none !important;
   }

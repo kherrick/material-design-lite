@@ -2,6 +2,7 @@
   accent-color: var(--md-sys-color-primary);
   display: grid;
   place-content: center;
+  position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;

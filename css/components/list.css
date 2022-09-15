@@ -1,8 +1,13 @@
-.list:where(ul, ol) {
+.list {
+  position: relative;
+}
+
+  .list:where(ul, ol) {
     list-style: none;
     margin: 0;
     padding: 0;
   }
+
   .list {
   min-width: 300px;
 }

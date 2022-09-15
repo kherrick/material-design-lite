@@ -1,5 +1,6 @@
 .tooltip {
   text-decoration: none;
+  position: relative;
 }
 
   .tooltip[aria-label] {

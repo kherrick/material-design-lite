@@ -1966,6 +1966,7 @@ button {
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 300px;
   border-radius: var(--md-sys-shape-medium);
   background-color: var(--md-sys-color-surface);
@@ -2119,6 +2120,7 @@ button {
 
 :where(.top-app-bar) {
   --top-app-bar-padding: 16px;
+  position: relative;
   padding: var(--top-app-bar-padding);
   display: grid;
   align-items: center;
@@ -2644,6 +2646,7 @@ datalist {
 
 .tooltip {
   text-decoration: none;
+  position: relative;
 }
 
 .tooltip[aria-label] {
@@ -2695,6 +2698,7 @@ datalist {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* Thumb */
@@ -2843,6 +2847,7 @@ datalist {
   transition: outline-offset 0.25s ease;
   outline-color: var(--md-sys-color-on-surface-variant);
   outline-width: 2px;
+  position: relative;
 }
 
 :focus:not(:active) {
@@ -2858,6 +2863,7 @@ datalist {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  position: relative;
   --size: 24px;
   width: var(--size);
   height: var(--size);
@@ -2909,6 +2915,7 @@ datalist {
   --safari-helper3: rgba(var(--md-sys-color-primary-rgb), 0.16);
   --safari-helper4: rgba(var(--md-sys-color-primary-rgb), 0.24);
   display: inline-block;
+  position: relative;
   width: 100%;
   color: rgba(var(--md-sys-color-on-surface-rgb), 0.87);
 }
@@ -3175,6 +3182,7 @@ datalist {
   border-radius: var(--md-sys-shape-medium);
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 :where(.table, table) :where(td:first-child, th:first-child) {
@@ -3216,6 +3224,7 @@ datalist {
   display: flex;
   flex-direction: row;
   width: 100%;
+  position: relative;
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
@@ -3262,6 +3271,7 @@ datalist {
   height: 1px;
   width: 100%;
   background-color: var(--md-sys-color-outline-variant);
+  position: relative;
 }
 
 :where(.segmented-button) {
@@ -3400,6 +3410,7 @@ datalist {
   accent-color: var(--md-sys-color-primary);
   display: grid;
   place-content: center;
+  position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
@@ -3438,6 +3449,7 @@ datalist {
   --progress-value: 20%;
   height: 4px;
   border-radius: 4px;
+  position: relative;
 }
 
 :where(progress, .progress).linear::-webkit-progress-value {
@@ -3692,6 +3704,10 @@ datalist {
   }
 }
 
+:where(.dialog) {
+  position: relative;
+}
+
 :where(.dialog)[open] {
     border-radius: 28px;
     border: none;
@@ -3758,16 +3774,16 @@ datalist {
   }
 
 :where(.dialog).modal::-webkit-backdrop {
-    /* Tokens not avaliable in backdrop (above document) */
-    /* background-color: rgba(var(--md-sys-color-scrim), 0.4); */
-    background-color: rgba(0, 0, 0, 0.4);
+    /* Tokens not available in backdrop (above document) */
+    /* background-color: rgba(var(--md-sys-color-scrim), 0.32); */
+    background-color: rgba(0, 0, 0, 0.32);
     pointer-events: none !important;
   }
 
 :where(.dialog).modal::backdrop {
-    /* Tokens not avaliable in backdrop (above document) */
-    /* background-color: rgba(var(--md-sys-color-scrim), 0.4); */
-    background-color: rgba(0, 0, 0, 0.4);
+    /* Tokens not available in backdrop (above document) */
+    /* background-color: rgba(var(--md-sys-color-scrim), 0.32); */
+    background-color: rgba(0, 0, 0, 0.32);
     pointer-events: none !important;
   }
 
@@ -3777,11 +3793,11 @@ datalist {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
   box-sizing: border-box;
-  position: relative;
 }
 
 .navigation-bar::before {
@@ -4036,14 +4052,14 @@ datalist {
   }
 
 .navigation-drawer.modal[open]::-webkit-backdrop {
-      /* Tokens not avaliable in backdrop (above document) */
+      /* Tokens not available in backdrop (above document) */
       /* background-color: rgba(var(--md-sys-color-scrim), 0.4); */
       background-color: rgba(0, 0, 0, 0.4);
       pointer-events: none !important;
     }
 
 .navigation-drawer.modal[open]::backdrop {
-      /* Tokens not avaliable in backdrop (above document) */
+      /* Tokens not available in backdrop (above document) */
       /* background-color: rgba(var(--md-sys-color-scrim), 0.4); */
       background-color: rgba(0, 0, 0, 0.4);
       pointer-events: none !important;
@@ -4052,6 +4068,7 @@ datalist {
 .snackbar {
   width: 344px;
   box-sizing: border-box;
+  position: relative;
   display: flex;
   flex-direction: row;
   gap: 8px;
@@ -4157,6 +4174,10 @@ datalist {
 :where(.tabs) i {
     margin-right: 8px;
   }
+
+.list {
+  position: relative;
+}
 
 .list:where(ul, ol) {
     list-style: none;
