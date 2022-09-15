@@ -1849,7 +1849,6 @@ datalist {
   display: flex;
   align-items: center;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  position: relative;
   border-radius: 20px;
   border: 1px solid var(--md-sys-color-outline);
   background-color: var(--md-sys-color-surface);
