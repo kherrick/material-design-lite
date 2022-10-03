@@ -39,7 +39,6 @@
     letter-spacing: var(--md-sys-typescale-label-small-tracking);
     font-size: var(--md-sys-typescale-label-small-size);
     font-weight: var(--md-sys-typescale-label-small-weight);
-    font-style: var(--md-sys-typescale-label-small-font-family-style);
     font-family: var(--md-sys-typescale-label-small-font);
     border-radius: var(--md-sys-shape-corner-small);
     background-color: var(--md-sys-color-inverse-surface);
