@@ -1966,3 +1966,7 @@ button,
 .elevation-5 {
   box-shadow: var(--md-sys-elevation-5);
 }
+
+* {
+  -webkit-font-smoothing: antialiased;
+}

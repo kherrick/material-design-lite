@@ -28,6 +28,10 @@
   overflow: hidden;
 }
 
+datalist {
+  display: none;
+}
+
 /* Codepen: https://codepen.io/finnhvman/pen/xyOORQ */
 
 .text-field.outlined {

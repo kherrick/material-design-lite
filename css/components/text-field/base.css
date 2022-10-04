@@ -27,3 +27,7 @@
   display: inline-block;
   overflow: hidden;
 }
+
+datalist {
+  display: none;
+}

@@ -1817,6 +1817,10 @@ button).elevated[disabled] {
   overflow: hidden;
 }
 
+datalist {
+  display: none;
+}
+
 /* Codepen: https://codepen.io/finnhvman/pen/xyOORQ */
 
 .text-field.outlined {
@@ -2849,6 +2853,12 @@ table).zebra tr:nth-of-type(even) {
     align-items: center;
     flex: 1;
     margin: 16px;
+    gap: 8px;
+  }
+
+.bottom-app-bar :where(.icon) {
+    background-color: transparent;
+    color: var(--md-sys-color-on-surface-variant);
   }
 
 .bottom-app-bar :where(.fab) {

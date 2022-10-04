@@ -1967,6 +1967,10 @@ button,
   box-shadow: var(--md-sys-elevation-5);
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
 a {
   text-decoration: none;
   color: var(--md-sys-color-primary);
