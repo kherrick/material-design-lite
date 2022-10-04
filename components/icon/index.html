@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/material-design-lite/css/mdl.css">
   <link rel="stylesheet" href="/material-design-lite/assets/f25a0cba.138a3ff4.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/5b615d43.553f8ba5.css" />
+<link rel="stylesheet" href="/material-design-lite/assets/components-_id_.45fd13b4.css" />
 <link rel="stylesheet" href="/material-design-lite/assets/components-_id_-overview-_id_.2f5416cf.css" /><script type="module" src="/material-design-lite/hoisted.dcf9698b.js"></script></head>
   <body class="astro-DSZEMXS6">
     
@@ -148,37 +149,296 @@
       </div>
     </aside>
     <section class="content astro-7OZ5KDLH">
-      <div class="article astro-7OZ5KDLH"><p>Icons visually communicate the button’s action. Their meaning should be clear and unambiguous. Icon buttons can be grouped <strong>together</strong> or they can <strong>stand alone</strong>.</p>
-<ul>
-<li>Icon buttons can take the form of a wide range of system icons.</li>
-<li>Ensure the meaning of the icon is unambiguous.</li>
-<li>On hover, include a tooltip that describes the button’s action, rather than the name of the icon itself.</li>
-<li>Use the outline-style icons to indicate an unselected state and a filled style to indicate selection.</li>
-</ul>
-<h2 id="default">Default</h2>
-<p><code-preview group="default"></code-preview></p>
-<h2 id="selected">Selected</h2>
-<p><code-preview group="selected"></code-preview></p>
-<h2 id="toggle">Toggle</h2>
-<p><code-preview group="toggle"></code-preview>
-<code-preview group="toggle-input"></code-preview></p>
-<h2 id="contained">Contained</h2>
-<p>Use a contained icon button when the component requires more visual separation from the background.</p>
-<p>Contained icon buttons can have one of three styles:</p>
-<ul>
-<li>Filled</li>
-<li>Filled tonal</li>
-<li>Outlined</li>
-</ul>
-<h3 id="filled">Filled</h3>
-<p>Filled icon buttons have higher visual impact and are best for high emphasis actions.</p>
-<p><code-preview group="contained.filled"></code-preview></p>
-<h3 id="filled-tonal">Filled tonal</h3>
-<p>Filled tonal icon buttons are a middle ground between filled and outlined icon buttons. They’re useful in contexts where the button requires slightly more emphasis than an outline would give, such as a secondary action paired with a high emphasis action.</p>
-<p><code-preview group="contained.filled-tonal"></code-preview></p>
-<h3 id="outlined">Outlined</h3>
-<p>Outlined icon buttons are medium-emphasis buttons. They’re useful when an icon button needs more emphasis than a standard icon button but less than a filled or filled tonal icon button.</p>
-<p><code-preview group="contained.outlined"></code-preview></p></div>
+      <div class="article astro-7OZ5KDLH"><div class="astro-ZKNLOM6A"><p>Icons visually communicate the button’s action. Their meaning should be clear and unambiguous. Icon buttons can be grouped <strong>together</strong> or they can <strong>stand alone</strong>.</p></div><div class="astro-ZKNLOM6A"><ul></div><div class="astro-ZKNLOM6A"><li>Icon buttons can take the form of a wide range of system icons.</li></div><div class="astro-ZKNLOM6A"><li>Ensure the meaning of the icon is unambiguous.</li></div><div class="astro-ZKNLOM6A"><li>On hover, include a tooltip that describes the button’s action, rather than the name of the icon itself.</li></div><div class="astro-ZKNLOM6A"><li>Use the outline-style icons to indicate an unselected state and a filled style to indicate selection.</li></div><div class="astro-ZKNLOM6A"></ul></div><div class="astro-ZKNLOM6A"><h2 id="default">Default</h2></div><section class="astro-KCEZYTHZ">
+  <!-- HTML Sandobx editor -->
+</section>
+
+<section class="astro-KCEZYTHZ">
+  <div class="preview row astro-KCEZYTHZ">
+    <div id="default.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon">
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Default</div>
+        </div><div id="default.disabled.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon" disabled>
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Default Disabled</div>
+        </div>
+  </div>
+  <div class="code astro-KCEZYTHZ">
+    <pre class="astro-MUM4DCOJ language-html"><code class="language-html"><span class="token comment">&lt;!-- Default --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+
+<span class="token comment">&lt;!-- Default Disabled --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre>
+
+
+  </div>
+</section>
+
+<div class="astro-ZKNLOM6A"><h2 id="selected">Selected</h2></div><section class="astro-KCEZYTHZ">
+  <!-- HTML Sandobx editor -->
+</section>
+
+<section class="astro-KCEZYTHZ">
+  <div class="preview row astro-KCEZYTHZ">
+    <div id="selected.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon" checked>
+  <i class="material-icons">check</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Selected</div>
+        </div><div id="toggle.selected.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon toggle" checked>
+  <i class="material-icons">check</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Toggle Selected</div>
+        </div><div id="selected.disabled.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon" checked disabled>
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Selected Disabled</div>
+        </div>
+  </div>
+  <div class="code astro-KCEZYTHZ">
+    <pre class="astro-MUM4DCOJ language-html"><code class="language-html"><span class="token comment">&lt;!-- Selected --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>check<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+
+<span class="token comment">&lt;!-- Toggle Selected --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon toggle<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>check<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+
+<span class="token comment">&lt;!-- Selected Disabled --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre>
+
+
+  </div>
+</section>
+
+<div class="astro-ZKNLOM6A"><h2 id="toggle">Toggle</h2></div><section class="astro-KCEZYTHZ">
+  <!-- HTML Sandobx editor -->
+</section>
+
+<section class="astro-KCEZYTHZ">
+  <div class="preview row astro-KCEZYTHZ">
+    <div id="toggle.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon toggle">
+  <i class="material-icons">check</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Toggle</div>
+        </div><div id="toggle.selected.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon toggle" checked>
+  <i class="material-icons">check</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Toggle Selected</div>
+        </div><div id="toggle.disabled.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon toggle" selected disabled>
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Toggle Disabled</div>
+        </div>
+  </div>
+  <div class="code astro-KCEZYTHZ">
+    <pre class="astro-MUM4DCOJ language-html"><code class="language-html"><span class="token comment">&lt;!-- Toggle --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon toggle<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>check<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+
+<span class="token comment">&lt;!-- Toggle Selected --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon toggle<span class="token punctuation">"</span></span> <span class="token attr-name">checked</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>check<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+
+<span class="token comment">&lt;!-- Toggle Disabled --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon toggle<span class="token punctuation">"</span></span> <span class="token attr-name">selected</span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre>
+
+
+  </div>
+</section>
+
+<section class="astro-KCEZYTHZ">
+  <!-- HTML Sandobx editor -->
+</section>
+
+<section class="astro-KCEZYTHZ">
+  <div class="preview row astro-KCEZYTHZ">
+    <div id="toggle-input.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><input class="icon toggle" type="checkbox" aria-label="toggle input" />
+</div>
+          <div class="label astro-KCEZYTHZ">Toggle Input</div>
+        </div><div id="toggle-input.custom.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><input
+  class="icon toggle"
+  type="checkbox"
+  off-icon="favorite_outline"
+  on-icon="favorite"
+  aria-label="toggle input"
+/>
+</div>
+          <div class="label astro-KCEZYTHZ">Toggle Input Custom</div>
+        </div>
+  </div>
+  <div class="code astro-KCEZYTHZ">
+    <pre class="astro-MUM4DCOJ language-html"><code class="language-html"><span class="token comment">&lt;!-- Toggle Input --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon toggle<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle input<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+
+<span class="token comment">&lt;!-- Toggle Input Custom --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span>
+  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon toggle<span class="token punctuation">"</span></span>
+  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span>
+  <span class="token attr-name">off-icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>favorite_outline<span class="token punctuation">"</span></span>
+  <span class="token attr-name">on-icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>favorite<span class="token punctuation">"</span></span>
+  <span class="token attr-name">aria-label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>toggle input<span class="token punctuation">"</span></span>
+<span class="token punctuation">/></span></span>
+</code></pre>
+
+
+  </div>
+</section>
+
+<div class="astro-ZKNLOM6A"><h2 id="contained">Contained</h2></div><div class="astro-ZKNLOM6A"><p>Use a contained icon button when the component requires more visual separation from the background.</p></div><div class="astro-ZKNLOM6A"><p>Contained icon buttons can have one of three styles:</p></div><div class="astro-ZKNLOM6A"><ul></div><div class="astro-ZKNLOM6A"><li>Filled</li></div><div class="astro-ZKNLOM6A"><li>Filled tonal</li></div><div class="astro-ZKNLOM6A"><li>Outlined</li></div><div class="astro-ZKNLOM6A"></ul></div><div class="astro-ZKNLOM6A"><h3 id="filled">Filled</h3></div><div class="astro-ZKNLOM6A"><p>Filled icon buttons have higher visual impact and are best for high emphasis actions.</p></div><section class="astro-KCEZYTHZ">
+  <!-- HTML Sandobx editor -->
+</section>
+
+<section class="astro-KCEZYTHZ">
+  <div class="preview row astro-KCEZYTHZ">
+    <div id="contained.filled.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon filled">
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Contained Filled</div>
+        </div><div id="contained.filled.disabled.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon filled" disabled>
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Contained Filled Disabled</div>
+        </div>
+  </div>
+  <div class="code astro-KCEZYTHZ">
+    <pre class="astro-MUM4DCOJ language-html"><code class="language-html"><span class="token comment">&lt;!-- Contained Filled --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon filled<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+
+<span class="token comment">&lt;!-- Contained Filled Disabled --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon filled<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre>
+
+
+  </div>
+</section>
+
+<div class="astro-ZKNLOM6A"><h3 id="filled-tonal">Filled tonal</h3></div><div class="astro-ZKNLOM6A"><p>Filled tonal icon buttons are a middle ground between filled and outlined icon buttons. They’re useful in contexts where the button requires slightly more emphasis than an outline would give, such as a secondary action paired with a high emphasis action.</p></div><section class="astro-KCEZYTHZ">
+  <!-- HTML Sandobx editor -->
+</section>
+
+<section class="astro-KCEZYTHZ">
+  <div class="preview row astro-KCEZYTHZ">
+    <div id="contained.filled-tonal.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon filled-tonal">
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Contained Filled Tonal</div>
+        </div><div id="contained.filled-tonal.disabled.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon filled-tonal" disabled>
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Contained Filled Tonal Disabled</div>
+        </div>
+  </div>
+  <div class="code astro-KCEZYTHZ">
+    <pre class="astro-MUM4DCOJ language-html"><code class="language-html"><span class="token comment">&lt;!-- Contained Filled Tonal --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon filled-tonal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+
+<span class="token comment">&lt;!-- Contained Filled Tonal Disabled --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon filled-tonal<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre>
+
+
+  </div>
+</section>
+
+<div class="astro-ZKNLOM6A"><h3 id="outlined">Outlined</h3></div><div class="astro-ZKNLOM6A"><p>Outlined icon buttons are medium-emphasis buttons. They’re useful when an icon button needs more emphasis than a standard icon button but less than a filled or filled tonal icon button.</p></div><section class="astro-KCEZYTHZ">
+  <!-- HTML Sandobx editor -->
+</section>
+
+<section class="astro-KCEZYTHZ">
+  <div class="preview row astro-KCEZYTHZ">
+    <div id="contained.outlined.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon outlined">
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Contained Outlined</div>
+        </div><div id="contained.outlined.disabled.html" class="snippet astro-KCEZYTHZ">
+          <div class="render astro-KCEZYTHZ"><button class="icon outlined" disabled>
+  <i class="material-icons">add</i>
+</button>
+</div>
+          <div class="label astro-KCEZYTHZ">Contained Outlined Disabled</div>
+        </div>
+  </div>
+  <div class="code astro-KCEZYTHZ">
+    <pre class="astro-MUM4DCOJ language-html"><code class="language-html"><span class="token comment">&lt;!-- Contained Outlined --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon outlined<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+
+<span class="token comment">&lt;!-- Contained Outlined Disabled --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon outlined<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>material-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>add<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+</code></pre>
+
+
+  </div>
+</section>
+
+
+
+</div>
     </section>
   </div>
     </section>

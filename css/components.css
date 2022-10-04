@@ -2225,12 +2225,7 @@ datalist {
   position: relative;
 }
 
-.tooltip[aria-label] {
-    position: relative;
-  }
-
-.tooltip[aria-label]:before {
-    content: attr(aria-label);
+.tooltip:before {
     position: absolute;
     bottom: -80px;
     left: 50%;
@@ -2253,7 +2248,15 @@ datalist {
     box-shadow: var(--md-sys-elevation-2);
   }
 
-.tooltip[aria-label]:hover:before {
+.tooltip[aria-label]:before {
+    content: attr(aria-label);
+  }
+
+.tooltip[data-tooltip]:before {
+    content: attr(data-tooltip);
+  }
+
+.tooltip:hover:before {
     transform: translateX(-50%) scale(1);
   }
 
@@ -2827,17 +2830,17 @@ table).zebra tr:nth-of-type(even) {
     background-color: var(--md-sys-color-surface-1);
   }
 
-.bottom-app-bar {
+:is(.bottom-app-bar) {
   display: flex;
   flex-direction: row;
   width: 100%;
   position: relative;
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
-  color: var(--md-sys-color-on-surface);
+  color: var(--md-sys-color-on-surface-variant);
 }
 
-.bottom-app-bar::before {
+:is(.bottom-app-bar)::before {
     content: "";
     position: absolute;
     top: 0;
@@ -2847,7 +2850,7 @@ table).zebra tr:nth-of-type(even) {
     background-color: var(--md-sys-color-surface-1);
   }
 
-.bottom-app-bar .actions {
+:is(.bottom-app-bar) .actions {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2856,27 +2859,27 @@ table).zebra tr:nth-of-type(even) {
     gap: 8px;
   }
 
-.bottom-app-bar :where(.icon) {
+:is(.bottom-app-bar) :where(.icon) {
     background-color: transparent;
-    color: var(--md-sys-color-on-surface-variant);
+    color: inherit;
   }
 
-.bottom-app-bar :where(.fab) {
+:is(.bottom-app-bar) :where(.fab) {
     margin: 16px;
     box-shadow: var(--md-sys-elevation-0);
     background-color: var(--md-sys-color-surface-variant);
     color: var(--md-sys-color-on-surface-variant);
   }
 
-.bottom-app-bar :where(.fab):hover {
+:is(.bottom-app-bar) :where(.fab):hover {
       box-shadow: var(--md-sys-elevation-1);
     }
 
-.bottom-app-bar :where(.fab):focus {
+:is(.bottom-app-bar) :where(.fab):focus {
       box-shadow: var(--md-sys-elevation-0);
     }
 
-.bottom-app-bar :where(.fab):active {
+:is(.bottom-app-bar) :where(.fab):active {
       box-shadow: var(--md-sys-elevation-0);
     }
 
