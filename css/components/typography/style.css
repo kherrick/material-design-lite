@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-:where(html),
+*,
 .tokens {
   /* Plain typeface */
   --md-ref-typeface-plain: Roboto;
@@ -28,7 +28,7 @@
   --md-ref-typeface-weight-regular: 400;
 }
 
-:where(html),
+*,
 .tokens {
   /* Label Medium text transform */
   --md-sys-typescale-label-medium-text-transform: none;
@@ -194,6 +194,10 @@
   );
   /* Display Large font name */
   --md-sys-typescale-display-large-font: var(--md-ref-typeface-brand);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
 }
 
 :is(.display-large,

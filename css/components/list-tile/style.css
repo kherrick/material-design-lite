@@ -14,6 +14,30 @@
  limitations under the License.
 */
 
-datalist {
-  display: none;
+:is(.list-tile) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  padding: 16px 24px;
+  gap: 16px;
 }
+
+:is(.list-tile) .title {
+    flex: 1;
+    white-space: nowrap;
+    text-align: start;
+  }
+
+:is(.list-tile) .leading {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+  }
+
+:is(.list-tile) .trailing {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+  }

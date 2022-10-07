@@ -42,7 +42,7 @@
   --md-comp-filled-tonal-icon-button-icon-size: 24px;
 }
 
-:is(.icon).filled-tonal {
+:is(.icon-button).filled-tonal {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
   width: var(--md-comp-filled-tonal-icon-button-container-size);
@@ -66,16 +66,17 @@
   );
 }
 
-:is(.icon).filled-tonal:where(.toggle) {
+:is(.icon-button).filled-tonal:is(.toggle) {
     background-color: var(--md-sys-color-surface-variant);
-    color: var(--md-sys-color-on-surface-variant);
+    color: var(--md-sys-color-primary);
   }
 
-:is(.icon).filled-tonal:where([selected],
+:is(.icon-button).filled-tonal:where([selected],
 [checked],
-:checked) {
+:checked,
+.checked) {
     background-color: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
+    color: var(--md-sys-color-on-surface-variant);
     --state-hover-opacity: var(
       --md-comp-filled-tonal-icon-button-selected-hover-state-layer-opacity
     );
@@ -90,7 +91,15 @@
     );
   }
 
-:is(.icon).filled-tonal[disabled] {
+:is(.icon-button).filled-tonal:where([selected],
+[checked],
+:checked,
+.checked):is(.toggle) {
+      background-color: var(--md-sys-color-secondary-container);
+      color: var(--md-sys-color-on-secondary-container);
+    }
+
+:is(.icon-button).filled-tonal[disabled] {
     background-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.12);
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }

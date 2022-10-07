@@ -14,8 +14,7 @@
  limitations under the License.
 */
 
-:where(html),
-.tokens {
+* {
   /* Error 0 */
   --md-ref-palette-error0-rgb: 0 0 0;
   --md-ref-palette-error0: rgb(var(--md-ref-palette-error0-rgb));
@@ -284,7 +283,7 @@
   --md-ref-palette-white: rgb(var(--md-ref-palette-white-rgb));
 }
 
-:where(html),
+*,
 .tokens {
   /* Plain typeface */
   --md-ref-typeface-plain: Roboto;
@@ -298,7 +297,7 @@
   --md-ref-typeface-weight-regular: 400;
 }
 
-:where(html),
+*,
 .tokens {
   /* Label Medium text transform */
   --md-sys-typescale-label-medium-text-transform: none;
@@ -532,7 +531,7 @@
   --md-sys-color-primary: var(--md-ref-palette-primary40);
 }
 
-:where(html),
+*,
 .tokens {
   --md-sys-shape-corner-extra-small-top: 4px 4px 0px 0px;
   --md-sys-shape-corner-extra-small: 4px 4px 4px 4px;
@@ -548,7 +547,7 @@
   --md-sys-shape-corner-full: 50%;
 }
 
-:where(html),
+*,
 .tokens {
   /* Linear */
   --md-sys-motion-easing-linear: cubic-bezier(0, 0, 1, 1);
@@ -632,7 +631,7 @@
   );
 }
 
-:where(html),
+*,
 .tokens {
   /* Hover state layer opacity */
   --md-sys-state-hover-state-layer-opacity: 0.07999999821186066;
@@ -644,7 +643,7 @@
   --md-sys-state-dragged-state-layer-opacity: 0.1599999964237213;
 }
 
-:where(html),
+*,
 .tokens {
   /* 0 */
   --md-sys-elevation-level0: 0px;
@@ -660,7 +659,7 @@
   --md-sys-elevation-level5: 12px;
 }
 
-:where(html) {
+body {
   /* Scrim */
   --md-sys-color-scrim: var(--md-ref-palette-neutral0);
   --md-sys-color-scrim-rgb: var(--md-ref-palette-neutral0-rgb);
@@ -766,7 +765,7 @@
   --md-sys-color-primary-rgb: var(--md-ref-palette-primary40-rgb);
 }
 
-:where(html) .dark-theme {
+body.dark-theme {
   /* Scrim */
   --md-sys-color-scrim: var(--md-ref-palette-neutral0);
   --md-sys-color-scrim-rgb: var(--md-ref-palette-neutral0-rgb);
@@ -873,7 +872,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :where(html) {
+  body {
     /* Scrim */
     --md-sys-color-scrim: var(--md-ref-palette-neutral0);
     --md-sys-color-scrim-rgb: var(--md-ref-palette-neutral0-rgb);
@@ -982,7 +981,7 @@
     --md-sys-color-primary: var(--md-ref-palette-primary80);
     --md-sys-color-primary-rgb: var(--md-ref-palette-primary80-rgb);
   }
-  :where(html) .light-theme {
+  body.light-theme {
     /* Scrim */
     --md-sys-color-scrim: var(--md-ref-palette-neutral0);
     --md-sys-color-scrim-rgb: var(--md-ref-palette-neutral0-rgb);

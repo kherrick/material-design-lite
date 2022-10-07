@@ -50,7 +50,7 @@
   --md-comp-icon-button-disabled-icon-opacity: 0.3799999952316284;
 }
 
-:is(.icon) {
+:is(.icon-button) {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -73,8 +73,8 @@
   font-weight: var(--md-sys-typescale-label-large-weight);
   font-family: var(--md-sys-typescale-label-large-font);
   font-size: var(--md-comp-icon-button-icon-size);
-  background-color: var(--md-sys-color-surface);
-  color: var(--md-sys-color-primary);
+  background-color: transparent;
+  color: var(--md-sys-color-on-surface);
   width: var(--md-comp-icon-button-state-layer-size);
   height: var(--md-comp-icon-button-state-layer-size);
   border-radius: var(--md-comp-icon-button-state-layer-shape);
@@ -89,7 +89,7 @@
   );
 }
 
-:is(.icon):where([selected],
+:is(.icon-button):where([selected],
 [checked],
 :checked) {
     color: var(--md-sys-color-primary);
@@ -104,7 +104,7 @@
     );
   }
 
-:is(.icon)[disabled] {
+:is(.icon-button)[disabled] {
     cursor: default;
     color: rgb(
       var(--md-sys-color-on-surface-rgb) /
@@ -112,12 +112,12 @@
     );
   }
 
-:is(.icon) i {
+:is(.icon-button) i {
     font-size: var(--md-comp-icon-button-icon-size);
     vertical-align: middle;
   }
 
-:is(.icon) i:only-child {
+:is(.icon-button) i:only-child {
       margin-left: 0;
       margin-right: 0;
     }
