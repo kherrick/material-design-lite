@@ -62,7 +62,7 @@
     </header>
 
     <article class="astro-5BPKJR2L">
-      <main data-headings="6" class="astro-B5YGOWZZ">
+      <main data-headings="7" class="astro-B5YGOWZZ">
       <section class="astro-B5YGOWZZ">
         <div id="root" class="astro-CA4KMN2X">
     <aside class="left-nav astro-CA4KMN2X">
@@ -215,6 +215,12 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>label</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>nav</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&#x3C;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<h2 id="styling">Styling</h2>
+<p>Since the bottom app bar is meant to be at the bottom of the screen, it is recommended to use a <code>div</code> or <code>footer</code> element with position <code>fixed</code> or <code>sticky</code>  and <code>bottom: 0</code> to keep it at the bottom of the screen.</p>
+<pre class="language-css"><code is:raw="" class="language-css"><span class="token selector">.bottom-app-bar</span> <span class="token punctuation">{</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span> <span class="token comment">/* or sticky */</span>
+  <span class="token property">bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
 <p>It is recommended to set the <strong>checked</strong> attribute on the default tab.</p>
 <h2 id="design-tokens">Design Tokens</h2>
 
@@ -282,6 +288,10 @@
                   </li><li class="astro-B5YGOWZZ">
                     <a class="heading astro-B5YGOWZZ" href="#navigation-icons" style="--depth: 3">
                       Navigation Icons
+                    </a>
+                  </li><li class="astro-B5YGOWZZ">
+                    <a class="heading astro-B5YGOWZZ" href="#styling" style="--depth: 2">
+                      Styling
                     </a>
                   </li><li class="astro-B5YGOWZZ">
                     <a class="heading astro-B5YGOWZZ" href="#design-tokens" style="--depth: 2">
