@@ -16,11 +16,9 @@
 
 :where(html),
 .tokens {
-  /* Circular progress indicator active indicator shape */
   --md-comp-circular-progress-indicator-active-indicator-shape: var(
     --md-sys-shape-corner-none
   );
-  /* Circular progress indicator active indicator width */
   --md-comp-circular-progress-indicator-active-indicator-width: 4px;
   /* Circular progress indicator active indicator size */
   --md-comp-circular-progress-indicator-size: 48px;

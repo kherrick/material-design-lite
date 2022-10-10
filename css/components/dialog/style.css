@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-*,
+:where(html),
 .tokens {
   --md-sys-comp-dialog-background-color: var(--md-sys-color-surface);
   --md-sys-comp-dialog-color: var(--md-sys-color-on-surface-variant);
@@ -46,7 +46,8 @@ dialog):not(.navigation-drawer)[open] {
   }
 
 :is(.dialog,
-dialog):not(.navigation-drawer)[open] i {
+dialog):not(.navigation-drawer)[open] :where(i,
+.material-icons) {
       pointer-events: none;
     }
 
@@ -98,7 +99,6 @@ dialog):not(.navigation-drawer).modal[open] {
 
 :is(.dialog,
 dialog):not(.navigation-drawer).modal::-webkit-backdrop {
-    /* Tokens not available in backdrop (above document) */
     /* background-color: rgb(var(--md-sys-color-scrim), 0.32); */
     background-color: rgb(0, 0, 0, 0.32);
     pointer-events: none !important;
@@ -106,7 +106,6 @@ dialog):not(.navigation-drawer).modal::-webkit-backdrop {
 
 :is(.dialog,
 dialog):not(.navigation-drawer).modal::backdrop {
-    /* Tokens not available in backdrop (above document) */
     /* background-color: rgb(var(--md-sys-color-scrim), 0.32); */
     background-color: rgb(0, 0, 0, 0.32);
     pointer-events: none !important;

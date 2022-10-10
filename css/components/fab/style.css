@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-*,
+:where(html),
 .tokens {
   --md-sys-comp-fab-background-color: var(--md-sys-color-primary-container);
   --md-sys-comp-fab-color: var(--md-sys-color-on-primary-container);
@@ -22,6 +22,13 @@
 }
 
 :is(.fab) {
+  /* Remove default button styles */
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
   padding: 16px;
   font-size: 24px;
   border-radius: 16px;
@@ -31,21 +38,10 @@
   background-color: var(--md-sys-comp-fab-background-color);
   color: var(--md-sys-comp-fab-color);
   box-shadow: var(--md-sys-elevation-1);
-  --tint-color: transparent;
 }
 
-:is(.fab)::after {
-    content: "";
-    border-radius: inherit;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--tint-color);
-  }
-
-:is(.fab) i {
+:is(.fab) :where(i,
+.material-icons) {
     font-size: 24px;
     margin-left: 0;
   }
@@ -53,32 +49,19 @@
 :is(.fab):where(:hover,
 .hover) {
     box-shadow: var(--md-sys-elevation-4);
-    --tint-color: rgb(
-      var(--md-sys-color-on-primary-container-rgb) /
-        var(--md-sys-state-hover-state-layer-opacity)
-    );
-  }
-
-:is(.fab):where(:focus,
-.focus) {
-    box-shadow: var(--md-sys-elevation-3);
-    --tint-color: rgb(
-      var(--md-sys-color-on-primary-container-rgb) /
-        var(--md-sys-state-focus-state-layer-opacity)
-    );
   }
 
 :is(.fab):where(:active,
 .active) {
     box-shadow: var(--md-sys-elevation-2);
-    --tint-color: rgb(
-      var(--md-sys-color-on-primary-container-rgb) /
-        var(--md-sys-state-pressed-state-layer-opacity)
-    );
+  }
+
+:is(.fab):where(:focus,
+.focus) {
+    box-shadow: var(--md-sys-elevation-3);
   }
 
 :is(.fab)[disabled] {
-    --tint-color: transparent;
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.12);
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
@@ -92,7 +75,8 @@
   height: 40px;
 }
 
-:is(.fab).small i {
+:is(.fab).small :where(i,
+.material-icons) {
     font-size: 24px;
   }
 
@@ -104,7 +88,8 @@
   height: 96px;
 }
 
-:is(.fab).large > i {
+:is(.fab).large :where(i,
+.material-icons) {
     font-size: 36px;
   }
 
@@ -115,7 +100,8 @@
   width: unset;
 }
 
-:is(.fab).extended i {
+:is(.fab).extended :where(i,
+.material-icons) {
     font-size: 24px;
     margin-right: 8px;
   }
@@ -125,32 +111,7 @@
   color: var(--md-sys-color-on-surface);
 }
 
-:is(.fab).surface:where(:hover,
-.hover) {
-    --tint-color: rgb(
-      var(--md-sys-color-on-surface-rgb) /
-        var(--md-sys-state-hover-state-layer-opacity)
-    );
-  }
-
-:is(.fab).surface:where(:focus,
-.focus) {
-    --tint-color: rgb(
-      var(--md-sys-color-on-surface-rgb) /
-        var(--md-sys-state-focus-state-layer-opacity)
-    );
-  }
-
-:is(.fab).surface:where(:active,
-.active) {
-    --tint-color: rgb(
-      var(--md-sys-color-on-surface-rgb) /
-        var(--md-sys-state-pressed-state-layer-opacity)
-    );
-  }
-
 :is(.fab).surface[disabled] {
-    --tint-color: transparent;
     background-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.12);
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
@@ -160,32 +121,7 @@
   color: var(--md-sys-color-on-secondary);
 }
 
-:is(.fab).secondary:where(:hover,
-.hover) {
-    --tint-color: rgb(
-      var(--md-sys-color-secondary-rgb) /
-        var(--md-sys-state-hover-state-layer-opacity)
-    );
-  }
-
-:is(.fab).secondary:where(:focus,
-.focus) {
-    --tint-color: rgb(
-      var(--md-sys-color-secondary-rgb) /
-        var(--md-sys-state-focus-state-layer-opacity)
-    );
-  }
-
-:is(.fab).secondary:where(:active,
-.active) {
-    --tint-color: rgb(
-      var(--md-sys-color-secondary-rgb) /
-        var(--md-sys-state-pressed-state-layer-opacity)
-    );
-  }
-
 :is(.fab).secondary[disabled] {
-    --tint-color: transparent;
     background-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.12);
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
@@ -195,32 +131,7 @@
   color: var(--md-sys-color-on-tertiary);
 }
 
-:is(.fab).tertiary:where(:hover,
-.hover) {
-    --tint-color: rgb(
-      var(--md-sys-color-tertiary-rgb) /
-        var(--md-sys-state-hover-state-layer-opacity)
-    );
-  }
-
-:is(.fab).tertiary:where(:focus,
-.focus) {
-    --tint-color: rgb(
-      var(--md-sys-color-tertiary-rgb) /
-        var(--md-sys-state-focus-state-layer-opacity)
-    );
-  }
-
-:is(.fab).tertiary:where(:active,
-.active) {
-    --tint-color: rgb(
-      var(--md-sys-color-tertiary-rgb) /
-        var(--md-sys-state-pressed-state-layer-opacity)
-    );
-  }
-
 :is(.fab).tertiary[disabled] {
-    --tint-color: transparent;
     background-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.12);
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }

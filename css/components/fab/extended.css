@@ -21,7 +21,8 @@
   width: unset;
 }
 
-:is(.fab).extended i {
+:is(.fab).extended :where(i,
+.material-icons) {
     font-size: 24px;
     margin-right: 8px;
   }

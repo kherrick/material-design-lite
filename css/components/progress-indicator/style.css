@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-*,
+:where(html),
 .tokens {
   --md-sys-comp-progress-background-color: var(--md-sys-color-surface-variant);
   --md-sys-comp-progress-color: var(--md-sys-color-primary);
@@ -36,7 +36,6 @@ progress {
 /* Create a conic-gradient for the circular progress */
 
 :is(.progress).circular {
-  position: relative;
   display: inline-block;
   width: var(--md-sys-comp-progress-circular-size);
   height: var(--md-sys-comp-progress-circular-size);
@@ -135,7 +134,6 @@ progress {
       --progress-duration: 2.1s;
       content: "";
       position: absolute;
-      background-color: inherit;
       top: 0;
       left: 0;
       bottom: 0;

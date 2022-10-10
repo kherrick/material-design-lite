@@ -22,6 +22,7 @@
   height: 96px;
 }
 
-:is(.fab).large > i {
+:is(.fab).large :where(i,
+.material-icons) {
     font-size: 36px;
   }

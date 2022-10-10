@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-*,
+:where(html),
 .tokens {
   --md-sys-comp-tabs-container-background-color: var(--md-sys-color-surface);
   --md-sys-comp-tabs-container-color: var(--md-sys-color-on-surface);
@@ -45,21 +45,6 @@
 :is(.tabs) :where(label,
 .tab) {
     border-radius: 0;
-    width: 100%;
-    height: 100%;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-:is(.tabs) :where(label,
-.tab) i {
-      margin-right: 8px;
-    }
-
-:is(.tabs) :where(label,
-.tab) {
     box-sizing: border-box;
     flex: 1;
     display: flex;
@@ -77,6 +62,12 @@
     z-index: 1;
     padding-bottom: 2px;
   }
+
+:is(.tabs) :where(label,
+.tab) :where(i,
+.material-icons) {
+      margin-right: 8px;
+    }
 
 :is(.tabs) :where(label,
 .tab):where([selected],

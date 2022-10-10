@@ -16,31 +16,24 @@
 
 :where(html),
 .tokens {
-  /* Filled icon button pressed state layer opacity */
   --md-comp-filled-icon-button-pressed-state-layer-opacity: var(
     --md-sys-state-pressed-state-layer-opacity
   );
-  /* Filled icon button focus state layer opacity */
   --md-comp-filled-icon-button-focus-state-layer-opacity: var(
     --md-sys-state-focus-state-layer-opacity
   );
-  /* Filled icon button hover state layer opacity */
   --md-comp-filled-icon-button-hover-state-layer-opacity: var(
     --md-sys-state-hover-state-layer-opacity
   );
-  /* Filled icon button disabled container opacity */
   --md-comp-filled-icon-button-disabled-container-opacity: 0.11999999731779099;
-  /* Filled icon button disabled icon color */
   --md-comp-filled-icon-button-disabled-icon-opacity: 0.3799999952316284;
-  /* Filled icon button container shape */
   --md-comp-filled-icon-button-container-shape: var(--md-sys-shape-corner-full);
-  /* Filled icon button container size */
   --md-comp-filled-icon-button-container-size: 40px;
   /* Filled icon button icon size */
   --md-comp-filled-icon-button-icon-size: 24px;
 }
 
-:is(.icon-button).filled {
+:where(.icon-button).filled {
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   width: var(--md-comp-filled-icon-button-container-size);
@@ -64,12 +57,12 @@
   );
 }
 
-:is(.icon-button).filled:is(.toggle) {
+:where(.icon-button).filled:is(.toggle) {
     background-color: var(--md-sys-color-surface-variant);
     color: var(--md-sys-color-primary);
   }
 
-:is(.icon-button).filled:where([selected],
+:where(.icon-button).filled:where([selected],
 [checked],
 :checked,
 .checked) {
@@ -89,7 +82,7 @@
     );
   }
 
-:is(.icon-button).filled:where([selected],
+:where(.icon-button).filled:where([selected],
 [checked],
 :checked,
 .checked):is(.toggle) {
@@ -97,22 +90,22 @@
       color: var(--md-sys-color-on-primary);
     }
 
-:is(.icon-button).filled:where(:hover,
+:where(.icon-button).filled:where(:hover,
 .hover) {
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.icon-button).filled:where(:active,
+:where(.icon-button).filled:where(:active,
 .active) {
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:is(.icon-button).filled:where(:focus,
+:where(.icon-button).filled:where(:focus,
 .focus) {
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:is(.icon-button).filled[disabled] {
+:where(.icon-button).filled[disabled] {
     box-shadow: var(--md-sys-elevation-0);
     background-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.12);
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
