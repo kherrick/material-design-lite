@@ -26,7 +26,7 @@
   :is(.text-field).outlined > textarea {
     box-sizing: border-box;
     margin: 0;
-    border: solid 1px;
+    border: solid 1px; /* Safari */
     border-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.6);
     border-top-color: transparent;
     border-radius: 4px;

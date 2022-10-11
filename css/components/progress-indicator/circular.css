@@ -17,6 +17,7 @@
 /* Create a conic-gradient for the circular progress */
 
 :is(.progress).circular {
+  position: relative;
   display: inline-block;
   width: var(--md-sys-comp-progress-circular-size);
   height: var(--md-sys-comp-progress-circular-size);

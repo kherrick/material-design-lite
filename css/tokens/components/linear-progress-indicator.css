@@ -16,10 +16,13 @@
 
 :where(html),
 .tokens {
+  /* Linear progress indicator active indicator shape */
   --md-comp-linear-progress-indicator-active-indicator-shape: var(
     --md-sys-shape-corner-none
   );
+  /* Linear progress indicator active indicator height */
   --md-comp-linear-progress-indicator-active-indicator-height: 4px;
+  /* Linear progress indicator track shape */
   --md-comp-linear-progress-indicator-track-shape: var(
     --md-sys-shape-corner-none
   );
