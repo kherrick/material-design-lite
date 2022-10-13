@@ -190,12 +190,6 @@
   );
   /* Display Large font name */
   --md-sys-typescale-display-large-font: var(--md-ref-typeface-brand);
-  --md-sys-comp-focus-ring-color: var(--md-sys-color-on-surface-variant);
-  --md-sys-comp-focus-ring-width: 2px;
-  --md-sys-comp-button-background-color: var(--md-sys-color-surface);
-  --md-sys-comp-button-color: var(--md-sys-color-primary);
-  --md-comp-button-container-height: 40px;
-  --md-comp-button-container-shape: 20px;
   /* Text button container elevation */
   --md-comp-text-button-container-elevation: var(--md-sys-elevation-level0);
   /* Text button focus state layer opacity */
@@ -594,13 +588,6 @@
   --md-comp-outlined-icon-button-unselected-outline-width: 1px;
   /* Outlined icon button icon size */
   --md-comp-outlined-icon-button-icon-size: 24px;
-  --md-sys-comp-fab-background-color: var(--md-sys-color-primary-container);
-  --md-sys-comp-fab-color: var(--md-sys-color-on-primary-container);
-  --md-comp-fab-container-size: 56px;
-  --md-sys-comp-card-width: 300px;
-  --md-sys-comp-chip-background-color: var(--md-sys-color-surface);
-  --md-sys-comp-chip-color: var(--md-sys-color-primary);
-  --md-comp-chip-container-height: 32px;
   /* Assist chip dragged state layer opacity */
   --md-comp-assist-chip-dragged-state-layer-opacity: var(
     --md-sys-state-dragged-state-layer-opacity
@@ -681,67 +668,6 @@
   --md-comp-assist-chip-container-height: 32px;
   /* Assist chip container shape */
   --md-comp-assist-chip-container-shape: var(--md-sys-shape-corner-small);
-  --md-sys-comp-top-app-bar-background-color: var(--md-sys-color-surface);
-  --md-sys-comp-top-app-bar-color: var(--md-sys-color-on-surface);
-  --md-sys-comp-top-app-bar-padding: 16px;
-  --md-sys-comp-text-field-caret-color: var(--md-sys-color-primary);
-  --md-sys-comp-tooltip-container-background-color: var(
-    --md-sys-color-inverse-surface
-  );
-  --md-sys-comp-tooltip-container-color: var(--md-sys-color-inverse-on-surface);
-  --md-sys-comp-tooltip-delay: 0.3s;
-  --md-sys-comp-switch-thumb-size: 16px;
-  --md-sys-comp-switch-track-width: 52px;
-  --md-sys-comp-switch-track-height: 32px;
-  --md-sys-comp-switch-border-width: 2px;
-  --md-sys-comp-badge-size: 22px;
-  --md-sys-comp-badge-dot-size: calc(var(--md-sys-comp-badge-size) / 2);
-  --md-sys-comp-badge-background-color: var(--md-sys-color-error);
-  --md-sys-comp-badge-color: var(--md-sys-color-on-error);
-  --md-sys-comp-checkbox-size: 24px;
-  --md-sys-comp-checkbox-unselected-color: var(--md-sys-color-outline);
-  --md-sys-comp-checkbox-selected-color: var(--md-sys-color-primary);
-  --md-sys-comp-slider-background-color: transparent;
-  --md-sys-comp-slider-color: var(--md-sys-color-surface-1);
-  --md-sys-comp-slider-container-height: 36px;
-  --md-sys-comp-slider-container-width: 100%;
-  --md-sys-comp-table-border-color: var(--md-sys-color-outline-variant);
-  --md-sys-comp-divider-color: var(--md-sys-color-outline-variant);
-  --md-sys-comp-divider-container-height: 1px;
-  --md-sys-comp-divider-container-width: 100%;
-  --md-sys-comp-segmented-button-background-color: var(--md-sys-color-surface);
-  --md-sys-comp-segmented-button-color: var(--md-sys-color-on-surface);
-  --md-sys-comp-radio-button-unselected-color: var(
-    --md-sys-color-on-surface-variant
-  );
-  --md-sys-comp-radio-button-selected-color: var(--md-sys-color-primary);
-  --md-sys-comp-progress-background-color: var(--md-sys-color-surface-variant);
-  --md-sys-comp-progress-color: var(--md-sys-color-primary);
-  --md-sys-comp-progress-size: 4px;
-  --md-sys-comp-progress-circular-size: 32px;
-  --md-sys-comp-progress-circular-center-color: var(--md-sys-color-surface);
-  --md-sys-comp-dialog-background-color: var(--md-sys-color-surface);
-  --md-sys-comp-dialog-color: var(--md-sys-color-on-surface-variant);
-  --md-comp-dialog-container-min-width: 280px;
-  --md-comp-dialog-container-max-width: 560px;
-  --md-sys-comp-navigation-bar-background-color: var(--md-sys-color-surface);
-  --md-sys-comp-navigation-bar-color: var(--md-sys-color-on-surface);
-  --md-comp-navigation-bar-container-width: 100%;
-  --md-sys-comp-navigation-rail-background-color: var(--md-sys-color-surface);
-  --md-sys-comp-navigation-rail-color: var(--md-sys-color-on-surface);
-  --md-comp-navigation-rail-container-width: 80px;
-  --md-comp-navigation-rail-container-height: 100%;
-  --md-sys-comp-navigation-drawer-background-color: var(--md-sys-color-surface);
-  --md-sys-comp-navigation-drawer-color: var(--md-sys-color-on-surface-variant);
-  --md-comp-navigation-drawer-container-height: 100%;
-  --md-comp-navigation-drawer-container-width: 360px;
-  --md-sys-comp-snackbar-container-width: 344px;
-  --md-sys-comp-snackbar-container-background-color: var(--md-sys-color-inverse-surface);
-  --md-sys-comp-snackbar-container-color: var(--md-sys-color-inverse-on-surface);
-  --md-sys-comp-tabs-container-background-color: var(--md-sys-color-surface);
-  --md-sys-comp-tabs-container-color: var(--md-sys-color-on-surface);
-  --md-comp-tabs-container-min-width: 100px;
-  --md-comp-list-container-min-width: 300px;
 }
 
 * {
@@ -933,6 +859,86 @@ p) {
   font-size: var(--md-sys-typescale-label-small-size);
   font-weight: var(--md-sys-typescale-label-small-weight);
   font-family: var(--md-sys-typescale-label-small-font);
+}
+
+:where(html,
+.light-theme,
+.dark-theme),
+.tokens {
+  --md-sys-comp-focus-ring-color: var(--md-sys-color-on-surface-variant);
+  --md-sys-comp-focus-ring-width: 2px;
+  --md-sys-comp-button-background-color: var(--md-sys-color-surface);
+  --md-sys-comp-button-color: var(--md-sys-color-primary);
+  --md-comp-button-container-height: 40px;
+  --md-comp-button-container-shape: 20px;
+  --md-sys-comp-fab-background-color: var(--md-sys-color-primary-container);
+  --md-sys-comp-fab-color: var(--md-sys-color-on-primary-container);
+  --md-comp-fab-container-size: 56px;
+  --md-sys-comp-card-width: 300px;
+  --md-sys-comp-chip-background-color: var(--md-sys-color-surface);
+  --md-sys-comp-chip-color: var(--md-sys-color-primary);
+  --md-comp-chip-container-height: 32px;
+  --md-sys-comp-top-app-bar-background-color: var(--md-sys-color-surface);
+  --md-sys-comp-top-app-bar-color: var(--md-sys-color-on-surface);
+  --md-sys-comp-top-app-bar-padding: 16px;
+  --md-sys-comp-text-field-caret-color: var(--md-sys-color-primary);
+  --md-sys-comp-tooltip-container-background-color: var(
+    --md-sys-color-inverse-surface
+  );
+  --md-sys-comp-tooltip-container-color: var(--md-sys-color-inverse-on-surface);
+  --md-sys-comp-tooltip-delay: 0.3s;
+  --md-sys-comp-switch-thumb-size: 16px;
+  --md-sys-comp-switch-track-width: 52px;
+  --md-sys-comp-switch-track-height: 32px;
+  --md-sys-comp-switch-border-width: 2px;
+  --md-sys-comp-badge-size: 22px;
+  --md-sys-comp-badge-dot-size: calc(var(--md-sys-comp-badge-size) / 2);
+  --md-sys-comp-badge-background-color: var(--md-sys-color-error);
+  --md-sys-comp-badge-color: var(--md-sys-color-on-error);
+  --md-sys-comp-checkbox-size: 24px;
+  --md-sys-comp-checkbox-unselected-color: var(--md-sys-color-outline);
+  --md-sys-comp-checkbox-selected-color: var(--md-sys-color-primary);
+  --md-sys-comp-slider-background-color: transparent;
+  --md-sys-comp-slider-color: var(--md-sys-color-surface-1);
+  --md-sys-comp-slider-container-height: 36px;
+  --md-sys-comp-slider-container-width: 100%;
+  --md-sys-comp-table-border-color: var(--md-sys-color-outline-variant);
+  --md-sys-comp-divider-color: var(--md-sys-color-outline-variant);
+  --md-sys-comp-divider-container-height: 1px;
+  --md-sys-comp-divider-container-width: 100%;
+  --md-sys-comp-segmented-button-background-color: var(--md-sys-color-surface);
+  --md-sys-comp-segmented-button-color: var(--md-sys-color-on-surface);
+  --md-sys-comp-radio-button-unselected-color: var(
+    --md-sys-color-on-surface-variant
+  );
+  --md-sys-comp-radio-button-selected-color: var(--md-sys-color-primary);
+  --md-sys-comp-progress-background-color: var(--md-sys-color-surface-variant);
+  --md-sys-comp-progress-color: var(--md-sys-color-primary);
+  --md-sys-comp-progress-size: 4px;
+  --md-sys-comp-progress-circular-size: 32px;
+  --md-sys-comp-progress-circular-center-color: var(--md-sys-color-surface);
+  --md-sys-comp-dialog-background-color: var(--md-sys-color-surface);
+  --md-sys-comp-dialog-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-dialog-container-min-width: 280px;
+  --md-comp-dialog-container-max-width: 560px;
+  --md-sys-comp-navigation-bar-background-color: var(--md-sys-color-surface);
+  --md-sys-comp-navigation-bar-color: var(--md-sys-color-on-surface);
+  --md-comp-navigation-bar-container-width: 100%;
+  --md-sys-comp-navigation-rail-background-color: var(--md-sys-color-surface);
+  --md-sys-comp-navigation-rail-color: var(--md-sys-color-on-surface);
+  --md-comp-navigation-rail-container-width: 80px;
+  --md-comp-navigation-rail-container-height: 100%;
+  --md-sys-comp-navigation-drawer-background-color: var(--md-sys-color-surface);
+  --md-sys-comp-navigation-drawer-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-navigation-drawer-container-height: 100%;
+  --md-comp-navigation-drawer-container-width: 360px;
+  --md-sys-comp-snackbar-container-width: 344px;
+  --md-sys-comp-snackbar-container-background-color: var(--md-sys-color-inverse-surface);
+  --md-sys-comp-snackbar-container-color: var(--md-sys-color-inverse-on-surface);
+  --md-sys-comp-tabs-container-background-color: var(--md-sys-color-surface);
+  --md-sys-comp-tabs-container-color: var(--md-sys-color-on-surface);
+  --md-comp-tabs-container-min-width: 100px;
+  --md-comp-list-container-min-width: 300px;
 }
 
 /* 

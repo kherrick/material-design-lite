@@ -14,7 +14,9 @@
  limitations under the License.
 */
 
-:where(html),
+:where(html,
+.light-theme,
+.dark-theme),
 .tokens {
   --md-sys-comp-navigation-bar-background-color: var(--md-sys-color-surface);
   --md-sys-comp-navigation-bar-color: var(--md-sys-color-on-surface);
