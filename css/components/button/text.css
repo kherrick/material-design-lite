@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Text button container elevation */
   --md-comp-text-button-container-elevation: var(--md-sys-elevation-level0);
   /* Text button focus state layer opacity */
@@ -62,7 +63,7 @@
   --md-comp-text-button-disabled-label-text-opacity: 0.3799999952316284;
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text {
@@ -94,7 +95,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:hover,
@@ -102,7 +103,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:active,
@@ -110,7 +111,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:focus,
@@ -118,7 +119,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text[disabled] {

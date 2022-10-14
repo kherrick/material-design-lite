@@ -17,7 +17,8 @@
 :where(html,
 .light-theme,
 .dark-theme),
-.tokens {
+.tokens,
+:host {
   --md-sys-comp-radio-button-unselected-color: var(
     --md-sys-color-on-surface-variant
   );

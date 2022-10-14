@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Dialog divider color */
   --md-comp-dialog-with-divider-divider-height: 1px;
   /* Dialog subhead tracking */

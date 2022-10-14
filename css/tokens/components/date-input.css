@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Header container height */
   --md-comp-date-input-modal-header-container-height: 120px;
   /* Header container width */

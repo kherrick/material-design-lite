@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Error 0 */
   --md-ref-palette-error0-rgb: 0 0 0;
   --md-ref-palette-error0: rgb(var(--md-ref-palette-error0-rgb));
@@ -1348,7 +1349,8 @@ tr)[disabled], :where(.tabs) :where(labal,
 :where(html,
 .light-theme,
 .dark-theme),
-.tokens {
+.tokens,
+:host {
   --md-sys-color-surface-1: rgb(var(--md-sys-color-primary-rgb) / 0.05);
   --md-sys-color-surface-2: rgb(var(--md-sys-color-primary-rgb) / 0.08);
   --md-sys-color-surface-3: rgb(var(--md-sys-color-primary-rgb) / 0.11);

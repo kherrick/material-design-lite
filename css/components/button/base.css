@@ -17,14 +17,15 @@
 :where(html,
 .light-theme,
 .dark-theme),
-.tokens {
+.tokens,
+:host {
   --md-sys-comp-button-background-color: var(--md-sys-color-surface);
   --md-sys-comp-button-color: var(--md-sys-color-primary);
   --md-comp-button-container-height: 40px;
   --md-comp-button-container-shape: 20px;
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) {
@@ -41,6 +42,7 @@ button):not(.icon-button,
   align-items: center;
   justify-content: center;
   border: none;
+  text-decoration: none;
   background-color: var(--_bg-color);
   color: var(--_fg-color);
   height: var(--_height);
@@ -63,14 +65,14 @@ button):not(.icon-button,
   transition: box-shadow 0.2s ease-in-out;
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip)[label] {
     content: attr(label);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -79,7 +81,7 @@ button):not(.icon-button,
     font-size: 18px;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -88,28 +90,28 @@ button):not(.icon-button,
       margin-right: 0;
     }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) a {
     text-decoration: none;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:hover {
       text-decoration: none;
     }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:focus {
       text-decoration: none;
     }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:hover,
@@ -117,7 +119,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:active,
@@ -125,7 +127,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:focus,
@@ -133,7 +135,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip)[disabled] {

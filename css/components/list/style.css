@@ -17,7 +17,8 @@
 :where(html,
 .light-theme,
 .dark-theme),
-.tokens {
+.tokens,
+:host {
   --md-comp-list-container-min-width: 300px;
 }
 

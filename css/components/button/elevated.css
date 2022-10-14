@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Elevated button focus container elevation */
   --md-comp-elevated-button-focus-container-elevation: var(
     --md-sys-elevation-level1
@@ -80,7 +81,7 @@
   --md-comp-elevated-button-disabled-container-opacity: 0.11999999731779099;
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated {
@@ -111,7 +112,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated :where(i,
@@ -119,7 +120,7 @@ button):not(.icon-button,
     font-size: var(--md-comp-elevated-button-with-icon-icon-size);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:hover,
@@ -127,7 +128,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:active,
@@ -135,7 +136,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:focus,
@@ -143,7 +144,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated[disabled] {

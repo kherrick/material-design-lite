@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Plain typeface */
   --md-ref-typeface-plain: Roboto;
   /* Brand typeface */
@@ -864,7 +865,8 @@ p) {
 :where(html,
 .light-theme,
 .dark-theme),
-.tokens {
+.tokens,
+:host {
   --md-sys-comp-focus-ring-color: var(--md-sys-color-on-surface-variant);
   --md-sys-comp-focus-ring-width: 2px;
   --md-sys-comp-button-background-color: var(--md-sys-color-surface);
@@ -1032,7 +1034,7 @@ p) {
     outline-offset: 5px;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) {
@@ -1049,6 +1051,7 @@ button):not(.icon-button,
   align-items: center;
   justify-content: center;
   border: none;
+  text-decoration: none;
   background-color: var(--_bg-color);
   color: var(--_fg-color);
   height: var(--_height);
@@ -1071,14 +1074,14 @@ button):not(.icon-button,
   transition: box-shadow 0.2s ease-in-out;
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip)[label] {
     content: attr(label);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -1087,7 +1090,7 @@ button):not(.icon-button,
     font-size: 18px;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -1096,28 +1099,28 @@ button):not(.icon-button,
       margin-right: 0;
     }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) a {
     text-decoration: none;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:hover {
       text-decoration: none;
     }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:focus {
       text-decoration: none;
     }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:hover,
@@ -1125,7 +1128,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:active,
@@ -1133,7 +1136,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:focus,
@@ -1141,7 +1144,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip)[disabled] {
@@ -1151,7 +1154,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text {
@@ -1183,7 +1186,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:hover,
@@ -1191,7 +1194,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:active,
@@ -1199,7 +1202,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:focus,
@@ -1207,7 +1210,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text[disabled] {
@@ -1215,7 +1218,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled {
@@ -1246,7 +1249,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:hover,
@@ -1254,7 +1257,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:active,
@@ -1262,7 +1265,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:focus,
@@ -1270,7 +1273,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled[disabled] {
@@ -1279,7 +1282,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal {
@@ -1318,7 +1321,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:hover,
@@ -1326,7 +1329,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:focus,
@@ -1334,7 +1337,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:active,
@@ -1342,7 +1345,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal[disabled] {
@@ -1352,7 +1355,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined {
@@ -1390,7 +1393,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined :where(i,
@@ -1398,7 +1401,7 @@ button):not(.icon-button,
     margin-left: -9px;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:hover,
@@ -1406,7 +1409,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:active,
@@ -1414,7 +1417,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:focus,
@@ -1422,7 +1425,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined[disabled] {
@@ -1431,7 +1434,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated {
@@ -1462,7 +1465,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated :where(i,
@@ -1470,7 +1473,7 @@ button):not(.icon-button,
     font-size: var(--md-comp-elevated-button-with-icon-icon-size);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:hover,
@@ -1478,7 +1481,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:active,
@@ -1486,7 +1489,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:focus,
@@ -1494,7 +1497,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated[disabled] {
@@ -1517,6 +1520,7 @@ button):not(.icon-button,
   position: relative;
   box-sizing: border-box;
   text-align: center;
+  text-decoration: none;
   gap: 0;
   border: none;
   cursor: pointer;
@@ -1839,6 +1843,7 @@ button):not(.icon-button,
   align-items: center;
   justify-content: center;
   border: none;
+  text-decoration: none;
   padding: 16px;
   font-size: 24px;
   border-radius: 16px;
@@ -1958,13 +1963,12 @@ button):not(.icon-button,
   text-align: start;
 }
 
-:is(.card) :where(i,
-.material-icons) mg {
+:is(.card) > img {
     padding: 0;
     border-radius: var(--md-sys-shape-corner-medium);
   }
 
-:is(.card) .title {
+:is(.card) > .title {
     padding: 8px 16px;
     -webkit-text-decoration: var(--md-sys-typescale-title-large-text-decoration);
             text-decoration: var(--md-sys-typescale-title-large-text-decoration);
@@ -1976,7 +1980,7 @@ button):not(.icon-button,
     font-family: var(--md-sys-typescale-title-large-font);
   }
 
-:is(.card) .subtitle {
+:is(.card) > .subtitle {
     padding: 8px 16px;
     -webkit-text-decoration: var(--md-sys-typescale-body-large-text-decoration);
             text-decoration: var(--md-sys-typescale-body-large-text-decoration);
@@ -1988,7 +1992,7 @@ button):not(.icon-button,
     font-family: var(--md-sys-typescale-body-large-font);
   }
 
-:is(.card) .actions {
+:is(.card) > .actions {
     padding: 16px;
     display: flex;
     flex-direction: row;
@@ -2021,6 +2025,7 @@ button):not(.icon-button,
   align-items: center;
   justify-content: center;
   border: none;
+  text-decoration: none;
   position: relative;
   border-radius: 8px;
   padding: 8px 16px;
@@ -2254,17 +2259,16 @@ header) {
   padding: var(--md-sys-comp-top-app-bar-padding);
   display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr auto;
-  grid-template-rows: auto;
-  grid-template-areas: "leading title actions";
   background-color: var(--md-sys-comp-top-app-bar-background-color);
   color: var(--md-sys-comp-top-app-bar-color);
+  gap: var(--md-sys-comp-top-app-bar-padding);
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr auto;
   grid-template-rows: auto;
   grid-template-areas: "leading title actions";
   z-index: 1;
+  box-sizing: border-box;
 }
 
 :is(.top-app-bar,
@@ -2796,8 +2800,9 @@ textarea):disabled + span {
     content: attr(data-tooltip);
   }
 
-:is(.tooltip):hover:before {
-    transform: translateX(-50%) scale(1);
+:is(.tooltip):is(:hover,
+[data-visible]):before {
+    transform: translateX(-50%) translateY(-10%) scale(1);
   }
 
 :is(.switch) {
@@ -3343,8 +3348,10 @@ table).zebra :is(tbody,
 footer) {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 100%;
   position: relative;
+  box-sizing: border-box;
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface-variant);
@@ -4084,8 +4091,8 @@ dialog):not(.navigation-drawer).modal::backdrop {
     flex: 1;
   }
 
-:is(.snackbar) :where(button,
-.button) {
+:is(.snackbar) :is(button,
+.button).text {
     align-self: end;
     color: var(--md-sys-color-inverse-primary);
   }

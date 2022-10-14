@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* 0 */
   --md-sys-elevation-level0: 0px;
   /* +1 */

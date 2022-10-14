@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Icon button selected pressed state layer opacity */
   --md-comp-icon-button-selected-pressed-state-layer-opacity: var(
     --md-sys-state-pressed-state-layer-opacity
@@ -58,6 +59,7 @@
   position: relative;
   box-sizing: border-box;
   text-align: center;
+  text-decoration: none;
   gap: 0;
   border: none;
   cursor: pointer;

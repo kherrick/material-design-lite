@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   --md-sys-color-primary-rgb: var(--md-ref-palette-primary40-rgb);;
   --md-sys-color-primary: var(--md-ref-palette-primary40);;
   --md-sys-color-primary-container-rgb: var(--md-ref-palette-primary90-rgb);;

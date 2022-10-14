@@ -17,14 +17,15 @@
 :where(html,
 .light-theme,
 .dark-theme),
-.tokens {
+.tokens,
+:host {
   --md-sys-comp-button-background-color: var(--md-sys-color-surface);
   --md-sys-comp-button-color: var(--md-sys-color-primary);
   --md-comp-button-container-height: 40px;
   --md-comp-button-container-shape: 20px;
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) {
@@ -41,6 +42,7 @@ button):not(.icon-button,
   align-items: center;
   justify-content: center;
   border: none;
+  text-decoration: none;
   background-color: var(--_bg-color);
   color: var(--_fg-color);
   height: var(--_height);
@@ -63,14 +65,14 @@ button):not(.icon-button,
   transition: box-shadow 0.2s ease-in-out;
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip)[label] {
     content: attr(label);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -79,7 +81,7 @@ button):not(.icon-button,
     font-size: 18px;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -88,28 +90,28 @@ button):not(.icon-button,
       margin-right: 0;
     }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) a {
     text-decoration: none;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:hover {
       text-decoration: none;
     }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:focus {
       text-decoration: none;
     }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:hover,
@@ -117,7 +119,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:active,
@@ -125,7 +127,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:focus,
@@ -133,7 +135,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip)[disabled] {
@@ -144,7 +146,8 @@ button):not(.icon-button,
   }
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Text button container elevation */
   --md-comp-text-button-container-elevation: var(--md-sys-elevation-level0);
   /* Text button focus state layer opacity */
@@ -437,7 +440,7 @@ button):not(.icon-button,
   --md-comp-elevated-button-disabled-container-opacity: 0.11999999731779099;
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text {
@@ -469,7 +472,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:hover,
@@ -477,7 +480,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:active,
@@ -485,7 +488,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:focus,
@@ -493,7 +496,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).text[disabled] {
@@ -501,7 +504,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled {
@@ -532,7 +535,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:hover,
@@ -540,7 +543,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:active,
@@ -548,7 +551,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:focus,
@@ -556,7 +559,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled[disabled] {
@@ -565,7 +568,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal {
@@ -604,7 +607,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:hover,
@@ -612,7 +615,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:focus,
@@ -620,7 +623,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:active,
@@ -628,7 +631,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal[disabled] {
@@ -638,7 +641,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined {
@@ -676,7 +679,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined :where(i,
@@ -684,7 +687,7 @@ button):not(.icon-button,
     margin-left: -9px;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:hover,
@@ -692,7 +695,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:active,
@@ -700,7 +703,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:focus,
@@ -708,7 +711,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined[disabled] {
@@ -717,7 +720,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated {
@@ -748,7 +751,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated :where(i,
@@ -756,7 +759,7 @@ button):not(.icon-button,
     font-size: var(--md-comp-elevated-button-with-icon-icon-size);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:hover,
@@ -764,7 +767,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:active,
@@ -772,7 +775,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:focus,
@@ -780,7 +783,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated[disabled] {

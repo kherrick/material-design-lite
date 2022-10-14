@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Filled button dragged state layer opacity */
   --md-comp-filled-button-dragged-state-layer-opacity: var(
     --md-sys-state-dragged-state-layer-opacity
@@ -88,7 +89,7 @@
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled {
@@ -119,7 +120,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:hover,
@@ -127,7 +128,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:active,
@@ -135,7 +136,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:focus,
@@ -143,7 +144,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled[disabled] {

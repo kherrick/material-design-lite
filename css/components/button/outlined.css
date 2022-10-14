@@ -15,7 +15,8 @@
 */
 
 :where(html),
-.tokens {
+.tokens,
+:host {
   /* Outlined button container elevation */
   --md-comp-outlined-button-container-elevation: var(--md-sys-elevation-level0);
   /* Outlined button focus state layer opacity */
@@ -66,7 +67,7 @@
   --md-comp-outlined-button-disabled-outline-opacity: 0.11999999731779099;
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined {
@@ -104,7 +105,7 @@ button):not(.icon-button,
   );
 }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined :where(i,
@@ -112,7 +113,7 @@ button):not(.icon-button,
     margin-left: -9px;
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:hover,
@@ -120,7 +121,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:active,
@@ -128,7 +129,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:focus,
@@ -136,7 +137,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:where(.button,
+:is(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined[disabled] {
