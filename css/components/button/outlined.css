@@ -67,7 +67,7 @@
   --md-comp-outlined-button-disabled-outline-opacity: 0.11999999731779099;
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined {
@@ -105,7 +105,7 @@ button):not(.icon-button,
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined :where(i,
@@ -113,7 +113,7 @@ button):not(.icon-button,
     margin-left: -9px;
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:hover,
@@ -121,7 +121,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:active,
@@ -129,7 +129,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:focus,
@@ -137,7 +137,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined[disabled] {

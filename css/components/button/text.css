@@ -63,7 +63,7 @@
   --md-comp-text-button-disabled-label-text-opacity: 0.3799999952316284;
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text {
@@ -95,7 +95,7 @@ button):not(.icon-button,
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:hover,
@@ -103,7 +103,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:active,
@@ -111,7 +111,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:focus,
@@ -119,7 +119,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text[disabled] {

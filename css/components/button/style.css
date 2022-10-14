@@ -25,7 +25,7 @@
   --md-comp-button-container-shape: 20px;
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) {
@@ -65,14 +65,14 @@ button):not(.icon-button,
   transition: box-shadow 0.2s ease-in-out;
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip)[label] {
     content: attr(label);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -81,7 +81,7 @@ button):not(.icon-button,
     font-size: 18px;
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -90,28 +90,28 @@ button):not(.icon-button,
       margin-right: 0;
     }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) a {
     text-decoration: none;
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:hover {
       text-decoration: none;
     }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:focus {
       text-decoration: none;
     }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:hover,
@@ -119,7 +119,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:active,
@@ -127,7 +127,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:focus,
@@ -135,7 +135,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip)[disabled] {
@@ -440,7 +440,7 @@ button):not(.icon-button,
   --md-comp-elevated-button-disabled-container-opacity: 0.11999999731779099;
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text {
@@ -472,7 +472,7 @@ button):not(.icon-button,
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:hover,
@@ -480,7 +480,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:active,
@@ -488,7 +488,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:focus,
@@ -496,7 +496,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).text[disabled] {
@@ -504,7 +504,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled {
@@ -535,7 +535,7 @@ button):not(.icon-button,
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:hover,
@@ -543,7 +543,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:active,
@@ -551,7 +551,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:focus,
@@ -559,7 +559,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled[disabled] {
@@ -568,7 +568,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal {
@@ -607,7 +607,7 @@ button):not(.icon-button,
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:hover,
@@ -615,7 +615,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:focus,
@@ -623,7 +623,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:active,
@@ -631,7 +631,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal[disabled] {
@@ -641,7 +641,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined {
@@ -679,7 +679,7 @@ button):not(.icon-button,
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined :where(i,
@@ -687,7 +687,7 @@ button):not(.icon-button,
     margin-left: -9px;
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:hover,
@@ -695,7 +695,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:active,
@@ -703,7 +703,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:focus,
@@ -711,7 +711,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).outlined[disabled] {
@@ -720,7 +720,7 @@ button):not(.icon-button,
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated {
@@ -751,7 +751,7 @@ button):not(.icon-button,
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated :where(i,
@@ -759,7 +759,7 @@ button):not(.icon-button,
     font-size: var(--md-comp-elevated-button-with-icon-icon-size);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:hover,
@@ -767,7 +767,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:active,
@@ -775,7 +775,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:focus,
@@ -783,7 +783,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated[disabled] {

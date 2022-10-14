@@ -25,7 +25,7 @@
   --md-comp-button-container-shape: 20px;
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) {
@@ -65,14 +65,14 @@ button):not(.icon-button,
   transition: box-shadow 0.2s ease-in-out;
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip)[label] {
     content: attr(label);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -81,7 +81,7 @@ button):not(.icon-button,
     font-size: 18px;
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) :where(i,
@@ -90,28 +90,28 @@ button):not(.icon-button,
       margin-right: 0;
     }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) a {
     text-decoration: none;
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:hover {
       text-decoration: none;
     }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip) a:focus {
       text-decoration: none;
     }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:hover,
@@ -119,7 +119,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:active,
@@ -127,7 +127,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip):where(:focus,
@@ -135,7 +135,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip)[disabled] {

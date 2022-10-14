@@ -85,7 +85,7 @@
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal {
@@ -124,7 +124,7 @@ button):not(.icon-button,
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:hover,
@@ -132,7 +132,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:focus,
@@ -140,7 +140,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:active,
@@ -148,7 +148,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-0);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).filled-tonal[disabled] {

@@ -81,7 +81,7 @@
   --md-comp-elevated-button-disabled-container-opacity: 0.11999999731779099;
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated {
@@ -112,7 +112,7 @@ button):not(.icon-button,
   );
 }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated :where(i,
@@ -120,7 +120,7 @@ button):not(.icon-button,
     font-size: var(--md-comp-elevated-button-with-icon-icon-size);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:hover,
@@ -128,7 +128,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:active,
@@ -136,7 +136,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-1);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:focus,
@@ -144,7 +144,7 @@ button):not(.icon-button,
     box-shadow: var(--md-sys-elevation-2);
   }
 
-:is(.button,
+:where(.button,
 button):not(.icon-button,
 .fab,
 .chip).elevated[disabled] {
