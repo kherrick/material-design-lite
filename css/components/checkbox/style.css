@@ -58,6 +58,7 @@
     font-family: "Material Icons";
     content: "check_box_outline_blank";
     color: var(--md-sys-comp-checkbox-unselected-color);
+    font-size: var(--md-sys-comp-checkbox-size);
   }
 
 :where(input[type="checkbox"],
