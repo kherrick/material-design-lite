@@ -31,7 +31,6 @@
   align-items: center;
   position: relative;
   -webkit-user-select: none;
-     -moz-user-select: none;
           user-select: none;
   background-color: var(--md-sys-comp-tabs-container-background-color);
   color: var(--md-sys-comp-tabs-container-color);
@@ -65,7 +64,6 @@
     margin: 0;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
             user-select: none;
     position: relative;
     z-index: 1;
