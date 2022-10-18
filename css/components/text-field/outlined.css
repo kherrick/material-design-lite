@@ -110,6 +110,10 @@
     border-top-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.87);
   }
 
+:is(.text-field).outlined:hover > input:not(:focus):-moz-placeholder-shown, :is(.text-field).outlined:hover > textarea:not(:focus):-moz-placeholder-shown {
+    border-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.87);
+  }
+
 :is(.text-field).outlined:hover > input:not(:focus):placeholder-shown,
   :is(.text-field).outlined:hover > textarea:not(:focus):placeholder-shown {
     border-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.87);
@@ -117,15 +121,28 @@
 
 /* Placeholder-shown */
 
+:is(.text-field).outlined input:not(:focus):-moz-placeholder-shown, :is(.text-field).outlined > textarea:not(:focus):-moz-placeholder-shown {
+    border-top-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.6);
+  }
+
 :is(.text-field).outlined input:not(:focus):placeholder-shown,
   :is(.text-field).outlined > textarea:not(:focus):placeholder-shown {
     border-top-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.6);
+  }
+
+:is(.text-field).outlined input:not(:focus):-moz-placeholder-shown + span, :is(.text-field).outlined > textarea:not(:focus):-moz-placeholder-shown + span {
+    font-size: inherit;
+    line-height: 68px;
   }
 
 :is(.text-field).outlined input:not(:focus):placeholder-shown + span,
   :is(.text-field).outlined > textarea:not(:focus):placeholder-shown + span {
     font-size: inherit;
     line-height: 68px;
+  }
+
+:is(.text-field).outlined input:not(:focus):-moz-placeholder-shown + span::before, :is(.text-field).outlined > textarea:not(:focus):-moz-placeholder-shown + span::before, :is(.text-field).outlined input:not(:focus):-moz-placeholder-shown + span::after, :is(.text-field).outlined > textarea:not(:focus):-moz-placeholder-shown + span::after {
+    border-top-color: transparent;
   }
 
 :is(.text-field).outlined input:not(:focus):placeholder-shown + span::before,
@@ -179,11 +196,19 @@
     border-top-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38) !important;
   }
 
+:is(.text-field).outlined input:disabled:-moz-placeholder-shown, :is(.text-field).outlined input:disabled:-moz-placeholder-shown + span, :is(.text-field).outlined > textarea:disabled:-moz-placeholder-shown, :is(.text-field).outlined > textarea:disabled:-moz-placeholder-shown + span {
+    border-top-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38) !important;
+  }
+
 :is(.text-field).outlined input:disabled:placeholder-shown,
   :is(.text-field).outlined input:disabled:placeholder-shown + span,
   :is(.text-field).outlined > textarea:disabled:placeholder-shown,
   :is(.text-field).outlined > textarea:disabled:placeholder-shown + span {
     border-top-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38) !important;
+  }
+
+:is(.text-field).outlined input:disabled:-moz-placeholder-shown + span::before, :is(.text-field).outlined input:disabled:-moz-placeholder-shown + span::after, :is(.text-field).outlined > textarea:disabled:-moz-placeholder-shown + span::before, :is(.text-field).outlined > textarea:disabled:-moz-placeholder-shown + span::after {
+    border-top-color: transparent !important;
   }
 
 :is(.text-field).outlined input:disabled:placeholder-shown + span::before,

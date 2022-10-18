@@ -53,8 +53,7 @@ input[type="range"])::-webkit-slider-thumb {
     height: 2px;
     width: 2px;
     background-color: rgb(var(--md-sys-color-primary-rgb));
-    -webkit-transform: scale(6, 6);
-            transform: scale(6, 6);
+    transform: scale(6, 6);
     -webkit-transition: box-shadow 0.2s;
     transition: box-shadow 0.2s;
     box-shadow: 0 0 0 2px transparent;
@@ -211,8 +210,7 @@ input[type="range"]):disabled::-webkit-slider-thumb {
       background-color: rgb(var(--md-sys-color-on-surface-rgb));
       color: var(--md-sys-color-surface); /* Safari */
       box-shadow: 0 0 0 1px var(--md-sys-color-surface) !important;
-      -webkit-transform: scale(4, 4);
-              transform: scale(4, 4);
+      transform: scale(4, 4);
     }
 
 :is(.slider,

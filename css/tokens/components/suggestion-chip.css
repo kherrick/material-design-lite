@@ -14,9 +14,7 @@
  limitations under the License.
 */
 
-:where(html,
-.light-theme,
-.dark-theme),
+:where(html),
 .tokens,
 :host {
   /* Suggestion chip disabled leading icon opacity */

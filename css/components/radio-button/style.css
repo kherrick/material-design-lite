@@ -31,14 +31,14 @@
   place-content: center;
   position: relative;
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   margin: 0;
 }
 
 :where(.radio-button,
 [type="radio"])::before {
     -webkit-font-smoothing: antialiased;
-    -webkit-font-feature-settings: "liga";
     font-feature-settings: "liga";
     direction: ltr;
     word-wrap: normal;

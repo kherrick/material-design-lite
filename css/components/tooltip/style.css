@@ -36,13 +36,9 @@
     bottom: -80px;
     left: 50%;
     padding: 8px;
-    -webkit-transform: translateX(-50%) scale(0);
-            transform: translateX(-50%) scale(0);
-    transition: -webkit-transform var(--md-sys-comp-tooltip-delay) ease-in-out;
+    transform: translateX(-50%) scale(0);
     transition: transform var(--md-sys-comp-tooltip-delay) ease-in-out;
-    transition: transform var(--md-sys-comp-tooltip-delay) ease-in-out, -webkit-transform var(--md-sys-comp-tooltip-delay) ease-in-out;
-    -webkit-transform-origin: top;
-            transform-origin: top;
+    transform-origin: top;
     -webkit-text-decoration: var(--md-sys-typescale-label-small-text-decoration);
             text-decoration: var(--md-sys-typescale-label-small-text-decoration);
     text-transform: var(--md-sys-typescale-label-small-text-transform);
@@ -68,6 +64,5 @@
 
 :is(.tooltip):is(:hover,
 [data-visible]):before {
-    -webkit-transform: translateX(-50%) translateY(-10%) scale(1);
-            transform: translateX(-50%) translateY(-10%) scale(1);
+    transform: translateX(-50%) translateY(-10%) scale(1);
   }

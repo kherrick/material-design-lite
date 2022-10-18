@@ -31,11 +31,7 @@
   --md-sys-elevation-level5: 12px;
 }
 
-:where(html,
-.light-theme,
-.dark-theme),
-.tokens,
-:host {
+:where(html) {
   --md-sys-elevation-0: 0px 0px 0px 0px
       rgb(var(--md-sys-color-shadow-rgb) / 0.2),
     0px 0px 0px 0px rgb(var(--md-sys-color-shadow-rgb) / 0.14),
