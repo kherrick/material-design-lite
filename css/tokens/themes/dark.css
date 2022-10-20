@@ -14,7 +14,8 @@
  limitations under the License.
 */
 
-:where(html),
+:where(html,
+.dark-theme),
 .tokens,
 :host {
   --md-sys-color-primary-rgb: var(--md-ref-palette-primary80-rgb);;

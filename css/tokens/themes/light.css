@@ -14,7 +14,8 @@
  limitations under the License.
 */
 
-:where(html),
+:where(html,
+.light-theme),
 .tokens,
 :host {
   --md-sys-color-primary-rgb: var(--md-ref-palette-primary40-rgb);;
