@@ -406,7 +406,7 @@ button):not(.icon-button,
 .fab,
 .chip):where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-2);
+    box-shadow: var(--md-sys-elevation-3);
   }
 
 :where(.button,
@@ -421,7 +421,7 @@ button):not(.icon-button,
 button):not(.icon-button,
 .fab,
 .chip):where(:focus,
-.focus) {
+.focus):not(:active) {
     box-shadow: var(--md-sys-elevation-2);
   }
 
@@ -472,7 +472,7 @@ button):not(.icon-button,
 .fab,
 .chip).text:where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-2);
   }
 
 :where(.button,
@@ -487,7 +487,7 @@ button):not(.icon-button,
 button):not(.icon-button,
 .fab,
 .chip).text:where(:focus,
-.focus) {
+.focus):not(:active) {
     box-shadow: var(--md-sys-elevation-1);
   }
 
@@ -535,7 +535,7 @@ button):not(.icon-button,
 .fab,
 .chip).filled:where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-2);
   }
 
 :where(.button,
@@ -550,7 +550,7 @@ button):not(.icon-button,
 button):not(.icon-button,
 .fab,
 .chip).filled:where(:focus,
-.focus) {
+.focus):not(:active) {
     box-shadow: var(--md-sys-elevation-1);
   }
 
@@ -607,15 +607,7 @@ button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-1);
-  }
-
-:where(.button,
-button):not(.icon-button,
-.fab,
-.chip).filled-tonal:where(:focus,
-.focus) {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-2);
   }
 
 :where(.button,
@@ -624,6 +616,14 @@ button):not(.icon-button,
 .chip).filled-tonal:where(:active,
 .active) {
     box-shadow: var(--md-sys-elevation-0);
+  }
+
+:where(.button,
+button):not(.icon-button,
+.fab,
+.chip).filled-tonal:where(:focus,
+.focus):not(:active) {
+    box-shadow: var(--md-sys-elevation-1);
   }
 
 :where(.button,
@@ -687,7 +687,7 @@ button):not(.icon-button,
 .fab,
 .chip).outlined:where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-2);
   }
 
 :where(.button,
@@ -702,7 +702,7 @@ button):not(.icon-button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:focus,
-.focus) {
+.focus):not(:active) {
     box-shadow: var(--md-sys-elevation-1);
   }
 
@@ -759,7 +759,7 @@ button):not(.icon-button,
 .fab,
 .chip).elevated:where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-2);
+    box-shadow: var(--md-sys-elevation-3);
   }
 
 :where(.button,
@@ -774,7 +774,7 @@ button):not(.icon-button,
 button):not(.icon-button,
 .fab,
 .chip).elevated:where(:focus,
-.focus) {
+.focus):not(:active) {
     box-shadow: var(--md-sys-elevation-2);
   }
 

@@ -144,6 +144,7 @@
   padding: 4px;
   margin: 0;
   box-shadow: var(--md-sys-elevation-0);
+  transition: box-shadow 0.2s ease-in-out;
   -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
           text-decoration: var(--md-sys-typescale-label-large-text-decoration);
   text-transform: var(--md-sys-typescale-label-large-text-transform);
@@ -263,7 +264,7 @@
 
 :where(.icon-button).filled:where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-2);
   }
 
 :where(.icon-button).filled:where(:active,
@@ -272,8 +273,8 @@
   }
 
 :where(.icon-button).filled:where(:focus,
-.focus) {
-    box-shadow: var(--md-sys-elevation-0);
+.focus):not(:active) {
+    box-shadow: var(--md-sys-elevation-1);
   }
 
 :where(.icon-button).filled[disabled] {
@@ -339,6 +340,21 @@
       color: var(--md-sys-color-on-secondary-container);
     }
 
+:where(.icon-button).filled-tonal:where(:hover,
+.hover) {
+    box-shadow: var(--md-sys-elevation-2);
+  }
+
+:where(.icon-button).filled-tonal:where(:active,
+.active) {
+    box-shadow: var(--md-sys-elevation-0);
+  }
+
+:where(.icon-button).filled-tonal:where(:focus,
+.focus):not(:active) {
+    box-shadow: var(--md-sys-elevation-1);
+  }
+
 :where(.icon-button).filled-tonal[disabled] {
     background-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.12);
     color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
@@ -389,6 +405,21 @@
     --state-disabled-opacity: var(
       --md-comp-outlined-icon-button-disabled-selected-container-opacity
     );
+  }
+
+:where(.icon-button).outlined:where(:hover,
+.hover) {
+    box-shadow: var(--md-sys-elevation-2);
+  }
+
+:where(.icon-button).outlined:where(:active,
+.active) {
+    box-shadow: var(--md-sys-elevation-0);
+  }
+
+:where(.icon-button).outlined:where(:focus,
+.focus):not(:active) {
+    box-shadow: var(--md-sys-elevation-1);
   }
 
 :where(.icon-button).outlined[disabled] {
@@ -448,6 +479,21 @@
 :checked,
 .checked) {
     color: var(--md-sys-color-primary);
+  }
+
+:where(.icon-button).toggle:where(:hover,
+.hover) {
+    box-shadow: var(--md-sys-elevation-2);
+  }
+
+:where(.icon-button).toggle:where(:active,
+.active) {
+    box-shadow: var(--md-sys-elevation-0);
+  }
+
+:where(.icon-button).toggle:where(:focus,
+.focus):not(:active) {
+    box-shadow: var(--md-sys-elevation-1);
   }
 
 :where(.icon-button).toggle[disabled] {

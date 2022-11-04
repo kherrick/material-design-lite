@@ -135,6 +135,7 @@
   color: var(--md-sys-comp-chip-color);
   border-radius: var(--md-sys-shape-corner-small);
   box-shadow: var(--md-sys-elevation-1);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 :is(.chip) :is(i,
@@ -160,12 +161,12 @@
 
 :is(.chip):where(:active,
 .active) {
-    box-shadow: var(--md-sys-elevation-1);
+    box-shadow: var(--md-sys-elevation-0);
   }
 
 :is(.chip):where(:focus,
-.focus) {
-    box-shadow: var(--md-sys-elevation-2);
+.focus):not(:active) {
+    box-shadow: var(--md-sys-elevation-1);
   }
 
 :is(.chip)[disabled] {
