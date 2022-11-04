@@ -1,0 +1,26 @@
+/* Material Icons */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+/* Roboto Font */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light dark;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

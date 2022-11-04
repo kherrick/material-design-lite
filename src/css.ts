@@ -6,7 +6,13 @@ import postcss from "postcss";
 import { cssPlugins } from "../lib/utils/css-plugins.mjs";
 
 const inputDir = "lib";
-const outputDir = "./docsite/public/css";
+const modules = true;
+let outputDir = "dist";
+
+// Check arguments for output directory.
+if (process.argv.length > 2) {
+    outputDir = process.argv[2];
+}
 
 // Remove the output directory if it exists.
 if (fs.existsSync(outputDir)) {
@@ -84,8 +90,8 @@ async function buildFile(inputPath: string, outputPath: string, options: {
     let processed = await processCss(css, inputPath, outputPath, options);
     processed = addHeader(processed);
     if (options.comments === false) {
-        // Remove all comments.
-        processed = processed.replace(/\/\*[\s\S]*?\*\/|([^\\:]|^)\/\/.*$/gm, "");
+        // Remove all multi line comments.
+        processed = processed.replace(/\/\*[\s\S]*?\*\//gm, "");
     }
     // Create parent directory if it doesn't exist.
     const parentDir = path.dirname(outputPath);
@@ -94,6 +100,12 @@ async function buildFile(inputPath: string, outputPath: string, options: {
     }
     // Write the file.
     fs.writeFileSync(outputPath, processed);
+    if (modules) {
+        // Write Css .module.css
+        const modulePath = outputPath.replace(/\.css$/, ".module.css");
+        fs.writeFileSync(modulePath, processed);
+    }
+    // TODO: Create export in package.json
     console.log(`Built ${outputPath} in ${(performance.now() - now).toFixed(2)} ms`);
 }
 
