@@ -42,7 +42,6 @@
   background-color: var(--md-sys-comp-fab-background-color);
   color: var(--md-sys-comp-fab-color);
   box-shadow: var(--md-sys-elevation-1);
-  transition: box-shadow 0.2s ease-in-out;
 }
 
 :is(.fab) :where(i,
@@ -62,7 +61,7 @@
   }
 
 :is(.fab):where(:focus,
-.focus):not(:active) {
+.focus) {
     box-shadow: var(--md-sys-elevation-3);
   }
 

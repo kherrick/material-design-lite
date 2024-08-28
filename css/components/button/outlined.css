@@ -14,9 +14,7 @@
  limitations under the License.
 */
 
-:where(html,
-.light-theme,
-.dark-theme),
+:where(html),
 .tokens,
 :host {
   /* Outlined button container elevation */
@@ -120,7 +118,7 @@ button):not(.icon-button,
 .fab,
 .chip).outlined:where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-2);
+    box-shadow: var(--md-sys-elevation-1);
   }
 
 :where(.button,
@@ -135,7 +133,7 @@ button):not(.icon-button,
 button):not(.icon-button,
 .fab,
 .chip).outlined:where(:focus,
-.focus):not(:active) {
+.focus) {
     box-shadow: var(--md-sys-elevation-1);
   }
 

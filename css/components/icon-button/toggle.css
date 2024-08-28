@@ -27,7 +27,6 @@
 
 :where(.icon-button).toggle:where(input[type="checkbox"])::after {
       -webkit-font-smoothing: antialiased;
-      -webkit-font-feature-settings: "liga";
       font-feature-settings: "liga";
       direction: ltr;
       word-wrap: normal;
@@ -35,7 +34,6 @@
       text-transform: none;
       letter-spacing: normal;
       line-height: 1;
-      font-style: normal;
       font-weight: normal;
       font-family: "Material Icons";
       font-size: var(--md-comp-icon-button-icon-size);
@@ -62,21 +60,6 @@
 :checked,
 .checked) {
     color: var(--md-sys-color-primary);
-  }
-
-:where(.icon-button).toggle:where(:hover,
-.hover) {
-    box-shadow: var(--md-sys-elevation-2);
-  }
-
-:where(.icon-button).toggle:where(:active,
-.active) {
-    box-shadow: var(--md-sys-elevation-0);
-  }
-
-:where(.icon-button).toggle:where(:focus,
-.focus):not(:active) {
-    box-shadow: var(--md-sys-elevation-1);
   }
 
 :where(.icon-button).toggle[disabled] {

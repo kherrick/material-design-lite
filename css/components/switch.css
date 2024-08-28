@@ -49,7 +49,6 @@
 :is(.switch)::after {
     content: "";
     -webkit-font-smoothing: antialiased;
-    -webkit-font-feature-settings: "liga";
     font-feature-settings: "liga";
     direction: ltr;
     word-wrap: normal;
@@ -57,7 +56,6 @@
     text-transform: none;
     letter-spacing: normal;
     line-height: 1;
-    font-style: normal;
     font-weight: normal;
     font-family: "Material Icons";
     font-size: 16px;
@@ -128,7 +126,7 @@
 
 :where(.switch).icon-selected:checked::after {
     content: "check";
-    left: calc(100% - var(--thumb-size) - var(--border-width) + 2px);
+    left: calc(100% - var(--thumb-size) - var(--border-width));
   }
 
 /* Codepen: https://codepen.io/finnhvman/pen/pOeyjE */
@@ -144,5 +142,5 @@
 
 :where(.switch).icon-unselected:checked::after {
     content: "check";
-    left: calc(100% - var(--thumb-size) - var(--border-width) + 2px);
+    left: calc(100% - var(--thumb-size) - var(--border-width));
   }

@@ -14,9 +14,7 @@
  limitations under the License.
 */
 
-:where(html,
-.light-theme,
-.dark-theme),
+:where(html),
 .tokens,
 :host {
   /* Filled tonal button pressed container elevation */
@@ -131,7 +129,15 @@ button):not(.icon-button,
 .fab,
 .chip).filled-tonal:where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-2);
+    box-shadow: var(--md-sys-elevation-1);
+  }
+
+:where(.button,
+button):not(.icon-button,
+.fab,
+.chip).filled-tonal:where(:focus,
+.focus) {
+    box-shadow: var(--md-sys-elevation-1);
   }
 
 :where(.button,
@@ -140,14 +146,6 @@ button):not(.icon-button,
 .chip).filled-tonal:where(:active,
 .active) {
     box-shadow: var(--md-sys-elevation-0);
-  }
-
-:where(.button,
-button):not(.icon-button,
-.fab,
-.chip).filled-tonal:where(:focus,
-.focus):not(:active) {
-    box-shadow: var(--md-sys-elevation-1);
   }
 
 :where(.button,

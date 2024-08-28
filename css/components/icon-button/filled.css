@@ -14,9 +14,7 @@
  limitations under the License.
 */
 
-:where(html,
-.light-theme,
-.dark-theme),
+:where(html),
 .tokens,
 :host {
   /* Filled icon button pressed state layer opacity */
@@ -102,7 +100,7 @@
 
 :where(.icon-button).filled:where(:hover,
 .hover) {
-    box-shadow: var(--md-sys-elevation-2);
+    box-shadow: var(--md-sys-elevation-1);
   }
 
 :where(.icon-button).filled:where(:active,
@@ -111,8 +109,8 @@
   }
 
 :where(.icon-button).filled:where(:focus,
-.focus):not(:active) {
-    box-shadow: var(--md-sys-elevation-1);
+.focus) {
+    box-shadow: var(--md-sys-elevation-0);
   }
 
 :where(.icon-button).filled[disabled] {

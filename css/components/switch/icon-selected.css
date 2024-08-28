@@ -26,5 +26,5 @@
 
 :where(.switch).icon-selected:checked::after {
     content: "check";
-    left: calc(100% - var(--thumb-size) - var(--border-width) + 2px);
+    left: calc(100% - var(--thumb-size) - var(--border-width));
   }
