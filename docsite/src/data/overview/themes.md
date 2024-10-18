@@ -11,7 +11,7 @@ There are prebuilt themes for every [CSS color name](https://developer.mozilla.o
 ```html
 <link
   rel="stylesheet"
-  href="https://rodydavis.github.io/material-design-lite/css/themes/${name}.css"
+  href="https://kherrick.github.io/material-design-lite/css/themes/${name}.css"
 />
 ```
 

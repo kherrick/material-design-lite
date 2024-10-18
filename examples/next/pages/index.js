@@ -72,7 +72,7 @@ export default function Home() {
           Built with{" "}
           <a
             className="color-primary-text"
-            href="https://rodydavis.github.io/material-design-lite/components/"
+            href="https://kherrick.github.io/material-design-lite/components/"
           >
             Material Design Lite
           </a>

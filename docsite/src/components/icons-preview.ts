@@ -53,7 +53,7 @@ export class IconsPreview extends LitElement {
         return html`
       <link
         rel="stylesheet"
-        href="https://rodydavis.github.io/material-design-lite/css/icons.css"
+        href="https://kherrick.github.io/material-design-lite/css/icons.css"
       />
       <link
         rel="stylesheet"

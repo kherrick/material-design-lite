@@ -12,7 +12,7 @@ To import the CSS in a **style** tag, use the following:
 
 ```css
 /* MDL Styles */
-@import url('https://rodydavis.github.io/material-design-lite/css/mdl.css');
+@import url('https://kherrick.github.io/material-design-lite/css/mdl.css');
 /* Material Icons */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /* Roboto Font */
@@ -22,7 +22,7 @@ To import the CSS in a **style** tag, use the following:
 To import the CSS in a **link** tag, use the following:
 
 ```html
-<link rel="stylesheet" href="https://rodydavis.github.io/material-design-lite/css/mdl.css">
+<link rel="stylesheet" href="https://kherrick.github.io/material-design-lite/css/mdl.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
 ```

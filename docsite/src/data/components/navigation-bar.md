@@ -39,14 +39,14 @@ To import just the component styles, copy the following into your project's **st
 
 ```css
 /* Core Styles */
-@import url('https://rodydavis.github.io/material-design-lite/css/core.css');
+@import url('https://kherrick.github.io/material-design-lite/css/core.css');
 /* Material Icons */
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 /* Roboto Font */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap');
 /* Component Styles */
-@import url('https://rodydavis.github.io/material-design-lite/css/components/navigation-icon/style.css');
-@import url('https://rodydavis.github.io/material-design-lite/css/components/navigation-bar/style.css');
+@import url('https://kherrick.github.io/material-design-lite/css/components/navigation-icon/style.css');
+@import url('https://kherrick.github.io/material-design-lite/css/components/navigation-bar/style.css');
 ```
 
 ## Usage

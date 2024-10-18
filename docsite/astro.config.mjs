@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   base: "/material-design-lite/",
-  site: "https://rodydavis.github.io",
+  site: "https://kherrick.github.io",
   markdown: {
     syntaxHighlight: "prism",
   },

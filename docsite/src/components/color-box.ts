@@ -38,7 +38,7 @@ export class ColorBox extends LitElement {
         return html`
           <link
             rel="stylesheet"
-            href="https://rodydavis.github.io/material-design-lite/css/components/tooltip/style.css"
+            href="https://kherrick.github.io/material-design-lite/css/components/tooltip/style.css"
         />
         <div class="box tooltip" 
         style=${styleMap(styles)}

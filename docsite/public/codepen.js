@@ -24,7 +24,7 @@ function CodeBlockCodePen() {
 // Also insert the MDL Library.
 CodeBlockCodePen.prototype.MDLIBS = [
   "<!-- Material Design Lite -->",
-  '<script src="https://rodydavis.github.io/material-design-lite/css/mdl.min.css"></script>',
+  '<script src="https://kherrick.github.io/material-design-lite/css/mdl.min.css"></script>',
   "<!-- Material Design icon font -->",
   '<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">',
 ];
