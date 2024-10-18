@@ -22,87 +22,6 @@
   --md-sys-comp-chip-background-color: var(--md-sys-color-surface);
   --md-sys-comp-chip-color: var(--md-sys-color-primary);
   --md-comp-chip-container-height: 32px;
-}
-
-:is(.chip) {
-  /* Remove default button styles */
-  -webkit-tap-highlight-color: transparent;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  text-decoration: none;
-  position: relative;
-  border-radius: 8px;
-  padding: 8px 16px;
-  height: 32px;
-  gap: 8px;
-  box-sizing: border-box;
-  cursor: pointer;
-  text-align: start;
-  vertical-align: middle;
-  -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
-          text-decoration: var(--md-sys-typescale-label-large-text-decoration);
-  text-transform: var(--md-sys-typescale-label-large-text-transform);
-  line-height: var(--md-sys-typescale-label-large-line-height);
-  letter-spacing: var(--md-sys-typescale-label-large-tracking);
-  font-size: var(--md-sys-typescale-label-large-size);
-  font-weight: var(--md-sys-typescale-label-large-weight);
-  font-family: var(--md-sys-typescale-label-large-font);
-  transition: box-shadow 0.2s ease-in-out;
-  background-color: var(--md-sys-comp-chip-background-color);
-  color: var(--md-sys-comp-chip-color);
-  border-radius: var(--md-sys-shape-corner-small);
-  box-shadow: var(--md-sys-elevation-1);
-}
-
-:is(.chip) :is(i,
-.material-icons) {
-    color: var(--md-sys-color-primary);
-    font-size: 18px;
-  }
-
-:is(.chip) :is(i,
-.material-icons):first-child {
-      margin-left: -8px;
-    }
-
-:is(.chip) :is(i,
-.material-icons):last-child {
-      margin-right: -8px;
-    }
-
-:is(.chip):where(:hover,
-.hover) {
-    box-shadow: var(--md-sys-elevation-2);
-  }
-
-:is(.chip):where(:active,
-.active) {
-    box-shadow: var(--md-sys-elevation-1);
-  }
-
-:is(.chip):where(:focus,
-.focus) {
-    box-shadow: var(--md-sys-elevation-2);
-  }
-
-:is(.chip)[disabled] {
-    cursor: default;
-    background-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.12);
-    color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
-    box-shadow: var(--md-sys-elevation-0);
-  }
-
-:is(.chip)[disabled] :where(i,
-.material-icons) {
-      color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
-    }
-
-:where(html),
-.tokens,
-:host {
   /* Assist chip dragged state layer opacity */
   --md-comp-assist-chip-dragged-state-layer-opacity: var(
     --md-sys-state-dragged-state-layer-opacity
@@ -145,7 +64,7 @@
   --md-comp-assist-chip-with-icon-disabled-icon-opacity: 0.3799999952316284;
   /* Assist chip disabled label text opacity */
   --md-comp-assist-chip-disabled-label-text-opacity: 0.3799999952316284;
-  /* Assist chip flat diabled outline opacity */
+  /* Assist chip flat disabled outline opacity */
   --md-comp-assist-chip-flat-disabled-outline-opacity: 0.11999999731779099;
   /* Assist chip icon size */
   --md-comp-assist-chip-with-icon-icon-size: 18px;
@@ -184,6 +103,83 @@
   /* Assist chip container shape */
   --md-comp-assist-chip-container-shape: var(--md-sys-shape-corner-small);
 }
+
+:is(.chip) {
+  /* Remove default button styles */
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  border-radius: 8px;
+  padding: 8px 16px;
+  height: 32px;
+  gap: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: start;
+  vertical-align: middle;
+  -webkit-text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+          text-decoration: var(--md-sys-typescale-label-large-text-decoration);
+  text-transform: var(--md-sys-typescale-label-large-text-transform);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  letter-spacing: var(--md-sys-typescale-label-large-tracking);
+  font-size: var(--md-sys-typescale-label-large-size);
+  font-weight: var(--md-sys-typescale-label-large-weight);
+  font-family: var(--md-sys-typescale-label-large-font);
+  transition: box-shadow 0.2s ease-in-out;
+  background-color: var(--md-sys-comp-chip-background-color);
+  color: var(--md-sys-comp-chip-color);
+  border-radius: var(--md-sys-shape-corner-small);
+  box-shadow: var(--md-sys-elevation-1);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+:is(.chip) :is(i,
+.material-icons) {
+    color: var(--md-sys-color-primary);
+    font-size: 18px;
+  }
+
+:is(.chip) :is(i,
+.material-icons):first-child {
+      margin-left: -8px;
+    }
+
+:is(.chip) :is(i,
+.material-icons):last-child {
+      margin-right: -8px;
+    }
+
+:is(.chip):where(:hover,
+.hover) {
+    box-shadow: var(--md-sys-elevation-2);
+  }
+
+:is(.chip):where(:active,
+.active) {
+    box-shadow: var(--md-sys-elevation-0);
+  }
+
+:is(.chip):where(:focus,
+.focus):not(:active) {
+    box-shadow: var(--md-sys-elevation-1);
+  }
+
+:is(.chip)[disabled] {
+    cursor: default;
+    background-color: rgb(var(--md-sys-color-on-surface-rgb) / 0.12);
+    color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
+    box-shadow: var(--md-sys-elevation-0);
+  }
+
+:is(.chip)[disabled] :where(i,
+.material-icons) {
+      color: rgb(var(--md-sys-color-on-surface-rgb) / 0.38);
+    }
 
 :is(.chip).assist {
   background-color: var(--md-sys-color-surface);
