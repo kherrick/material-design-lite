@@ -1,7 +1,5 @@
 # Material Design Lite
 
-[![GitHub version](https://badge.fury.io/gh/google%2Fmaterial-design-lite.svg)](https://badge.fury.io/gh/google%2Fmaterial-design-lite)
-[![npm version](https://badge.fury.io/js/material-design-lite.svg)](https://badge.fury.io/js/material-design-lite)
 [![Test](https://github.com/kherrick/material-design-lite/actions/workflows/test.yml/badge.svg)](https://github.com/kherrick/material-design-lite/actions/workflows/test.yml)
 [![Demo](https://github.com/kherrick/material-design-lite/actions/workflows/demo.yml/badge.svg)](https://github.com/kherrick/material-design-lite/actions/workflows/demo.yml)
 
