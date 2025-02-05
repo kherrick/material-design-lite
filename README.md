@@ -1,4 +1,4 @@
-# Material Design Lite
+# [Material Design Lite](https://kherrick.github.io/material-design-lite/)
 
 [![Test](https://github.com/kherrick/material-design-lite/actions/workflows/test.yml/badge.svg)](https://github.com/kherrick/material-design-lite/actions/workflows/test.yml)
 [![Demo](https://github.com/kherrick/material-design-lite/actions/workflows/demo.yml/badge.svg)](https://github.com/kherrick/material-design-lite/actions/workflows/demo.yml)
@@ -11,9 +11,11 @@ static content websites. It doesn't rely on any JavaScript frameworks or
 libraries. Optimized for cross-device use, gracefully degrades in older
 browsers, and offers an experience that is accessible from the get-go.
 
-![](/screenshots/components-1.png)
-![](/screenshots/components-2.png)
-![](/screenshots/components-3.png)
+
+
+[![Material Design Lite 3 Screenshot 1](./screenshots/components-1.png)](https://kherrick.github.io/material-design-lite/components/)
+[![Material Design Lite 3 Screenshot 1](./screenshots/components-2.png)](https://kherrick.github.io/material-design-lite/components/)
+[![Material Design Lite 3 Screenshot 1](./screenshots/components-3.png)](https://kherrick.github.io/material-design-lite/components/)
 
 ### Limited support
 
