@@ -218,28 +218,6 @@ export const OVERVIEW: Component[] = [
 
 export const MENU: Component[] = [
   {
-    text: "Overview",
-    icon: "palette",
-    link: "/overview",
-    children: OVERVIEW,
-  },
-  {
-    text: "Demos",
-    icon: "play_circle_outline",
-    link: "/demos",
-    children: [
-      {
-        text: "Scaffold",
-        link: "demos/scaffold",
-      },
-      {
-        text: "Sticker sheet",
-        link: "demos/sticker-sheet",
-        draft: true,
-      },
-    ],
-  },
-  {
     text: "Components",
     icon: "widgets",
     link: "/components",
