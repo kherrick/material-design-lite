@@ -1,6 +1,6 @@
 {
   "name": "material-design-lite",
-  "version": "3.0.0-rc.1.3",
+  "version": "3.0.0-rc.1.4",
   "description": "Lightweight Material Design CSS framework",
   "type": "module",
   "scripts": {
@@ -22,7 +22,7 @@
     "tsc:watch": "tsc -w"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
   },
   "homepage": "https://github.com/kherrick/material-design-lite#readme",
   "dependencies": {
+    "@types/node": "^20.17.17",
     "cssnano": "^5.1.13",
     "postcss-apply": "^0.12.0",
     "postcss-color-hct": "^0.0.3",
@@ -56,7 +57,6 @@
     "@playwright/test": "^1.50.1",
     "@types/jest": "^29.1.2",
     "@types/markdown-it": "^12.2.3",
-    "@types/node": "^18.7.23",
     "@web/dev-server": "^0.4.6",
     "@web/test-runner": "^0.19.0",
     "@web/test-runner-playwright": "^0.11.0",
